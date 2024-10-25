@@ -1,0 +1,71 @@
+.lista-atividades {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.filtros {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filtros input[type="text"] {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.filtros button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF; /* Cor azul padrão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filtros button:hover {
+    background-color: #0056b3; /* Azul escuro para hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; /* Bordas da tabela */
+}
+
+table th {
+    background-color: #f4f4f4; /* Cor de fundo do cabeçalho */
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e7f1ff; /* Cor das tags */
+    border-radius: 3px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.icon {
+    /* Estilo do ícone, ajuste conforme necessário */
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #007BFF; /* Cor do ícone */
+    border-radius: 50%; /* Formato circular */
+    margin-right: 3px;
+}
+
+.contador {
+    margin-top: 20px;
+}
+
+.pagina {
+    margin-top: 20px;
+    /* Estilo para a seção de paginação, se necessário */
+}

@@ -6,7 +6,6 @@ const ListaAtividades = () => {
     const [filtroCliente, setFiltroCliente] = useState('');
     const [itensSelecionados, setItensSelecionados] = useState(new Set());
 
-    // Simulação de busca de atividades
     useEffect(() => {
         // Exemplo de dados, isso pode ser uma chamada API
         const dadosExemplo = [
@@ -15,9 +14,8 @@ const ListaAtividades = () => {
             { id: 3, descricao: 'Atividade 3', cliente: 'Cliente A', agendamento: '2024-10-27', status: 'Pendente', tags: [] }
         ];
         
-        // Definindo os atividades com os dados simulados
         setAtividades(dadosExemplo);
-    }, []); // O array vazio significa que isso só roda uma vez quando o componente monta.
+    }, []);
 
     const handleSelecionarTodos = (event) => {
         if (event.target.checked) {
@@ -56,6 +54,7 @@ const ListaAtividades = () => {
     return (
         <div className="lista-atividades">
             <div className="filtros">
+                <button>Nova Atividade</button>
                 <input
                     type="text"
                     placeholder="Filtro por Cliente"
@@ -63,8 +62,18 @@ const ListaAtividades = () => {
                     onChange={handleFiltroClienteChange}
                 />
                 <button onClick={handleExportar}>Exportar</button>
-                <button>Nova Atividade</button>
                 <button>Nova tarefa</button>
+
+                {/* Novos botões ao lado direito */}
+                <div className="botoes-direita">
+                    <button>Busca Avançada</button>
+                    <button>Relatório</button>
+                    <button>Todos</button>
+                    <button>Tarefas</button>
+                    <button>Audiências</button>
+                    <button>Compromisso</button>
+                    <button>Configurações</button>
+                </div>
             </div>
             <table>
                 <thead>

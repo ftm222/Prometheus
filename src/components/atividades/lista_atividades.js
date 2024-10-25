@@ -10,9 +10,9 @@ const ListaAtividades = () => {
     useEffect(() => {
         // Exemplo de dados, isso pode ser uma chamada API
         const dadosExemplo = [
-            { id: 1, descricao: 'Atendimento 1', cliente: 'Cliente A', agendamento: '2024-10-25', status: 'Pendente', tags: ['Urgente'] },
-            { id: 2, descricao: 'Atendimento 2', cliente: 'Cliente B', agendamento: '2024-10-26', status: 'Concluído', tags: ['Importante'] },
-            { id: 3, descricao: 'Atendimento 3', cliente: 'Cliente A', agendamento: '2024-10-27', status: 'Pendente', tags: [] }
+            { id: 1, descricao: 'Atividade 1', cliente: 'Cliente A', agendamento: '2024-10-25', status: 'Pendente', tags: ['Urgente'] },
+            { id: 2, descricao: 'Atividade 2', cliente: 'Cliente B', agendamento: '2024-10-26', status: 'Concluído', tags: ['Importante'] },
+            { id: 3, descricao: 'Atividade 3', cliente: 'Cliente A', agendamento: '2024-10-27', status: 'Pendente', tags: [] }
         ];
         
         // Definindo os atividades com os dados simulados
@@ -21,14 +21,14 @@ const ListaAtividades = () => {
 
     const handleSelecionarTodos = (event) => {
         if (event.target.checked) {
-            const novosSelecionados = new Set(atividades.map(atendimento => atendimento.id));
+            const novosSelecionados = new Set(atividades.map(Atividade => Atividade.id));
             setItensSelecionados(novosSelecionados);
         } else {
             setItensSelecionados(new Set());
         }
     };
 
-    const handleSelecionarAtendimento = (id) => {
+    const handleSelecionarAtividade = (id) => {
         setItensSelecionados((prev) => {
             const novosSelecionados = new Set(prev);
             if (novosSelecionados.has(id)) {
@@ -49,8 +49,8 @@ const ListaAtividades = () => {
         console.log('Exportar');
     };
 
-    const atividadesFiltrados = atividades.filter(atendimento =>
-        atendimento.cliente.toLowerCase().includes(filtroCliente.toLowerCase())
+    const atividadesFiltrados = atividades.filter(Atividade =>
+        Atividade.cliente.toLowerCase().includes(filtroCliente.toLowerCase())
     );
 
     return (
@@ -63,7 +63,7 @@ const ListaAtividades = () => {
                     onChange={handleFiltroClienteChange}
                 />
                 <button onClick={handleExportar}>Exportar</button>
-                <button>Nova atendimento</button>
+                <button>Nova Atividade</button>
                 <button>Nova tarefa</button>
             </div>
             <table>
@@ -83,21 +83,21 @@ const ListaAtividades = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {atividadesFiltrados.map(atendimento => (
-                        <tr key={atendimento.id}>
+                    {atividadesFiltrados.map(Atividade => (
+                        <tr key={Atividade.id}>
                             <td>
                                 <input
                                     type="checkbox"
-                                    checked={itensSelecionados.has(atendimento.id)}
-                                    onChange={() => handleSelecionarAtendimento(atendimento.id)}
+                                    checked={itensSelecionados.has(Atividade.id)}
+                                    onChange={() => handleSelecionarAtividade(Atividade.id)}
                                 />
                             </td>
-                            <td>{atendimento.descricao}</td>
-                            <td>{atendimento.cliente}</td>
-                            <td>{atendimento.agendamento}</td>
-                            <td>{atendimento.status}</td>
+                            <td>{Atividade.descricao}</td>
+                            <td>{Atividade.cliente}</td>
+                            <td>{Atividade.agendamento}</td>
+                            <td>{Atividade.status}</td>
                             <td>
-                                {atendimento.tags.map(tag => (
+                                {Atividade.tags.map(tag => (
                                     <span key={tag} className="tag">
                                         <i className="icon" /> {tag}
                                     </span>

@@ -73,10 +73,10 @@ const Navbar = () => {
             {activeDropdown === 'processos' && (
               <ul className="dropdown-menu">
                 <li><Link to="/processos" onClick={handleLinkClick}>Processos</Link></li>
-                <li><Link to="/processos/intimacoes" onClick={handleLinkClick}>Intimações</Link></li>
-                <li><Link to="/processos/central" onClick={handleLinkClick}>Central de Captura</Link></li>
-                <li><Link to="/processos/andamentos" onClick={handleLinkClick}>Andamentos Processuais</Link></li>
-                <li><Link to="/processos/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
+                <li><Link to="/intimacoes" onClick={handleLinkClick}>Intimações</Link></li>
+                <li><Link to="/central" onClick={handleLinkClick}>Central de Captura</Link></li>
+                <li><Link to="/andamentos" onClick={handleLinkClick}>Andamentos Processuais</Link></li>
+                <li><Link to="/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
               </ul>
             )}
           </li>
@@ -86,11 +86,11 @@ const Navbar = () => {
             <Link to="#">Financeiro</Link>
             {activeDropdown === 'financeiro' && (
               <ul className="dropdown-menu">
-                <li><Link to="/financeiro/receitas" onClick={handleLinkClick}>Receitas e Despesas</Link></li>
-                <li><Link to="/financeiro/extrato" onClick={handleLinkClick}>Extrato de Conta</Link></li>
-                <li><Link to="/financeiro/solicitacoes" onClick={handleLinkClick}>Solicitações</Link></li>
-                <li><Link to="/financeiro/integracao" onClick={handleLinkClick}>Integração de Receitas</Link></li>
-                <li><Link to="/financeiro/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
+                <li><Link to="/receitas" onClick={handleLinkClick}>Receitas e Despesas</Link></li>
+                <li><Link to="/extrato" onClick={handleLinkClick}>Extrato de Conta</Link></li>
+                <li><Link to="/solicitacoes" onClick={handleLinkClick}>Solicitações</Link></li>
+                <li><Link to="/integracao" onClick={handleLinkClick}>Integração de Receitas</Link></li>
+                <li><Link to="/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
               </ul>
             )}
           </li>
@@ -101,7 +101,7 @@ const Navbar = () => {
             {activeDropdown === 'documentos' && (
               <ul className="dropdown-menu">
                 <li><Link to="/documentos" onClick={handleLinkClick}>Documentos</Link></li>
-                <li><Link to="/documentos/modelos" onClick={handleLinkClick}>Modelos de Documentos</Link></li>
+                <li><Link to="/modelos" onClick={handleLinkClick}>Modelos de Documentos</Link></li>
               </ul>
             )}
           </li>
@@ -111,8 +111,8 @@ const Navbar = () => {
             <Link to="#">Extensões</Link>
             {activeDropdown === 'extensoes' && (
               <ul className="dropdown-menu">
-                <li><Link to="/extensoes/conexoes" onClick={handleLinkClick}>Conexões</Link></li>
-                <li><Link to="/extensoes/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
+                <li><Link to="/conexoes" onClick={handleLinkClick}>Conexões</Link></li>
+                <li><Link to="/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
               </ul>
             )}
           </li>
@@ -142,9 +142,9 @@ const Navbar = () => {
                 <button className="icon-button">⚙️</button>
                 {activeDropdown === 'configuracoes' && (
                   <ul className="dropdown-menu">
-                    <li><Link to="/configuracoes/perfil" onClick={handleLinkClick}>Perfil</Link></li>
-                    <li><Link to="/configuracoes/preferencias" onClick={handleLinkClick}>Preferências</Link></li>
-                    <li><Link to="/configuracoes/sair" onClick={handleLinkClick}>Sair</Link></li>
+                    <li><Link to="/perfil" onClick={handleLinkClick}>Perfil</Link></li>
+                    <li><Link to="/preferencias" onClick={handleLinkClick}>Preferências</Link></li>
+                    <li><Link to="/sair" onClick={handleLinkClick}>Sair</Link></li>
                   </ul>
                 )}
               </div>
@@ -165,9 +165,9 @@ const Navbar = () => {
                 <button className="icon-button">👤</button>
                 {activeDropdown === 'usuario' && (
                   <ul className="dropdown-menu">
-                  <li><Link to="/usuario/perfil" onClick={handleLinkClick}>Meu Perfil</Link></li>
-                  <li><Link to="/usuario/configuracoes" onClick={handleLinkClick}>Configurações</Link></li>
-                  <li><Link to="/usuario/sair" onClick={handleLinkClick}>Sair</Link></li>
+                  <li><Link to="/perfil" onClick={handleLinkClick}>Meu Perfil</Link></li>
+                  <li><Link to="/configuracoes" onClick={handleLinkClick}>Configurações</Link></li>
+                  <li><Link to="/sair" onClick={handleLinkClick}>Sair</Link></li>
                 </ul>
                 )}
               </div>

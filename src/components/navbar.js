@@ -54,28 +54,15 @@ const Navbar = () => {
             )}
           </li>
 
-          {/* Atendimentos Dropdown */}
-          <li className="dropdown" onMouseEnter={() => handleMouseEnter('atendimentos')} onMouseLeave={handleMouseLeave}>
-            <Link to="#">Atendimentos</Link>
-            {activeDropdown === 'atendimentos' && (
-              <ul className="dropdown-menu">
-                <li><Link to="/atendimentos/lista" onClick={handleLinkClick}>Lista de Atendimentos</Link></li>
-                <li><Link to="/atendimentos/historico" onClick={handleLinkClick}>Histórico</Link></li>
-                <li><Link to="/atendimentos/novo" onClick={handleLinkClick}>Novo Atendimento</Link></li>
-                <li><Link to="/atendimentos/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
-              </ul>
-            )}
-          </li>
-
           {/* Atividades Dropdown */}
           <li className="dropdown" onMouseEnter={() => handleMouseEnter('atividades')} onMouseLeave={handleMouseLeave}>
             <Link to="#">Atividades</Link>
             {activeDropdown === 'atividades' && (
               <ul className="dropdown-menu">
-                <li><Link to="/atividades/lista" onClick={handleLinkClick}>Lista de Atividades</Link></li>
-                <li><Link to="/atividades/painel" onClick={handleLinkClick}>Painel de Tarefas</Link></li>
-                <li><Link to="/atividades/kanban" onClick={handleLinkClick}>Kanban de Tarefas</Link></li>
-                <li><Link to="/atividades/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
+                <li><Link to="/atividades" onClick={handleLinkClick}>Lista de Atividades</Link></li>
+                <li><Link to="/painel" onClick={handleLinkClick}>Painel de Tarefas</Link></li>
+                <li><Link to="/kanban" onClick={handleLinkClick}>Kanban de Tarefas</Link></li>
+                <li><Link to="/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
               </ul>
             )}
           </li>
@@ -155,9 +142,9 @@ const Navbar = () => {
                 <button className="icon-button">⚙️</button>
                 {activeDropdown === 'configuracoes' && (
                   <ul className="dropdown-menu">
-                    <li><Link to="/configuracoes/item1">Perfil</Link></li>
-                    <li><Link to="/configuracoes/item2">Preferências</Link></li>
-                    <li><Link to="/configuracoes/item3">Sair</Link></li>
+                    <li><Link to="/configuracoes/perfil" onClick={handleLinkClick}>Perfil</Link></li>
+                    <li><Link to="/configuracoes/preferencias" onClick={handleLinkClick}>Preferências</Link></li>
+                    <li><Link to="/configuracoes/sair" onClick={handleLinkClick}>Sair</Link></li>
                   </ul>
                 )}
               </div>
@@ -173,15 +160,15 @@ const Navbar = () => {
                 )}
               </div>
 
-              {/* Usuário Dropdown */}
+              {/* Usuário */}
               <div className="dropdown" onMouseEnter={() => handleMouseEnter('usuario')} onMouseLeave={handleMouseLeave}>
                 <button className="icon-button">👤</button>
                 {activeDropdown === 'usuario' && (
                   <ul className="dropdown-menu">
-                    <li><Link to="/usuario/perfil" onClick={handleLinkClick}>Perfil</Link></li>
-                    <li><Link to="/usuario/configuracoes" onClick={handleLinkClick}>Configurações</Link></li>
-                    <li><Link to="/usuario/sair" onClick={handleLinkClick}>Sair</Link></li>
-                  </ul>
+                  <li><Link to="/usuario/perfil" onClick={handleLinkClick}>Meu Perfil</Link></li>
+                  <li><Link to="/usuario/configuracoes" onClick={handleLinkClick}>Configurações</Link></li>
+                  <li><Link to="/usuario/sair" onClick={handleLinkClick}>Sair</Link></li>
+                </ul>
                 )}
               </div>
             </div>

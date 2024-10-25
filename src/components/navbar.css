@@ -8,7 +8,7 @@
   align-items: center;
   flex-wrap: wrap;
   position: relative; /* Relative para manter contexto para elementos filhos */
-  z-index: 1000; /* Garante que a navbar sempre fique no topo */
+  z-index: 1500; /* Garante que a navbar sempre fique no topo */
 }
 
 /* Estilo da logo da Navbar */

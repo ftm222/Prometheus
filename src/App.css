@@ -1,9 +1,12 @@
-.App {
+/* src/App.css */
+
+.app-container {
   text-align: center;
+  padding: 10px; /* Adiciona padding para pequenas telas */
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 40vmin; /* Escala a altura da logo com base no tamanho da viewport */
   pointer-events: none;
 }
 
@@ -20,12 +23,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin); /* Tamanho do texto baseado na tela */
   color: white;
+  padding: 20px; /* Ajusta o padding para evitar bordas apertadas */
 }
 
 .App-link {
   color: #61dafb;
+}
+
+/* Oculta o calendário por padrão */
+.calendar-container {
+  display: none;
+}
+
+/* Exibe o calendário na página inicial quando for a rota correta */
+.home-page .calendar-container {
+  display: block;
 }
 
 @keyframes App-logo-spin {
@@ -34,5 +48,109 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Estilos adicionais para melhor visualização */
+.navbar {
+  background-color: #333; /* Cor para a barra de navegação */
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.header {
+  margin: 20px 0; /* Margem para o cabeçalho */
+}
+
+.routes {
+  padding: 20px; /* Padding para as rotas */
+}
+
+.footer {
+  background-color: #282c34; /* Cor de fundo do rodapé */
+  color: white;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center; /* Centraliza o texto do rodapé */
+}
+
+/* --------- Responsividade para diferentes tamanhos de tela --------- */
+
+/* Telas pequenas (smartphones) */
+@media (max-width: 600px) {
+  .App-logo {
+    height: 30vmin; /* Ajusta a altura da logo em telas menores */
+  }
+
+  .App-header {
+    font-size: calc(10px + 3vmin); /* Aumenta o tamanho do texto para melhor leitura */
+    padding: 15px; /* Reduz o padding para telas menores */
+  }
+
+  .navbar {
+    padding: 0.5rem; /* Reduz o padding da barra de navegação */
+  }
+
+  .routes {
+    padding: 10px; /* Reduz o padding para o conteúdo principal */
+  }
+
+  .footer {
+    padding: 0.5rem; /* Reduz o padding do rodapé */
+    font-size: 12px; /* Tamanho do texto menor no rodapé */
+  }
+}
+
+/* Tablets e iPads (telas médias) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .App-logo {
+    height: 35vmin; /* Ajuste intermediário da logo */
+  }
+
+  .App-header {
+    font-size: calc(10px + 2.5vmin); /* Ajuste intermediário do texto */
+    padding: 20px;
+  }
+
+  .navbar {
+    padding: 1rem; /* Padding mais espaçado para tablets */
+  }
+
+  .routes {
+    padding: 20px;
+  }
+
+  .footer {
+    padding: 1rem;
+    font-size: 14px;
+  }
+}
+
+/* Telas grandes (desktops e maiores displays) */
+@media (min-width: 1025px) {
+  .App-logo {
+    height: 40vmin; /* Tamanho da logo para grandes telas */
+  }
+
+  .App-header {
+    font-size: calc(10px + 2vmin); /* Tamanho do texto para grandes telas */
+    padding: 30px;
+  }
+
+  .navbar {
+    padding: 1.5rem;
+  }
+
+  .routes {
+    padding: 30px;
+  }
+
+  .footer {
+    padding: 1.5rem;
+    font-size: 16px;
   }
 }

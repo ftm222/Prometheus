@@ -1,0 +1,92 @@
+/* inserirAtendimento.css */
+
+body {
+    font-family: 'Arial', sans-serif; /* Fonte padrão para o corpo */
+    background-color: #f0f0f0; /* Cor de fundo da página */
+    margin: 0; /* Remove margens padrão */
+    padding: 20px; /* Espaçamento interno da página */
+}
+
+.container {
+    max-width: 700px; /* Limita a largura do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    padding: 30px; /* Espaçamento interno */
+    border: 1px solid #ddd; /* Borda leve ao redor do contêiner */
+    border-radius: 10px; /* Cantos arredondados */
+    background-color: #ffffff; /* Fundo branco para o contêiner */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+h1 {
+    text-align: center; /* Centraliza o título */
+    color: #0056b3; /* Cor do texto do título */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+h2 {
+    color: #333; /* Cor do texto dos subtítulos */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+.section {
+    margin-bottom: 25px; /* Espaçamento inferior entre seções */
+    padding: 15px; /* Adiciona espaçamento interno às seções */
+    border: 1px solid #e0e0e0; /* Borda leve para seções */
+    border-radius: 8px; /* Cantos arredondados para seções */
+    background-color: #f9f9f9; /* Fundo levemente cinza para seções */
+}
+
+.input-group {
+    margin-bottom: 20px; /* Espaçamento entre grupos de entrada */
+    display: flex; /* Utiliza flexbox para alinhamento */
+    flex-direction: column; /* Organiza os itens em coluna */
+}
+
+.label {
+    display: block; /* Cada rótulo ocupa uma linha */
+    margin-bottom: 8px; /* Espaçamento abaixo do rótulo */
+    font-weight: bold; /* Destaca o rótulo */
+    color: #333; /* Cor do rótulo */
+}
+
+input[type="date"],
+input[type="text"],
+select,
+textarea {
+    width: 100%; /* Largura total para os campos */
+    padding: 10px; /* Espaçamento interno dos campos */
+    border: 1px solid #ccc; /* Borda leve nos campos */
+    border-radius: 4px; /* Cantos arredondados */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra interna */
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionamento vertical apenas */
+}
+
+.button-group {
+    display: flex; /* Utiliza flexbox para os botões */
+    justify-content: space-between; /* Espaço entre os botões */
+}
+
+.btn {
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    border: none; /* Remove borda padrão */
+    border-radius: 4px; /* Cantos arredondados nos botões */
+    color: white; /* Cor do texto dos botões */
+    background-color: #0056b3; /* Cor de fundo padrão dos botões */
+    cursor: pointer; /* Muda o cursor ao passar sobre os botões */
+    transition: background-color 0.3s; /* Transição suave ao mudar de cor */
+}
+
+.btn:hover {
+    background-color: #004494; /* Cor do botão ao passar o mouse */
+}
+
+.cancel {
+    background-color: #dc3545; /* Cor de fundo para botão de cancelar */
+}
+
+.cancel:hover {
+    background-color: #c82333; /* Cor do botão de cancelar ao passar o mouse */
+}

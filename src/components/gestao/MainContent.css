@@ -1,0 +1,215 @@
+/* Estilos principais para a área de conteúdo */
+.main-container {
+  display: flex;
+  flex-direction: column; /* Layout em coluna para manter o cabeçalho no topo */
+  height: 100vh; /* Ocupar a altura total da viewport */
+  overflow-x: hidden; /* Evita a rolagem lateral */
+  transition: margin-left 0.3s ease; /* Transição suave para abrir e fechar a sidebar */
+}
+
+/* Ajusta o espaço quando a sidebar estiver aberta */
+.sidebar-open .main-content {
+  margin-left: 250px;
+  width: calc(100vw - 250px); /* Certifica que o conteúdo considere a largura da sidebar */
+}
+
+.main-content {
+  background-color: #f9f9f9;
+  padding: 20px;
+  width: 100vw; /* Garante que o conteúdo principal ocupe 100% da largura quando a sidebar está fechada */
+  height: 100%; /* Certifica-se de que o conteúdo principal ocupe 100% da altura restante */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha o conteúdo no topo */
+  box-sizing: border-box;
+  overflow-y: auto; /* Permite rolagem vertical caso o conteúdo seja maior que a altura */
+}
+
+/* Estilos para o cabeçalho */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribui o espaço entre os itens */
+  padding: 10px;
+  background-color: white; /* Fundo branco para destacar */
+  border-bottom: 1px solid #ccc; /* Linha divisória */
+  position: sticky; /* Adiciona fixação ao rolar a página */
+  top: 0; /* Fixa o cabeçalho no topo */
+  z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+  width: 100%; /* Ocupa toda a largura */
+}
+
+/* Estilos para a distribuição de itens no cabeçalho */
+.header-left, .header-center, .header-right {
+  flex: 1; /* Cada seção ocupa o mesmo espaço */
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens */
+}
+
+/* Estilo para o conteúdo à esquerda (botão "Menu") */
+.header-left {
+  justify-content: flex-start; /* Alinha o botão "Menu" à esquerda */
+}
+
+/* Estilo para o conteúdo central (título "Relatórios") */
+.header-center {
+  justify-content: center; /* Centraliza o título "Relatórios" */
+}
+
+/* Estilo para o conteúdo à direita (botão "Perfil") */
+.header-right {
+  justify-content: flex-end; /* Alinha o botão "Perfil" à direita */
+}
+
+/* Estilos para o título "Relatórios" */
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Estilos do botão "Menu" */
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px; /* Adiciona espaço à direita do botão "Menu" */
+}
+
+/* Estilos do botão "Perfil" */
+.profile-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px; /* Adiciona espaço à esquerda do botão "Perfil" */
+}
+
+/* Sidebar-title agora no topo da página como cabeçalho */
+.sidebar-title {
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Estilos do dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-content li {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #555;
+}
+
+.dropdown-content li:hover {
+  background-color: #eee;
+}
+
+.dropdown-button:hover + .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+/* Estilos de conteúdo principal */
+.report-content {
+  flex-grow: 1; /* Permite que o conteúdo cresça e ocupe o espaço disponível */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.clipboard {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.clipboard img {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.report-content p {
+  font-size: 18px;
+  color: #777;
+  text-align: center;
+  max-width: 100%;
+  word-wrap: break-word;
+  margin: 0 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hamburger-menu {
+      font-size: 25px;
+  }
+
+  .main-content h2 {
+      font-size: 20px;
+  }
+
+  .clipboard img {
+      width: 80px;
+      height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger-menu {
+      font-size: 20px;
+  }
+
+  .main-content h2 {
+      font-size: 18px;
+  }
+
+  .clipboard img {
+      width: 60px;
+      height: 60px;
+  }
+
+  .report-content p {
+      font-size: 16px;
+      margin: 0 10px;
+  }
+}

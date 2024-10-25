@@ -1,0 +1,74 @@
+.dashboard {
+    display: flex; /* Usar Flexbox para layout */
+    justify-content: space-between; /* Espaço igual entre os itens */
+    padding: 30px; /* Aumentar o padding da seção */
+    background-color: #1c1c1c; /* Fundo escuro */
+    border-radius: 8px; /* Bordas arredondadas */
+  }
+  
+  .dashboard-item {
+    background-color: #2a2a2a; /* Cor de fundo dos itens */
+    color: #ffffff; /* Cor do texto */
+    flex: 1; /* Cada item ocupa espaço igual */
+    margin: 0 10px; /* Aumentar a margem entre os itens */
+    border-radius: 8px; /* Bordas arredondadas dos itens */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Aumentar a sombra leve */
+    text-align: center; /* Centraliza o conteúdo */
+    height: 220px; /* Aumentar a altura para 220px */
+  }
+  
+  .calendar {
+    display: flex;
+    flex-direction: column; /* Coloca os itens na vertical */
+    justify-content: center; /* Centraliza o conteúdo do calendário */
+    align-items: center; /* Centraliza horizontalmente */
+  }
+  
+  .calendar-block {
+    padding: 15px; /* Aumentar o padding para o bloco de calendário */
+    border: 2px solid #007bff; /* Borda do bloco de calendário em azul */
+    border-radius: 8px; /* Bordas arredondadas do bloco */
+    text-align: center; /* Centraliza o conteúdo do bloco */
+    background-color: #007bff; /* Cor de fundo do bloco de calendário em azul */
+  }
+  
+  .calendar-month {
+    font-size: 20px; /* Aumentar o tamanho da fonte do mês */
+    font-weight: bold; /* Negrito */
+    color: #ffffff; /* Cor do mês em branco */
+  }
+  
+  .calendar-day {
+    font-size: 32px; /* Aumentar o tamanho da fonte do dia */
+    font-weight: bold; /* Negrito */
+    color: #ffffff; /* Cor do dia em branco */
+    margin-top: 5px; /* Margem acima do dia */
+    background-color: #1c1c1c; /* Fundo preto para o dia */
+    padding: 10px 0; /* Aumentar o padding para o dia */
+    border-radius: 4px; /* Bordas arredondadas para o dia */
+  }
+  
+  .calendar-weekday {
+    font-size: 16px; /* Aumentar o tamanho da fonte do dia da semana */
+    color: #b0b0b0; /* Cor do texto do dia da semana */
+    margin-top: 5px; /* Margem acima do dia da semana */
+  }
+  
+  .circle {
+    width: 60px; /* Aumentar a largura do círculo */
+    height: 60px; /* Aumentar a altura do círculo */
+    border-radius: 50%; /* Círculo perfeito */
+    display: flex; /* Flexbox para centralizar o texto */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    font-size: 20px; /* Aumentar o tamanho do texto dentro do círculo */
+    font-weight: bold; /* Negrito */
+    color: #ffffff; /* Cor do texto dentro do círculo */
+    margin: 10px auto; /* Aumentar a margem */
+  }
+  
+  .index {
+    font-size: 14px; /* Aumentar o tamanho do texto do índice */
+    color: #ffffff; /* Cor do texto do índice */
+  }
+  

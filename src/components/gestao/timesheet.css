@@ -1,0 +1,266 @@
+/* src/components/Gestao/Timesheet.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.timesheet-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.user-options {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-profile, .btn-settings {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.main-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Botões "Lançamento de horas" e "Timesheets" */
+.timesheet-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.launch-hours-btn, .view-timesheets-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.launch-hours-btn:hover, .view-timesheets-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Container de ações do timesheet */
+.timesheet-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #222;
+    color: white;
+}
+
+.new-timesheet-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-timesheet-btn:hover {
+    background-color: darkgreen;
+}
+
+.btn-search, .btn-advanced-search {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-search:hover, .btn-advanced-search:hover {
+    background-color: #555;
+}
+
+.btn-generate-report {
+    padding: 10px 20px;
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-generate-report:hover {
+    background-color: #C70039;
+}
+
+.timesheet-list {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Estilos para a tabela de timesheets */
+.timesheet-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1c1c1c;
+}
+
+.timesheet-table th, .timesheet-table td {
+    padding: 10px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.timesheet-table th {
+    background-color: #333;
+    color: white;
+}
+
+.timesheet-table td {
+    background-color: #222;
+    color: white;
+}
+
+/* Botões de ação dentro da tabela */
+.btn-edit, .btn-delete {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #007BFF;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+}
+
+.btn-delete {
+    background-color: #FF5733;
+}
+
+.btn-delete:hover {
+    background-color: #C70039;
+}
+
+/* Estilos para o estado vazio */
+.empty-state img {
+    width: 150px;
+    margin: 20px 0;
+}
+
+.empty-state p {
+    color: #ccc;
+    font-size: 1.2em;
+}
+
+/* Modal de busca avançada */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    color: white;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .timesheet-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .timesheet-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+}

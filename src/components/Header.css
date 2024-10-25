@@ -1,0 +1,41 @@
+/* src/components/Header.css */
+
+.header {
+    background-color: #20232a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha todo o conteúdo à esquerda */
+    position: relative; /* Garante que o cabeçalho respeite o fluxo de layout da página */
+    z-index: 1; /* Define uma camada mais baixa para o cabeçalho */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-title {
+    margin: 0;
+    margin-right: 20px; /* Espaço entre o título e os botões */
+    font-size: 1.5rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.header-button {
+    background-color: #61dafb;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #20232a;
+    cursor: pointer;
+}
+
+.header-button:hover {
+    background-color: #21a1f1;
+}

@@ -1,0 +1,36 @@
+.new-timesheet {
+    padding: 20px;
+}
+
+.new-timesheet h1 {
+    margin-bottom: 20px;
+}
+
+.new-timesheet form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.new-timesheet label {
+    font-weight: bold;
+}
+
+.new-timesheet input, .new-timesheet textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.new-timesheet button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.new-timesheet button:hover {
+    background-color: #0056b3;
+}

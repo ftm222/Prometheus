@@ -1,0 +1,171 @@
+.pessoa-container { /* Define o contêiner principal para a seção de pessoas */
+    padding: 20px; /* Adiciona espaço interno de 20 pixels em todas as direções */
+    background-color: #1b1b1b; /* Define a cor de fundo como um cinza escuro */
+    color: #fff; /* Define a cor do texto como branco */
+    font-family: Arial, sans-serif; /* Define a fonte do texto */
+}
+
+.header { /* Define o estilo do cabeçalho que contém os botões e campos de entrada */
+    display: flex; /* Usa flexbox para layout */
+    align-items: center; /* Alinha itens ao centro verticalmente */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do cabeçalho */
+    flex-wrap: wrap; /* Permite quebra de linha para melhor alinhamento */
+}
+
+h1 { /* Define o estilo do título principal */
+    flex-basis: 100%; /* Garante que o título ocupe toda a linha superior */
+    font-size: 24px; /* Define o tamanho da fonte do título */
+    margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.btn-nova-pessoa { /* Define o estilo do botão para adicionar uma nova pessoa */
+    background-color: #28a745; /* Define a cor de fundo do botão como verde */
+    color: white; /* Define a cor do texto do botão como branco */
+    border: none; /* Remove a borda do botão */
+    padding: 10px 20px; /* Adiciona espaço interno ao botão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    margin-right: 10px; /* Adiciona espaço à direita do botão */
+}
+
+.search-bar { /* Define o estilo da barra de pesquisa */
+    flex: 2; /* Permite que a barra de pesquisa ocupe 2 partes do espaço flexível */
+    padding: 10px; /* Adiciona espaço interno à barra de pesquisa */
+    margin-right: 10px; /* Adiciona espaço à direita da barra de pesquisa */
+    border: 1px solid #ccc; /* Adiciona uma borda cinza clara à barra de pesquisa */
+    border-radius: 5px; /* Arredonda os cantos da barra de pesquisa */
+    background-color: #333; /* Define a cor de fundo da barra de pesquisa como cinza escuro */
+    color: white; /* Define a cor do texto na barra de pesquisa como branco */
+}
+
+.btn-busca-avancada, .btn-relatorio-simplificado { /* Define estilos comuns para os botões de busca avançada e relatório simplificado */
+    background-color: #007bff; /* Define a cor de fundo como azul */
+    color: white; /* Define a cor do texto como branco */
+    border: none; /* Remove a borda dos botões */
+    padding: 10px 20px; /* Adiciona espaço interno aos botões */
+    border-radius: 5px; /* Arredonda os cantos dos botões */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    margin-right: 10px; /* Adiciona espaço à direita dos botões */
+}
+
+.btn-relatorio-simplificado { /* Define o estilo específico para o botão de relatório simplificado */
+    background-color: #17a2b8; /* Define uma cor diferente para o botão de relatório simplificado */
+}
+
+label { /* Define o estilo dos rótulos para os botões de seleção */
+    margin-right: 15px; /* Adiciona espaço à direita do rótulo */
+    font-size: 14px; /* Define o tamanho da fonte dos rótulos */
+}
+
+.checkbox-container { /* Define o contêiner para a checkbox */
+    display: flex; /* Usa flexbox para alinhar a checkbox e o rótulo */
+    align-items: center; /* Alinha a checkbox e o rótulo ao centro verticalmente */
+    margin-bottom: 10px; /* Adiciona espaço abaixo de cada checkbox */
+}
+
+input[type="checkbox"] { /* Estilos para as checkboxes */
+    width: 20px; /* Define a largura da checkbox */
+    height: 20px; /* Define a altura da checkbox */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    accent-color: #007bff; /* Define a cor do acento da checkbox (apenas em navegadores compatíveis) */
+}
+
+/* Estilo específico para a checkbox "Marcar Todos" */
+.checkbox-marcar-todos {
+    width: 25px; /* Largura um pouco maior para a checkbox "Marcar Todos" */
+    height: 25px; /* Altura um pouco maior para a checkbox "Marcar Todos" */
+    margin-right: 10px; /* Adiciona espaço à direita da checkbox */
+}
+
+label input { /* Define o estilo dos inputs dentro dos rótulos */
+    margin-right: 5px; /* Adiciona espaço à direita do input */
+}
+
+.pessoa-tabela { /* Define o estilo da tabela de pessoas */
+    width: 100%; /* Define a largura da tabela como 100% do contêiner pai */
+    border-collapse: collapse; /* Remove espaços entre as bordas das células da tabela */
+    background-color: #2c2c2c; /* Define a cor de fundo da tabela como um cinza mais claro */
+}
+
+.pessoa-tabela th, /* Define o estilo das células de cabeçalho da tabela */
+.pessoa-tabela td { /* Define o estilo das células de dados da tabela */
+    padding: 10px; /* Adiciona espaço interno às células */
+    text-align: left; /* Alinha o texto à esquerda */
+    border-bottom: 1px solid #444; /* Adiciona uma borda inferior cinza escura às células */
+    color: #fff; /* Define a cor do texto das células como branco */
+}
+
+.pessoa-tabela th { /* Define o estilo específico para as células de cabeçalho da tabela */
+    background-color: #333; /* Define a cor de fundo das células de cabeçalho como cinza escuro */
+    color: #ddd; /* Define a cor do texto das células de cabeçalho como cinza claro */
+}
+
+.pessoa-tabela tr:hover { /* Define o estilo da linha da tabela quando o mouse está sobre ela */
+    background-color: #444; /* Altera a cor de fundo da linha para cinza escuro ao passar o mouse */
+}
+
+.status-badge { /* Define o estilo do badge que indica o tipo de pessoa */
+    padding: 5px 10px; /* Adiciona espaço interno ao badge */
+    border-radius: 15px; /* Arredonda os cantos do badge */
+    font-size: 12px; /* Define o tamanho da fonte do badge */
+    color: white; /* Define a cor do texto do badge como branco */
+    margin-right: 10px; /* Adiciona espaço à direita do badge */
+}
+
+.juridica { /* Define o estilo para badges de pessoa jurídica */
+    background-color: #28a745; /* Define a cor de fundo como verde */
+}
+
+.fisica { /* Define o estilo para badges de pessoa física */
+    background-color: #007bff; /* Define a cor de fundo como azul */
+}
+
+.status-info { /* Define o estilo para informações de status */
+    color: #ccc; /* Define a cor do texto como cinza claro */
+}
+
+.btn-editar, .btn-excluir { /* Define estilos comuns para os botões de editar e excluir */
+    background-color: #f0ad4e; /* Define a cor de fundo como laranja */
+    border: none; /* Remove a borda dos botões */
+    padding: 5px 10px; /* Adiciona espaço interno aos botões */
+    border-radius: 5px; /* Arredonda os cantos dos botões */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    color: #fff; /* Define a cor do texto dos botões como branco */
+    margin-right: 5px; /* Adiciona espaço à direita dos botões */
+}
+
+.btn-excluir { /* Define o estilo específico para o botão de excluir */
+    background-color: #d9534f; /* Define a cor de fundo como vermelho */
+}
+
+/* Ajuste da largura das colunas */
+.pessoa-tabela th:nth-child(1), /* Define o estilo da primeira coluna da tabela */
+.pessoa-tabela td:nth-child(1) { /* Define o estilo das células da primeira coluna da tabela */
+    width: 25%; /* Nome */
+}
+
+.pessoa-tabela th:nth-child(2), /* Define o estilo da segunda coluna da tabela */
+.pessoa-tabela td:nth-child(2) { /* Define o estilo das células da segunda coluna da tabela */
+    width: 15%; /* CPF/CNPJ */
+}
+
+.pessoa-tabela th:nth-child(3), /* Define o estilo da terceira coluna da tabela */
+.pessoa-tabela td:nth-child(3) { /* Define o estilo das células da terceira coluna da tabela */
+    width: 12%; /* Telefone */
+}
+
+.pessoa-tabela th:nth-child(4), /* Define o estilo da quarta coluna da tabela */
+.pessoa-tabela td:nth-child(4) { /* Define o estilo das células da quarta coluna da tabela */
+    width: 20%; /* E-mail */
+}
+
+.pessoa-tabela th:nth-child(5), /* Define o estilo da quinta coluna da tabela */
+.pessoa-tabela td:nth-child(5) { /* Define o estilo das células da quinta coluna da tabela */
+    width: 18%; /* Status */
+}
+
+.pessoa-tabela th:nth-child(6), /* Define o estilo da sexta coluna da tabela */
+.pessoa-tabela td:nth-child(6) { /* Define o estilo das células da sexta coluna da tabela */
+    width: 10%; /* Ações */
+}

@@ -1,0 +1,207 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos globais */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: white;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  /* Barra superior */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .top-bar .left h1 {
+    font-size: 24px;
+  }
+  
+  .top-bar .right {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .top-bar .right button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    min-width: 100px;
+  }
+  
+  .top-bar .right button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Barra de busca */
+  .search-bar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .search-bar {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+  }
+  
+  .search-btn {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    flex: 1;
+  }
+  
+  .search-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Seção de busca avançada */
+  .advanced-search-toggle {
+    text-align: right;
+  }
+  
+  #toggle-advanced-search {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  #toggle-advanced-search:hover {
+    color: #007bff;
+  }
+  
+  .advanced-search {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+  }
+  
+  /* Estilo dos campos de busca avançada */
+  .advanced-search-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .field-group {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 15px;
+  }
+  
+  .field-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .field-group input,
+  .field-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilo dos atendimentos */
+  .atendimentos {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .attendance-item {
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #282828;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .attendance-item p {
+    margin-bottom: 10px;
+  }
+  
+  /* Paginação */
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .pagination button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination button:hover {
+    background-color: #0056b3;
+  }
+  
+  .page-info {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #ccc;
+    margin-top: 20px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .top-bar,
+    .search-bar-wrapper,
+    .advanced-search-fields {
+      flex-direction: column;
+    }
+  
+    .top-bar .right {
+      justify-content: center;
+    }
+  
+    .search-bar-wrapper {
+      justify-content: space-around;
+    }
+  
+    .pagination {
+      flex-direction: column;
+    }
+  }
+  

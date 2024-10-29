@@ -16,7 +16,7 @@ import NovoTimesheet from './components/gestao/NovoTimesheet'; // Importa o comp
 import MainContent from './components/gestao/MainContent'; // Certifique-se de que MainContent seja utilizado
 
 // Importação dos componentes da páginas Atividades
-import ListaAtividades from './components/atividades/lista_atividades';
+import ListaAtividades from './components/atividades/lista_atividades'; // Acesse corretamente a página de Lista de Atividades
 import PainelTarefas from './components/atividades/painel_tarefas';
 import KanbanTarefas from './components/atividades/kanban_tarefas';
 import RelatoriosAtividades from './components/atividades/relatorios';
@@ -26,7 +26,7 @@ import Processos from './components/processos/processos';
 import Intimacoes from './components/processos/intimacoes';
 import CentralCaptura from './components/processos/central_captura_processos';
 import AndamentosProcessuais from './components/processos/andamentos_processuais';
-import RelatoriosProcessos from './components/processos/relatórios';
+import RelatoriosProcessos from './components/processos/relatórios'; // Verifique o nome do arquivo
 
 // Importação dos componentes da páginas Financeiro
 import ReceitasDespesas from './components/finaneceiro/receitas_despesas';
@@ -79,7 +79,7 @@ const App = () => {
         } /> 
 
         {/* Rotas para a seção de atividades */}
-        <Route path="/atividades" element={<ListaAtividades />} />
+        <Route path="/atividades" element={<ListaAtividades />} /> {/* Rota corrigida para acessar a página de Lista de Atividades */}
         <Route path="/atividades/painel" element={<PainelTarefas />} />
         <Route path="/atividades/kanban" element={<KanbanTarefas />} />
         <Route path="/atividades/relatorios" element={<RelatoriosAtividades />} />

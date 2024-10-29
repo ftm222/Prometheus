@@ -1,8 +1,10 @@
+/* Define a classe principal para a lista de atividades com uma fonte e margem */
 .lista-atividades {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
+/* Define o estilo da barra de filtros com elementos centralizados e espaçados */
 .filtros {
     display: flex;
     align-items: center;
@@ -10,77 +12,89 @@
     margin-bottom: 20px;
 }
 
+/* Estiliza o campo de texto na seção de filtros com margem e preenchimento */
 .filtros input[type="text"] {
     margin-right: 10px;
     padding: 5px;
 }
 
+/* Define o estilo dos botões na seção de filtros */
 .filtros button {
     margin-right: 10px;
     padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #007BFF; /* Cor de fundo azul */
+    color: white; /* Texto branco */
+    border: none; /* Remove bordas */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Aponta o cursor ao passar sobre o botão */
 }
 
+/* Estilo dos botões na seção de botões à direita */
 .botoes-direita button {
     padding: 10px;
-    margin-left: 10px;
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-left: 10px; /* Margem à esquerda para espaçamento */
+    background-color: #6c757d; /* Cor de fundo cinza */
+    color: white; /* Texto branco */
+    border: none; /* Remove bordas */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Aponta o cursor ao passar sobre o botão */
 }
 
+/* Define o estilo de hover para botões nas seções de filtros e botões à direita */
 .filtros button:hover,
 .botoes-direita button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Muda a cor de fundo ao passar o mouse */
 }
 
+/* Alinha elementos dentro da classe de botões à direita */
 .botoes-direita {
     display: flex;
     align-items: center;
 }
 
+/* Estilo da tabela com largura total e bordas unidas */
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 100%; /* Largura total da tabela */
+    border-collapse: collapse; /* Remove o espaço entre bordas das células */
 }
 
+/* Define o preenchimento, alinhamento e borda das células da tabela */
 table th, table td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
+    padding: 10px; /* Espaçamento interno nas células */
+    text-align: left; /* Alinha o texto à esquerda */
+    border: 1px solid #ddd; /* Borda de cor cinza clara */
 }
 
+/* Estilo do cabeçalho da tabela com cor de fundo */
 table th {
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Cor de fundo cinza claro */
 }
 
+/* Estilo para a tag de atividades */
 .tag {
-    display: inline-block;
-    background-color: #e7f1ff;
-    border-radius: 3px;
-    padding: 5px;
-    margin-right: 5px;
+    display: inline-block; /* Exibe como bloco em linha */
+    background-color: #e7f1ff; /* Cor de fundo azul claro */
+    border-radius: 3px; /* Bordas arredondadas */
+    padding: 5px; /* Preenchimento interno */
+    margin-right: 5px; /* Espaçamento entre tags */
 }
 
+/* Estilo para o ícone dentro da tag */
 .icon {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #007BFF;
-    border-radius: 50%;
-    margin-right: 3px;
+    display: inline-block; /* Exibe como bloco em linha */
+    width: 10px; /* Largura do ícone */
+    height: 10px; /* Altura do ícone */
+    background-color: #007BFF; /* Cor azul para o ícone */
+    border-radius: 50%; /* Ícone em formato circular */
+    margin-right: 3px; /* Espaço entre o ícone e o texto */
 }
 
+/* Define o estilo da classe contador */
 .contador {
-    margin-top: 20px;
+    margin-top: 20px; /* Margem acima do contador */
 }
 
+/* Define o estilo da classe página */
 .pagina {
-    margin-top: 20px;
+    margin-top: 20px; /* Margem acima da seção de paginação */
 }

@@ -1,74 +1,73 @@
 .dashboard {
-    display: flex; /* Usar Flexbox para layout */
-    justify-content: space-between; /* Espaço igual entre os itens */
-    padding: 30px; /* Aumentar o padding da seção */
-    background-color: #1c1c1c; /* Fundo escuro */
-    border-radius: 8px; /* Bordas arredondadas */
-  }
-  
-  .dashboard-item {
-    background-color: #2a2a2a; /* Cor de fundo dos itens */
-    color: #ffffff; /* Cor do texto */
-    flex: 1; /* Cada item ocupa espaço igual */
-    margin: 0 10px; /* Aumentar a margem entre os itens */
-    border-radius: 8px; /* Bordas arredondadas dos itens */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Aumentar a sombra leve */
-    text-align: center; /* Centraliza o conteúdo */
-    height: 220px; /* Aumentar a altura para 220px */
-  }
-  
-  .calendar {
-    display: flex;
-    flex-direction: column; /* Coloca os itens na vertical */
-    justify-content: center; /* Centraliza o conteúdo do calendário */
-    align-items: center; /* Centraliza horizontalmente */
-  }
-  
-  .calendar-block {
-    padding: 15px; /* Aumentar o padding para o bloco de calendário */
-    border: 2px solid #007bff; /* Borda do bloco de calendário em azul */
-    border-radius: 8px; /* Bordas arredondadas do bloco */
-    text-align: center; /* Centraliza o conteúdo do bloco */
-    background-color: #007bff; /* Cor de fundo do bloco de calendário em azul */
-  }
-  
-  .calendar-month {
-    font-size: 20px; /* Aumentar o tamanho da fonte do mês */
-    font-weight: bold; /* Negrito */
-    color: #ffffff; /* Cor do mês em branco */
-  }
-  
-  .calendar-day {
-    font-size: 32px; /* Aumentar o tamanho da fonte do dia */
-    font-weight: bold; /* Negrito */
-    color: #ffffff; /* Cor do dia em branco */
-    margin-top: 5px; /* Margem acima do dia */
-    background-color: #1c1c1c; /* Fundo preto para o dia */
-    padding: 10px 0; /* Aumentar o padding para o dia */
-    border-radius: 4px; /* Bordas arredondadas para o dia */
-  }
-  
-  .calendar-weekday {
-    font-size: 16px; /* Aumentar o tamanho da fonte do dia da semana */
-    color: #b0b0b0; /* Cor do texto do dia da semana */
-    margin-top: 5px; /* Margem acima do dia da semana */
-  }
-  
-  .circle {
-    width: 60px; /* Aumentar a largura do círculo */
-    height: 60px; /* Aumentar a altura do círculo */
-    border-radius: 50%; /* Círculo perfeito */
-    display: flex; /* Flexbox para centralizar o texto */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    font-size: 20px; /* Aumentar o tamanho do texto dentro do círculo */
-    font-weight: bold; /* Negrito */
-    color: #ffffff; /* Cor do texto dentro do círculo */
-    margin: 10px auto; /* Aumentar a margem */
-  }
-  
-  .index {
-    font-size: 14px; /* Aumentar o tamanho do texto do índice */
-    color: #ffffff; /* Cor do texto do índice */
-  }
-  
+  display: flex; /* Usar Flexbox para layout, permitindo um design responsivo e alinhamento fácil dos itens */
+  justify-content: space-between; /* Cria espaço igual entre os itens dentro do contêiner */
+  padding: 30px; /* Aumenta o espaçamento interno da seção (padding) para 30 pixels */
+  background-color: #1c1c1c; /* Define um fundo escuro para a seção do dashboard */
+  border-radius: 8px; /* Arredonda as bordas do contêiner do dashboard */
+}
+
+.dashboard-item {
+  background-color: #2a2a2a; /* Define a cor de fundo dos itens do dashboard */
+  color: #ffffff; /* Define a cor do texto como branco para contraste */
+  flex: 1; /* Faz com que cada item ocupe um espaço igual dentro do contêiner flexível */
+  margin: 0 10px; /* Adiciona uma margem horizontal de 10 pixels entre os itens */
+  border-radius: 8px; /* Arredonda as bordas de cada item */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona uma leve sombra ao redor dos itens para profundidade */
+  text-align: center; /* Centraliza o conteúdo dentro de cada item */
+  height: 220px; /* Define uma altura fixa de 220 pixels para os itens */
+}
+
+.calendar {
+  display: flex; /* Usa Flexbox para o layout do calendário */
+  flex-direction: column; /* Organiza os itens do calendário em uma coluna (verticalmente) */
+  justify-content: center; /* Centraliza o conteúdo do calendário verticalmente */
+  align-items: center; /* Centraliza o conteúdo do calendário horizontalmente */
+}
+
+.calendar-block {
+  padding: 15px; /* Adiciona um espaçamento interno de 15 pixels ao bloco do calendário */
+  border: 2px solid #007bff; /* Adiciona uma borda azul de 2 pixels ao bloco do calendário */
+  border-radius: 8px; /* Arredonda as bordas do bloco do calendário */
+  text-align: center; /* Centraliza o conteúdo dentro do bloco do calendário */
+  background-color: #007bff; /* Define a cor de fundo do bloco do calendário como azul */
+}
+
+.calendar-month {
+  font-size: 20px; /* Aumenta o tamanho da fonte do mês para 20 pixels */
+  font-weight: bold; /* Define o texto do mês como negrito */
+  color: #ffffff; /* Define a cor do mês como branca */
+}
+
+.calendar-day {
+  font-size: 32px; /* Aumenta o tamanho da fonte do dia para 32 pixels */
+  font-weight: bold; /* Define o texto do dia como negrito */
+  color: #ffffff; /* Define a cor do dia como branca */
+  margin-top: 5px; /* Adiciona uma margem superior de 5 pixels acima do dia */
+  background-color: #1c1c1c; /* Define um fundo preto para o dia */
+  padding: 10px 0; /* Adiciona um padding vertical de 10 pixels ao dia */
+  border-radius: 4px; /* Arredonda as bordas do dia */
+}
+
+.calendar-weekday {
+  font-size: 16px; /* Aumenta o tamanho da fonte do dia da semana para 16 pixels */
+  color: #b0b0b0; /* Define a cor do texto do dia da semana como cinza claro */
+  margin-top: 5px; /* Adiciona uma margem superior de 5 pixels acima do dia da semana */
+}
+
+.circle {
+  width: 60px; /* Define a largura do círculo como 60 pixels */
+  height: 60px; /* Define a altura do círculo como 60 pixels */
+  border-radius: 50%; /* Faz com que o elemento tenha bordas arredondadas suficientes para ser um círculo perfeito */
+  display: flex; /* Usa Flexbox para permitir centralização do texto dentro do círculo */
+  justify-content: center; /* Centraliza o texto horizontalmente dentro do círculo */
+  align-items: center; /* Centraliza o texto verticalmente dentro do círculo */
+  font-size: 20px; /* Aumenta o tamanho do texto dentro do círculo para 20 pixels */
+  font-weight: bold; /* Define o texto dentro do círculo como negrito */
+  color: #ffffff; /* Define a cor do texto dentro do círculo como branca */
+  margin: 10px auto; /* Adiciona uma margem de 10 pixels verticalmente e centraliza horizontalmente */
+}
+
+.index {
+  font-size: 14px; /* Aumenta o tamanho do texto do índice para 14 pixels */
+  color: #ffffff; /* Define a cor do texto do índice como branca */
+}

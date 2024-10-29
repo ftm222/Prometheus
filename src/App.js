@@ -1,69 +1,69 @@
 // src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Importando as rotas e o hook 'useLocation'
-import Navbar from './components/navbar'; // Importa o componente da barra de navegação
-import Header from './components/header'; // Importa o componente de cabeçalho
-import Dashboard from './components/Dashboard'; // Importa o componente da página inicial
-import Calendar from './components/Calendar'; // Importa o componente do calendário
+import React from 'react'; // Importa a biblioteca React
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Importa componentes para definir rotas e o hook useLocation
+import Navbar from './components/navbar'; // Importa o componente Navbar para a barra de navegação
+import Header from './components/header'; // Importa o componente Header para o cabeçalho
+import Dashboard from './components/Dashboard'; // Importa o componente Dashboard para a página inicial
+import Calendar from './components/Calendar'; // Importa o componente Calendar para exibir um calendário
 
-// Importação dos componentes da páginas Gestão
-import Atendimento from './components/gestao/atendimento';
+// Importação dos componentes da página de Gestão
+import Atendimento from './components/gestao/atendimento'; // Importa o componente Atendimento para a seção Gestão
 import InserirAtendimento from './components/gestao/inserirAtendimento'; // Importa o componente InserirAtendimento
-import Pessoa from './components/gestao/pessoa';
-import Workflow from './components/gestao/workflow';
-import Timesheet from './components/gestao/timesheet';
+import Pessoa from './components/gestao/pessoa'; // Importa o componente Pessoa
+import Workflow from './components/gestao/workflow'; // Importa o componente Workflow
+import Timesheet from './components/gestao/timesheet'; // Importa o componente Timesheet
 import NovoTimesheet from './components/gestao/NovoTimesheet'; // Importa o componente NovoTimesheet
-import MainContent from './components/gestao/MainContent'; // Certifique-se de que MainContent seja utilizado
+import MainContent from './components/gestao/MainContent'; // Importa o componente MainContent, garantindo que ele seja utilizado
 
-// Importação dos componentes da páginas Atividades
-import ListaAtividades from './components/atividades/lista_atividades'; // Acesse corretamente a página de Lista de Atividades
-import PainelTarefas from './components/atividades/painel_tarefas';
-import KanbanTarefas from './components/atividades/kanban_tarefas';
-import RelatoriosAtividades from './components/atividades/relatorios';
+// Importação dos componentes da página de Atividades
+import ListaAtividades from './components/atividades/lista_atividades'; // Importa o componente ListaAtividades para a seção Atividades
+import PainelTarefas from './components/atividades/painel_tarefas'; // Importa o componente PainelTarefas
+import KanbanTarefas from './components/atividades/kanban_tarefas'; // Importa o componente KanbanTarefas
+import RelatoriosAtividades from './components/atividades/relatorios'; // Importa o componente RelatoriosAtividades
 
-// Importação dos componentes da páginas Processos
-import Processos from './components/processos/processos';
-import Intimacoes from './components/processos/intimacoes';
-import CentralCaptura from './components/processos/central_captura_processos';
-import AndamentosProcessuais from './components/processos/andamentos_processuais';
-import RelatoriosProcessos from './components/processos/relatórios'; // Verifique o nome do arquivo
+// Importação dos componentes da página de Processos
+import Processos from './components/processos/processos'; // Importa o componente Processos para a seção Processos
+import Intimacoes from './components/processos/intimacoes'; // Importa o componente Intimacoes
+import CentralCaptura from './components/processos/central_captura_processos'; // Importa o componente CentralCaptura
+import AndamentosProcessuais from './components/processos/andamentos_processuais'; // Importa o componente AndamentosProcessuais
+import RelatoriosProcessos from './components/processos/relatórios'; // Importa o componente RelatoriosProcessos
 
-// Importação dos componentes da páginas Financeiro
-import ReceitasDespesas from './components/finaneceiro/receitas_despesas';
-import ExtratoConta from './components/finaneceiro/extrato_conta';
-import Solicitacoes from './components/finaneceiro/solicitacoes';
-import IntegracaoReceitas from './components/finaneceiro/integracao_receitas';
-import IntegracaoDespesas from './components/finaneceiro/integracao_despesas';
-import RelatoriosFinanceiro from './components/finaneceiro/relatorios';
+// Importação dos componentes da página Financeiro
+import ReceitasDespesas from './components/finaneceiro/receitas_despesas'; // Importa o componente ReceitasDespesas
+import ExtratoConta from './components/finaneceiro/extrato_conta'; // Importa o componente ExtratoConta
+import Solicitacoes from './components/finaneceiro/solicitacoes'; // Importa o componente Solicitacoes
+import IntegracaoReceitas from './components/finaneceiro/integracao_receitas'; // Importa o componente IntegracaoReceitas
+import IntegracaoDespesas from './components/finaneceiro/integracao_despesas'; // Importa o componente IntegracaoDespesas
+import RelatoriosFinanceiro from './components/finaneceiro/relatorios'; // Importa o componente RelatoriosFinanceiro
 
-// Importação dos componentes da páginas Documentos
-import Documentos from './components/documentos/documentos';
-import ModelosDocumentos from './components/documentos/modelos_documentos';
+// Importação dos componentes da página Documentos
+import Documentos from './components/documentos/documentos'; // Importa o componente Documentos
+import ModelosDocumentos from './components/documentos/modelos_documentos'; // Importa o componente ModelosDocumentos
 
-// Importação dos componentes da páginas Extensoes
-import Conexoes from './components/extensoes/conexoes';
-import RelatoriosExtensoes from './components/extensoes/relatorios';
+// Importação dos componentes da página Extensões
+import Conexoes from './components/extensoes/conexoes'; // Importa o componente Conexoes
+import RelatoriosExtensoes from './components/extensoes/relatorios'; // Importa o componente RelatoriosExtensoes
 
-// Importação dos componentes da páginas App.css
-import './App.css'; // Importa os estilos globais da aplicação
+// Importação dos estilos globais da aplicação
+import './App.css'; // Importa o arquivo CSS com os estilos gerais
 
 // Função principal do componente App
 const App = () => {
-  const location = useLocation(); // Hook do React Router que captura a localização atual da URL
+  const location = useLocation(); // Usa o hook useLocation para capturar a URL atual
 
-  // Lógica para exibir o calendário somente na página inicial (com domínio específico)
+  // Define uma variável para verificar se está na página inicial e se o domínio é 'http://localhost:3000'
   const isHomePage = window.location.origin === 'http://localhost:3000' && location.pathname === '/';
 
   return (
-    <div className={`app-container ${isHomePage ? 'home-page' : ''}`}> {/* Corrigido o uso de className e template string */}
+    <div className={`app-container ${isHomePage ? 'home-page' : ''}`}> {/* Define a classe com base na página atual */}
       <Navbar /> {/* Renderiza a barra de navegação em todas as páginas */}
       <Header /> {/* Renderiza o cabeçalho em todas as páginas */}
 
       <Routes>
-        {/* Definição das rotas */}
-        <Route path="/" element={<Dashboard />} /> {/* Página inicial (Dashboard) */}
+        {/* Define as rotas da aplicação */}
+        <Route path="/" element={<Dashboard />} /> {/* Página inicial com o componente Dashboard */}
 
-        {/* Rotas para a seção de gestão */}
+        {/* Rotas da seção de Gestão */}
         <Route path="/gestao/atendimento" element={<Atendimento />} />
         <Route path="/gestao/atendimento/inserirAtendimento" element={<InserirAtendimento />} /> {/* Nova rota para InserirAtendimento */}
         <Route path="/gestao/pessoa" element={<Pessoa />} />
@@ -71,27 +71,27 @@ const App = () => {
         <Route path="/gestao/timesheet" element={<Timesheet />} />
         <Route path="/gestao/timesheet/novo-timesheet" element={<NovoTimesheet />} /> {/* Nova rota para NovoTimesheet */}
 
-        {/* Aqui você renderiza Sidebar e MainContent juntos */}
+        {/* Renderiza Sidebar e MainContent juntos na rota /gestao/relatorios */}
         <Route path="/gestao/relatorios" element={
           <div style={{ display: 'flex' }}>
-            <MainContent />
+            <MainContent /> {/* Componente MainContent renderizado em conjunto */}
           </div>
         } /> 
 
-        {/* Rotas para a seção de atividades */}
-        <Route path="/atividades" element={<ListaAtividades />} /> {/* Rota corrigida para acessar a página de Lista de Atividades */}
+        {/* Rotas da seção Atividades */}
+        <Route path="/atividades" element={<ListaAtividades />} /> {/* Página de Lista de Atividades */}
         <Route path="/atividades/painel" element={<PainelTarefas />} />
         <Route path="/atividades/kanban" element={<KanbanTarefas />} />
         <Route path="/atividades/relatorios" element={<RelatoriosAtividades />} />
 
-        {/* Rotas para a seção de processos */}
+        {/* Rotas da seção Processos */}
         <Route path="/processos" element={<Processos />} />
         <Route path="/processos/intimacoes" element={<Intimacoes />} />
         <Route path="/processos/central-captura" element={<CentralCaptura />} />
         <Route path="/processos/andamentos" element={<AndamentosProcessuais />} />
         <Route path="/processos/relatorios" element={<RelatoriosProcessos />} />
 
-        {/* Rotas para a seção financeiro */}
+        {/* Rotas da seção Financeiro */}
         <Route path="/financeiro" element={<ReceitasDespesas />} />
         <Route path="/financeiro/extrato" element={<ExtratoConta />} />
         <Route path="/financeiro/solicitacoes" element={<Solicitacoes />} />
@@ -99,16 +99,16 @@ const App = () => {
         <Route path="/financeiro/integracao-despesas" element={<IntegracaoDespesas />} />
         <Route path="/financeiro/relatorios" element={<RelatoriosFinanceiro />} />
 
-        {/* Rotas para a seção de documentos */}
+        {/* Rotas da seção Documentos */}
         <Route path="/documentos" element={<Documentos />} />
         <Route path="/documentos/modelos" element={<ModelosDocumentos />} />
 
-        {/* Rotas para a seção de extensões */}
+        {/* Rotas da seção Extensões */}
         <Route path="/extensoes" element={<Conexoes />} />
         <Route path="/extensoes/relatorios" element={<RelatoriosExtensoes />} />
       </Routes>
 
-      {/* Renderiza o calendário apenas se for a página inicial e o domínio for "http://localhost:3000" */}
+      {/* Renderiza o componente Calendar apenas na página inicial com domínio específico */}
       {isHomePage && (
         <div className="calendar-container">
           <Calendar /> {/* Componente de calendário */}
@@ -118,11 +118,11 @@ const App = () => {
   );
 };
 
-// Wrapper para usar o React Router
+// Componente AppWrapper para envolver App com o React Router
 const AppWrapper = () => (
   <Router>
-    <App />
+    <App /> {/* Renderiza o componente App dentro do Router */}
   </Router>
 );
 
-export default AppWrapper;
+export default AppWrapper; // Exporta AppWrapper para uso em outras partes da aplicação

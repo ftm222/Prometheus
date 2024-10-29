@@ -1,35 +1,40 @@
 /* src/App.css */
 
+/* Classe principal do contêiner da aplicação */
 .app-container {
-  text-align: center;
-  padding: 10px; /* Adiciona padding para pequenas telas */
+  text-align: center; /* Centraliza o texto dentro do contêiner */
+  padding: 10px; /* Adiciona espaçamento em torno do contêiner para telas pequenas */
 }
 
+/* Estilo da logo da aplicação */
 .App-logo {
-  height: 40vmin; /* Escala a altura da logo com base no tamanho da viewport */
-  pointer-events: none;
+  height: 40vmin; /* Define a altura da logo com base no tamanho da viewport */
+  pointer-events: none; /* Desativa eventos de clique na logo */
 }
 
+/* Condição para preferências de movimento reduzido */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear; /* Aplica uma animação de rotação na logo */
   }
 }
 
+/* Estilos para o cabeçalho da aplicação */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin); /* Tamanho do texto baseado na tela */
-  color: white;
-  padding: 20px; /* Ajusta o padding para evitar bordas apertadas */
+  background-color: #282c34; /* Cor de fundo do cabeçalho */
+  min-height: 100vh; /* Altura mínima igual à altura da viewport */
+  display: flex; /* Configura o layout como flexbox */
+  flex-direction: column; /* Organiza os elementos em coluna */
+  align-items: center; /* Centraliza os itens no eixo horizontal */
+  justify-content: center; /* Centraliza os itens no eixo vertical */
+  font-size: calc(10px + 2vmin); /* Tamanho do texto responsivo */
+  color: white; /* Cor do texto */
+  padding: 20px; /* Espaçamento ao redor do cabeçalho */
 }
 
+/* Estilo dos links na aplicação */
 .App-link {
-  color: #61dafb;
+  color: #61dafb; /* Cor dos links */
 }
 
 /* Oculta o calendário por padrão */
@@ -37,120 +42,126 @@
   display: none;
 }
 
-/* Exibe o calendário na página inicial quando for a rota correta */
+/* Exibe o calendário apenas na página inicial */
 .home-page .calendar-container {
   display: block;
 }
 
+/* Animação de rotação para a logo */
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Inicia a rotação da logo em 0 graus */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Roda a logo em 360 graus */
   }
 }
 
-/* Estilos adicionais para melhor visualização */
+/* Estilos adicionais para melhorar a interface visual */
+
+/* Estilo da barra de navegação */
 .navbar {
-  background-color: #333; /* Cor para a barra de navegação */
-  color: white;
-  padding: 1rem;
-  width: 100%;
-  text-align: center;
+  background-color: #333; /* Cor de fundo da barra de navegação */
+  color: white; /* Cor do texto */
+  padding: 1rem; /* Espaçamento ao redor da barra */
+  width: 100%; /* Largura total da barra */
+  text-align: center; /* Centraliza o texto */
 }
 
+/* Margem para o cabeçalho */
 .header {
-  margin: 20px 0; /* Margem para o cabeçalho */
+  margin: 20px 0;
 }
 
+/* Padding para o conteúdo das rotas */
 .routes {
-  padding: 20px; /* Padding para as rotas */
+  padding: 20px;
 }
 
+/* Estilo para o rodapé */
 .footer {
-  background-color: #282c34; /* Cor de fundo do rodapé */
-  color: white;
-  padding: 1rem;
+  background-color: #282c34; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  padding: 1rem; /* Espaçamento ao redor do rodapé */
   position: relative;
-  bottom: 0;
-  width: 100%;
-  text-align: center; /* Centraliza o texto do rodapé */
+  bottom: 0; /* Posiciona o rodapé na parte inferior */
+  width: 100%; /* Largura total */
+  text-align: center; /* Centraliza o texto */
 }
 
-/* --------- Responsividade para diferentes tamanhos de tela --------- */
+/* Responsividade para diferentes tamanhos de tela */
 
 /* Telas pequenas (smartphones) */
 @media (max-width: 600px) {
   .App-logo {
-    height: 30vmin; /* Ajusta a altura da logo em telas menores */
+    height: 30vmin; /* Reduz a altura da logo para telas menores */
   }
 
   .App-header {
-    font-size: calc(10px + 3vmin); /* Aumenta o tamanho do texto para melhor leitura */
-    padding: 15px; /* Reduz o padding para telas menores */
+    font-size: calc(10px + 3vmin); /* Aumenta o tamanho do texto para leitura fácil */
+    padding: 15px; /* Reduz o espaçamento do cabeçalho */
   }
 
   .navbar {
-    padding: 0.5rem; /* Reduz o padding da barra de navegação */
+    padding: 0.5rem; /* Reduz o espaçamento na barra de navegação */
   }
 
   .routes {
-    padding: 10px; /* Reduz o padding para o conteúdo principal */
+    padding: 10px; /* Reduz o espaçamento do conteúdo principal */
   }
 
   .footer {
-    padding: 0.5rem; /* Reduz o padding do rodapé */
-    font-size: 12px; /* Tamanho do texto menor no rodapé */
+    padding: 0.5rem; /* Reduz o espaçamento no rodapé */
+    font-size: 12px; /* Reduz o tamanho do texto no rodapé */
   }
 }
 
 /* Tablets e iPads (telas médias) */
 @media (min-width: 601px) and (max-width: 1024px) {
   .App-logo {
-    height: 35vmin; /* Ajuste intermediário da logo */
+    height: 35vmin; /* Ajusta a altura da logo para telas médias */
   }
 
   .App-header {
     font-size: calc(10px + 2.5vmin); /* Ajuste intermediário do texto */
-    padding: 20px;
+    padding: 20px; /* Padding para o cabeçalho */
   }
 
   .navbar {
-    padding: 1rem; /* Padding mais espaçado para tablets */
+    padding: 1rem; /* Padding para a barra de navegação */
   }
 
   .routes {
-    padding: 20px;
+    padding: 20px; /* Padding para o conteúdo principal */
   }
 
   .footer {
-    padding: 1rem;
-    font-size: 14px;
+    padding: 1rem; /* Padding do rodapé */
+    font-size: 14px; /* Tamanho de texto intermediário no rodapé */
   }
 }
 
-/* Telas grandes (desktops e maiores displays) */
+/* Telas grandes (desktops e displays maiores) */
 @media (min-width: 1025px) {
   .App-logo {
-    height: 40vmin; /* Tamanho da logo para grandes telas */
+    height: 40vmin; /* Altura da logo em telas grandes */
   }
 
   .App-header {
-    font-size: calc(10px + 2vmin); /* Tamanho do texto para grandes telas */
-    padding: 30px;
+    font-size: calc(10px + 2vmin); /* Tamanho de texto para grandes telas */
+    padding: 30px; /* Espaçamento adicional para o cabeçalho */
   }
 
   .navbar {
-    padding: 1.5rem;
+    padding: 1.5rem; /* Espaçamento maior para a barra de navegação */
   }
 
   .routes {
-    padding: 30px;
+    padding: 30px; /* Espaçamento maior para o conteúdo principal */
   }
 
   .footer {
-    padding: 1.5rem;
-    font-size: 16px;
+    padding: 1.5rem; /* Espaçamento adicional para o rodapé */
+    font-size: 16px; /* Tamanho de texto maior para o rodapé */
   }
 }

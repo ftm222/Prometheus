@@ -1,41 +1,47 @@
 /* src/components/Header.css */
 
+/* Estilo para o cabeçalho principal */
 .header {
-    background-color: #20232a;
-    color: white;
-    padding: 20px;
-    display: flex;
-    align-items: center;
+    background-color: #20232a; /* Define a cor de fundo do cabeçalho */
+    color: white; /* Define a cor do texto como branco */
+    padding: 20px; /* Adiciona um espaço interno de 20 pixels em todas as direções */
+    display: flex; /* Utiliza o modelo de layout flexível */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
     justify-content: flex-start; /* Alinha todo o conteúdo à esquerda */
     position: relative; /* Mantém a posição relativa para o fluxo da página */
     z-index: 0; /* Garante que o header fique abaixo do dropdown do menu principal */
 }
 
+/* Estilo para o contêiner de conteúdo do cabeçalho */
 .header-content {
-    display: flex;
-    align-items: center;
+    display: flex; /* Utiliza o modelo de layout flexível */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
+/* Estilo para o título do cabeçalho */
 .header-title {
-    margin: 0;
-    margin-right: 20px; /* Espaço entre o título e os botões */
-    font-size: 1.5rem;
+    margin: 0; /* Remove as margens padrão do título */
+    margin-right: 20px; /* Adiciona um espaço à direita do título (entre o título e os botões) */
+    font-size: 1.5rem; /* Define o tamanho da fonte do título */
 }
 
+/* Estilo para o grupo de botões */
 .button-group {
-    display: flex;
-    gap: 10px; /* Espaçamento entre os botões */
+    display: flex; /* Utiliza o modelo de layout flexível para o grupo de botões */
+    gap: 10px; /* Define o espaçamento entre os botões */
 }
 
+/* Estilo para os botões do cabeçalho */
 .header-button {
-    background-color: #61dafb;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #20232a;
-    cursor: pointer;
+    background-color: #61dafb; /* Define a cor de fundo dos botões */
+    border: none; /* Remove a borda padrão dos botões */
+    padding: 10px 20px; /* Adiciona espaço interno de 10 pixels em cima e embaixo, 20 pixels nas laterais */
+    font-size: 1rem; /* Define o tamanho da fonte dos botões */
+    color: #20232a; /* Define a cor do texto dos botões */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
 }
 
+/* Estilo para o estado de hover dos botões */
 .header-button:hover {
-    background-color: #21a1f1;
+    background-color: #21a1f1; /* Altera a cor de fundo quando o mouse passa sobre o botão */
 }

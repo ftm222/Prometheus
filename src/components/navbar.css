@@ -1,191 +1,189 @@
 /* Estilo da barra de navegação */
 .navbar {
-  background-color: #101010;
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  position: relative; /* Relative para manter contexto para elementos filhos */
-  z-index: 1500; /* Garante que a navbar sempre fique no topo */
+  background-color: #101010; /* Define a cor de fundo da navbar como um tom escuro */
+  color: white; /* Define a cor do texto como branco */
+  padding: 15px; /* Adiciona um espaçamento interno de 15px ao redor da navbar */
+  display: flex; /* Utiliza o layout flexbox para organizar os itens dentro da navbar */
+  justify-content: space-between; /* Distribui o espaço entre os itens, colocando os primeiros e últimos nas extremidades */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  flex-wrap: wrap; /* Permite que os itens que não cabem em uma linha sejam movidos para a próxima linha */
+  position: relative; /* Define o posicionamento relativo para os elementos filhos posicionados absolutamente */
+  z-index: 1500; /* Define a camada de empilhamento, garantindo que a navbar fique acima de outros elementos */
 }
 
 /* Estilo da logo da Navbar */
 .navbar-left {
-  display: flex;
-  align-items: center;
+  display: flex; /* Utiliza o layout flexbox para organizar os itens na parte esquerda da navbar */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
 .navbar-logo {
-  font-size: 24px;
-  font-weight: bold;
-  margin-right: 20px;
+  font-size: 24px; /* Define o tamanho da fonte da logo como 24px */
+  font-weight: bold; /* Define o peso da fonte como negrito */
+  margin-right: 20px; /* Adiciona uma margem à direita de 20px, separando a logo de outros elementos */
 }
 
 /* Estilo do ícone de casinha */
 .home-icon {
-  color: white;
-  font-size: 24px;
-  margin-right: 20px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
+  color: white; /* Define a cor do ícone de casa como branco */
+  font-size: 24px; /* Define o tamanho da fonte do ícone como 24px */
+  margin-right: 20px; /* Adiciona uma margem à direita de 20px para espaçamento */
+  text-decoration: none; /* Remove o sublinhado do link */
+  display: flex; /* Utiliza o layout flexbox para organizar o conteúdo do ícone */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
 .home-icon:hover {
-  color: #ffa500;
+  color: #ffa500; /* Muda a cor do ícone para laranja ao passar o mouse sobre ele */
 }
 
 /* Estilos do menu principal */
 .navbar-links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
+  list-style-type: none; /* Remove os marcadores da lista */
+  margin: 0; /* Remove as margens da lista */
+  padding: 0; /* Remove o preenchimento da lista */
+  display: flex; /* Utiliza o layout flexbox para organizar os links horizontalmente */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  flex-wrap: nowrap; /* Impede que os itens quebrem para a linha seguinte */
 }
 
 .navbar-links li {
-  position: relative;
-  margin: 0;
+  position: relative; /* Define o posicionamento relativo para o item da lista, permitindo o uso de elementos posicionados absolutamente dentro dele */
+  margin: 0; /* Remove as margens dos itens da lista */
 }
 
 /* Estilo dos links na navbar */
 .navbar-links li a {
-  color: white;
-  text-decoration: none;
-  padding: 0 10px;
+  color: white; /* Define a cor do texto dos links como branco */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  padding: 0 10px; /* Adiciona um preenchimento horizontal de 10px aos links */
 }
 
 .navbar-links li a:hover {
-  color: #f0ad4e;
+  color: #f0ad4e; /* Muda a cor do texto dos links para um tom amarelado ao passar o mouse sobre eles */
 }
 
 /* Estilo do Dropdown */
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #333;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  flex-direction: column;
-  z-index: 1500; /* Aumenta o z-index para garantir que dropdown fique acima de outros elementos */
+  display: none; /* Oculta o menu dropdown por padrão */
+  position: absolute; /* Posiciona o menu dropdown absolutamente em relação ao seu elemento pai */
+  top: 100%; /* Coloca o menu dropdown logo abaixo do elemento pai */
+  left: 0; /* Alinha o menu dropdown à esquerda do elemento pai */
+  background-color: #333; /* Define a cor de fundo do menu dropdown como um tom escuro */
+  list-style-type: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o preenchimento da lista */
+  margin: 0; /* Remove as margens da lista */
+  flex-direction: column; /* Organiza os itens do dropdown em coluna */
+  z-index: 1500; /* Define a camada de empilhamento para que o dropdown apareça acima de outros elementos */
 }
 
 /* Exibe o dropdown ao passar o mouse */
 .dropdown:hover .dropdown-menu,
 .user-dropdown:hover .dropdown-menu {
-  display: flex;
+  display: flex; /* Exibe o menu dropdown como flexível ao passar o mouse sobre o elemento pai */
 }
 
 /* Estilo dos itens do dropdown */
 .dropdown-menu li {
-  padding: 10px;
+  padding: 10px; /* Adiciona um preenchimento de 10px aos itens do menu dropdown */
 }
 
 .dropdown-menu li a {
-  color: white;
+  color: white; /* Define a cor do texto dos links no menu dropdown como branco */
 }
 
 /* Estilo da barra de pesquisa */
 .navbar-search {
-  margin: 0 20px;
-  flex-grow: 1;
+  margin: 0 20px; /* Adiciona uma margem horizontal de 20px à barra de pesquisa */
+  flex-grow: 1; /* Permite que a barra de pesquisa cresça para ocupar espaço disponível */
 }
 
 /* Ajuste para o input da barra de pesquisa */
 .navbar-search input {
-  width: 100%;
-  background-color: #222;
-  border: none;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 3px;
+  width: 100%; /* Define a largura do campo de entrada como 100% do seu contêiner pai */
+  background-color: #222; /* Define a cor de fundo do campo de entrada como um tom escuro */
+  border: none; /* Remove a borda do campo de entrada */
+  color: white; /* Define a cor do texto dentro do campo de entrada como branco */
+  padding: 5px 10px; /* Adiciona um preenchimento de 5px vertical e 10px horizontal ao campo de entrada */
+  border-radius: 3px; /* Adiciona um arredondamento de 3px às bordas do campo de entrada */
 }
 
 /* Estilo dos ícones no lado direito da navbar */
 .navbar-icons {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+  display: flex; /* Utiliza o layout flexbox para organizar os ícones horizontalmente */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  margin-left: auto; /* Adiciona uma margem à esquerda automática, empurrando os ícones para a extremidade direita */
 }
 
 .icon-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  margin: 0 10px;
+  background: none; /* Remove o fundo do botão do ícone */
+  border: none; /* Remove a borda do botão do ícone */
+  color: white; /* Define a cor do texto do botão do ícone como branco */
+  font-size: 18px; /* Define o tamanho da fonte do botão do ícone como 18px */
+  cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão, indicando que é clicável */
+  margin: 0 10px; /* Adiciona uma margem horizontal de 10px aos botões de ícone */
 }
 
 .icon-button:hover {
-  color: #f0ad4e;
+  color: #f0ad4e; /* Muda a cor do texto do botão do ícone para um tom amarelado ao passar o mouse sobre ele */
 }
 
 /* Estilo da barra à direita */
 .navbar-right {
-  display: flex;
-  align-items: center;
-  position: relative;
+  display: flex; /* Utiliza o layout flexbox para organizar os itens na parte direita da navbar */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  position: relative; /* Define o posicionamento relativo para permitir o uso de elementos posicionados absolutamente dentro dele */
 }
 
 /* Ajuste para o dropdown de usuário */
 .user-dropdown {
-  position: relative;
+  position: relative; /* Define o posicionamento relativo para o dropdown de usuário */
 }
 
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Altera a direção do layout para coluna em telas menores */
+    align-items: flex-start; /* Alinha os itens ao início (lado esquerdo) da navbar */
   }
 
   .navbar-links {
-    flex-direction: column;
-    width: 100%;
-    display: none;
+    flex-direction: column; /* Altera a direção dos links da navbar para coluna em telas menores */
+    width: 100%; /* Define a largura dos links da navbar como 100% */
+    margin: 0; /* Remove as margens dos links da navbar */
   }
 
-  .navbar.active .navbar-links {
-    display: flex;
+  .navbar-links li {
+    width: 100%; /* Define a largura dos itens da lista como 100% */
   }
 
   .navbar-right {
-    flex-direction: column;
-    align-items: flex-start;
+    margin-top: 10px; /* Adiciona uma margem superior de 10px para os itens à direita */
   }
 
-  .navbar-right .navbar-icons {
-    margin-left: 0;
+  .navbar-right input {
+    width: 100%; /* Define a largura do campo de entrada como 100% */
   }
 
-  .navbar-search {
-    margin: 10px 0;
-    width: 100%;
+  .navbar-right button {
+    width: 100%; /* Define a largura do botão como 100% */
   }
 }
 
 @media (max-width: 480px) {
   .navbar-logo {
-    font-size: 20px;
+    font-size: 20px; /* Diminui o tamanho da fonte da logo para 20px */
   }
 
   .navbar-right input {
-    padding: 3px;
+    padding: 3px; /* Diminui o preenchimento do campo de entrada para 3px */
   }
 
   .navbar-right button {
-    padding: 3px 5px;
+    padding: 3px 5px; /* Diminui o preenchimento dos botões na navbar direita para 3px vertical e 5px horizontal */
   }
 
   .navbar-right .icon-button {
-    font-size: 18px;
+    font-size: 18px; /* Diminui o tamanho da fonte dos botões de ícone para 18px */
   }
 }

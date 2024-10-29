@@ -1,80 +1,79 @@
 /* Estilos para o container do calendário */
 .calendar-container {
-    margin-top: 20px;
-    background-color: #1c1c1c; /* Fundo escuro preto */
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-    height: auto; /* Permite altura automática baseada no conteúdo */
-    min-height: 80vh; /* Define uma altura mínima para o calendário */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Estilos para o título do calendário */
-  .calendar-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-    flex-shrink: 0; /* O título não encolherá */
-    color: #f1f1f1; /* Título em cinza claro */
-  }
-  
-  /* Estilos da barra de ferramentas do calendário */
-  .fc-toolbar {
-    background-color: #333; /* Cinza escuro */
-    color: #f1f1f1; /* Texto em cinza claro */
-    padding: 10px;
-    border-radius: 4px;
-    flex-shrink: 0;
-  }
-  
-  /* Ajusta a área do calendário para expandir corretamente */
-  .fc {
-    flex-grow: 1; /* Permite que o calendário cresça para ocupar o espaço restante */
-    width: 100%; /* Garante que o calendário ocupe toda a largura */
-    max-width: 100%; /* Garante que o calendário não ultrapasse a área visível */
-  }
-  
-  /* Botões do FullCalendar */
-  .fc-button {
-    background-color: #555; /* Botões em cinza médio */
-    border: none;
-    color: white;
-    margin: 0 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .fc-button:hover {
-    background-color: #444; /* Mais escuro no hover */
-  }
-  
-  /* Estilos para os eventos do calendário */
-  .fc-daygrid-event {
-    background-color: #666; /* Cinza para os eventos */
-    border: none;
-    color: white;
-    border-radius: 3px;
-    padding: 5px;
-  }
-  
-  /* Estilos para os dias do mês */
-  .fc-daygrid-day {
-    background-color: #2b2b2b; /* Fundo preto suave para os dias */
-    color: #d4d4d4; /* Texto em cinza claro */
-  }
-  
-  .fc-daygrid-day:hover {
-    background-color: #3a3a3a; /* Fundo mais claro no hover */
-  }
-  
-  /* Estilos para os dias de hoje */
-  .fc-day-today {
-    background-color: #444; /* Cor destacada para o dia atual */
-  }
-  
-  .fc-day-past {
-    color: #888; /* Cinza mais claro para os dias passados */
-  }
-  
+  margin-top: 20px; /* Define uma margem superior de 20 pixels para o container */
+  background-color: #1c1c1c; /* Fundo escuro preto para o container */
+  padding: 20px; /* Espaçamento interno de 20 pixels ao redor do conteúdo */
+  border-radius: 8px; /* Bordas arredondadas com raio de 8 pixels */
+  color: white; /* Cor do texto em branco */
+  height: auto; /* Permite que a altura do container se ajuste automaticamente com base no conteúdo */
+  min-height: 80vh; /* Define uma altura mínima de 80% da altura da viewport */
+  display: flex; /* Define o container como um flex container */
+  flex-direction: column; /* Organiza os itens filhos em uma coluna */
+}
+
+/* Estilos para o título do calendário */
+.calendar-title {
+  font-size: 24px; /* Define o tamanho da fonte do título para 24 pixels */
+  margin-bottom: 10px; /* Define uma margem inferior de 10 pixels */
+  flex-shrink: 0; /* Impede que o título encolha em um container flexível */
+  color: #f1f1f1; /* Cor do título em cinza claro */
+}
+
+/* Estilos da barra de ferramentas do calendário */
+.fc-toolbar {
+  background-color: #333; /* Define o fundo da barra de ferramentas como cinza escuro */
+  color: #f1f1f1; /* Cor do texto da barra de ferramentas em cinza claro */
+  padding: 10px; /* Espaçamento interno de 10 pixels */
+  border-radius: 4px; /* Bordas arredondadas com raio de 4 pixels */
+  flex-shrink: 0; /* Impede que a barra de ferramentas encolha */
+}
+
+/* Ajusta a área do calendário para expandir corretamente */
+.fc {
+  flex-grow: 1; /* Permite que a área do calendário cresça para ocupar o espaço restante no container */
+  width: 100%; /* Garante que a área do calendário ocupe toda a largura do container */
+  max-width: 100%; /* Garante que a área do calendário não ultrapasse a largura do container */
+}
+
+/* Botões do FullCalendar */
+.fc-button {
+  background-color: #555; /* Define a cor de fundo dos botões como cinza médio */
+  border: none; /* Remove a borda dos botões */
+  color: white; /* Cor do texto dos botões em branco */
+  margin: 0 5px; /* Define uma margem horizontal de 5 pixels */
+  padding: 5px 10px; /* Define um padding de 5 pixels vertical e 10 pixels horizontal */
+  cursor: pointer; /* Muda o cursor para uma mão quando passa sobre o botão */
+  border-radius: 4px; /* Bordas arredondadas com raio de 4 pixels */
+}
+
+.fc-button:hover {
+  background-color: #444; /* Muda a cor de fundo para um cinza mais escuro ao passar o mouse sobre o botão */
+}
+
+/* Estilos para os eventos do calendário */
+.fc-daygrid-event {
+  background-color: #666; /* Define a cor de fundo dos eventos como cinza */
+  border: none; /* Remove a borda dos eventos */
+  color: white; /* Cor do texto dos eventos em branco */
+  border-radius: 3px; /* Bordas arredondadas com raio de 3 pixels */
+  padding: 5px; /* Define um padding de 5 pixels ao redor do conteúdo do evento */
+}
+
+/* Estilos para os dias do mês */
+.fc-daygrid-day {
+  background-color: #2b2b2b; /* Define um fundo preto suave para os dias do calendário */
+  color: #d4d4d4; /* Cor do texto dos dias em cinza claro */
+}
+
+.fc-daygrid-day:hover {
+  background-color: #3a3a3a; /* Muda a cor de fundo para um cinza mais claro ao passar o mouse sobre um dia */
+}
+
+/* Estilos para os dias de hoje */
+.fc-day-today {
+  background-color: #444; /* Define uma cor de fundo destacada para o dia atual */
+}
+
+.fc-day-past {
+  color: #888; /* Define a cor do texto para dias passados como um cinza mais claro */
+}

@@ -1,266 +1,297 @@
 /* src/components/Gestao/Timesheet.css */
 
+/* Define a fonte padrão para o corpo do documento */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: white;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* Usa Arial como fonte principal e sans-serif como fonte secundária */
+    background-color: #111; /* Define a cor de fundo como um cinza muito escuro */
+    color: white; /* Define a cor do texto como branco */
+    margin: 0; /* Remove as margens padrão do corpo */
+    padding: 0; /* Remove o preenchimento padrão do corpo */
 }
 
+/* Contêiner principal para o timesheet */
 .timesheet-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    display: flex; /* Define o contêiner como flexível para facilitar o layout */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    min-height: 100vh; /* Garante que o contêiner ocupe pelo menos 100% da altura da janela */
 }
 
+/* Estilo do cabeçalho */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000;
-    padding: 10px;
+    display: flex; /* Define o cabeçalho como um contêiner flexível */
+    justify-content: space-between; /* Espaça os itens igualmente entre as extremidades do cabeçalho */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    background-color: #000; /* Define a cor de fundo do cabeçalho como preto */
+    padding: 10px; /* Adiciona um preenchimento interno de 10 pixels */
 }
 
+/* Estilo da logo dentro do cabeçalho */
 .logo img {
-    width: 100px;
+    width: 100px; /* Define a largura da imagem da logo como 100 pixels */
 }
 
+/* Estilo do menu de navegação */
 .nav {
-    display: flex;
-    gap: 20px;
+    display: flex; /* Define a navegação como um contêiner flexível */
+    gap: 20px; /* Adiciona um espaço de 20 pixels entre os itens da navegação */
 }
 
+/* Estilo dos links de navegação */
 .nav a {
-    color: white;
-    text-decoration: none;
+    color: white; /* Define a cor dos links como branca */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
 }
 
+/* Estilo para as opções do usuário */
 .user-options {
-    display: flex;
-    gap: 10px;
+    display: flex; /* Define as opções do usuário como um contêiner flexível */
+    gap: 10px; /* Adiciona um espaço de 10 pixels entre as opções */
 }
 
+/* Estilo dos botões de perfil e configurações */
 .btn-profile, .btn-settings {
-    width: 40px;
-    height: 40px;
-    background-color: gray;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
+    width: 40px; /* Define a largura dos botões como 40 pixels */
+    height: 40px; /* Define a altura dos botões como 40 pixels */
+    background-color: gray; /* Define a cor de fundo dos botões como cinza */
+    border-radius: 50%; /* Torna os botões redondos */
+    border: none; /* Remove a borda padrão dos botões */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o botão */
 }
 
+/* Estilo para a área de conteúdo principal */
 .main-content {
-    flex-grow: 1;
-    padding: 20px;
+    flex-grow: 1; /* Permite que o conteúdo principal cresça para preencher o espaço disponível */
+    padding: 20px; /* Adiciona um preenchimento interno de 20 pixels */
 }
 
+/* Estilo do título dentro da área de conteúdo principal */
 .main-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 2.5em; /* Define o tamanho da fonte do título como 2.5 vezes o tamanho padrão */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20 pixels ao título */
 }
 
-/* Botões "Lançamento de horas" e "Timesheets" */
+/* Estilo para os botões de "Lançamento de horas" e "Timesheets" */
 .timesheet-buttons {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
+    display: flex; /* Define os botões como um contêiner flexível */
+    gap: 15px; /* Adiciona um espaço de 15 pixels entre os botões */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20 pixels ao contêiner dos botões */
 }
 
+/* Estilo dos botões de lançamento de horas e visualização de timesheets */
 .launch-hours-btn, .view-timesheets-btn {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px; /* Adiciona preenchimento de 10 pixels em cima e embaixo, 20 pixels nas laterais */
+    background-color: #007BFF; /* Define a cor de fundo dos botões como azul */
+    color: white; /* Define a cor do texto dos botões como branco */
+    border: none; /* Remove a borda padrão dos botões */
+    border-radius: 5px; /* Arredonda os cantos dos botões com um raio de 5 pixels */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor de fundo */
 }
 
+/* Estilo para o efeito de hover nos botões de lançamento de horas e visualização de timesheets */
 .launch-hours-btn:hover, .view-timesheets-btn:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Altera a cor de fundo para um azul mais escuro ao passar o mouse sobre os botões */
 }
 
-/* Container de ações do timesheet */
+/* Container para as ações do timesheet */
 .timesheet-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    width: 100%;
+    display: flex; /* Define as ações como um contêiner flexível */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    gap: 15px; /* Adiciona um espaço de 15 pixels entre os itens */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20 pixels ao contêiner de ações */
+    width: 100%; /* Define a largura do contêiner de ações como 100% */
 }
 
+/* Estilo da barra de pesquisa */
 .search-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-grow: 1;
+    display: flex; /* Define a barra de pesquisa como um contêiner flexível */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    gap: 10px; /* Adiciona um espaço de 10 pixels entre os itens da barra de pesquisa */
+    flex-grow: 1; /* Permite que a barra de pesquisa cresça para preencher o espaço disponível */
 }
 
+/* Estilo para o campo de entrada da barra de pesquisa */
 .search-bar input {
-    flex-grow: 1;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #333;
-    background-color: #222;
-    color: white;
+    flex-grow: 1; /* Permite que o campo de entrada cresça para preencher o espaço disponível na barra de pesquisa */
+    padding: 10px; /* Adiciona um preenchimento interno de 10 pixels ao redor do campo de entrada */
+    border-radius: 5px; /* Arredonda os cantos do campo de entrada com um raio de 5 pixels */
+    border: 1px solid #333; /* Define uma borda sólida de 1 pixel com cor cinza escuro ao redor do campo de entrada */
+    background-color: #222; /* Define a cor de fundo do campo de entrada como um cinza escuro */
+    color: white; /* Define a cor do texto dentro do campo de entrada como branco */
 }
 
+/* Estilo para o botão de novo timesheet */
 .new-timesheet-btn {
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: green; /* Define a cor de fundo do botão como verde */
+    color: white; /* Define a cor do texto do botão como branco */
+    padding: 10px 20px; /* Adiciona um preenchimento interno de 10 pixels em cima e embaixo, 20 pixels nas laterais */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Arredonda os cantos do botão com um raio de 5 pixels */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor de fundo */
 }
 
+/* Estilo para o efeito de hover no botão de novo timesheet */
 .new-timesheet-btn:hover {
-    background-color: darkgreen;
+    background-color: darkgreen; /* Altera a cor de fundo para um verde escuro ao passar o mouse sobre o botão */
 }
 
+/* Estilo para os botões de pesquisa e pesquisa avançada */
 .btn-search, .btn-advanced-search {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px; /* Adiciona um preenchimento interno de 10 pixels em cima e embaixo, 20 pixels nas laterais */
+    background-color: #333; /* Define a cor de fundo dos botões como cinza escuro */
+    color: white; /* Define a cor do texto dos botões como branco */
+    border: none; /* Remove a borda padrão dos botões */
+    border-radius: 5px; /* Arredonda os cantos dos botões com um raio de 5 pixels */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre os botões */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor de fundo */
 }
 
+/* Estilo para o efeito de hover nos botões de pesquisa e pesquisa avançada */
 .btn-search:hover, .btn-advanced-search:hover {
-    background-color: #555;
+    background-color: #555; /* Altera a cor de fundo para um cinza mais claro ao passar o mouse sobre os botões */
 }
 
+/* Estilo para o botão de gerar relatório */
 .btn-generate-report {
-    padding: 10px 20px;
-    background-color: #FF5733;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px; /* Adiciona um preenchimento interno de 10 pixels em cima e embaixo, 20 pixels nas laterais */
+    background-color: #FF5733; /* Define a cor de fundo do botão como um vermelho alaranjado */
+    color: white; /* Define a cor do texto do botão como branco */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Arredonda os cantos do botão com um raio de 5 pixels */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor de fundo */
 }
 
+/* Estilo para o efeito de hover no botão de gerar relatório */
 .btn-generate-report:hover {
-    background-color: #C70039;
+    background-color: #C70039; /* Altera a cor de fundo para um vermelho mais escuro ao passar o mouse sobre o botão */
 }
 
+/* Estilo para a lista de timesheets */
 .timesheet-list {
-    margin-top: 40px;
-    text-align: center;
+    margin-top: 40px; /* Adiciona uma margem superior de 40 pixels à lista de timesheets */
+    text-align: center; /* Centraliza o texto dentro da lista de timesheets */
 }
 
 /* Estilos para a tabela de timesheets */
 .timesheet-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #1c1c1c;
+    width: 100%; /* Define a largura da tabela como 100% do contêiner pai */
+    border-collapse: collapse; /* Remove os espaços entre as bordas das células da tabela */
+    background-color: #1c1c1c; /* Define a cor de fundo da tabela como um cinza muito escuro */
 }
 
+/* Estilo para os cabeçalhos e células da tabela */
 .timesheet-table th, .timesheet-table td {
-    padding: 10px;
-    border: 1px solid #333;
-    text-align: center;
+    padding: 10px; /* Adiciona um preenchimento interno de 10 pixels às células da tabela */
+    border: 1px solid #333; /* Define uma borda sólida de 1 pixel com cor cinza escuro para as células */
+    text-align: center; /* Centraliza o texto dentro das células da tabela */
 }
 
+/* Estilo para os cabeçalhos da tabela */
 .timesheet-table th {
-    background-color: #333;
-    color: white;
+    background-color: #333; /* Define a cor de fundo dos cabeçalhos da tabela como cinza escuro */
+    color: white; /* Define a cor do texto dos cabeçalhos como branco */
 }
 
+/* Estilo para as células da tabela */
 .timesheet-table td {
-    background-color: #222;
-    color: white;
+    background-color: #222; /* Define a cor de fundo das células da tabela como um cinza escuro */
+    color: white; /* Define a cor do texto das células como branco */
 }
 
 /* Botões de ação dentro da tabela */
 .btn-edit, .btn-delete {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    color: white;
-    margin: 0 5px;
-    transition: background-color 0.3s ease;
+    padding: 5px 10px; /* Adiciona um preenchimento interno de 5 pixels em cima e embaixo, 10 pixels nas laterais */
+    border: none; /* Remove a borda padrão dos botões */
+    border-radius: 3px; /* Arredonda os cantos dos botões com um raio de 3 pixels */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre os botões */
+    color: white; /* Define a cor do texto dos botões como branco */
+    margin: 0 5px; /* Adiciona uma margem horizontal de 5 pixels entre os botões */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor de fundo */
 }
 
+/* Estilo para o botão de edição */
 .btn-edit {
-    background-color: #007BFF;
+    background-color: #007BFF; /* Define a cor de fundo do botão de edição como azul */
 }
 
+/* Estilo para o efeito de hover no botão de edição */
 .btn-edit:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Altera a cor de fundo para um azul mais escuro ao passar o mouse sobre o botão */
 }
 
+/* Estilo para o botão de exclusão */
 .btn-delete {
-    background-color: #FF5733;
+    background-color: #FF5733; /* Define a cor de fundo do botão de exclusão como um vermelho alaranjado */
 }
 
+/* Estilo para o botão de exclusão ao passar o mouse */
 .btn-delete:hover {
-    background-color: #C70039;
+    background-color: #C70039; /* Altera a cor de fundo do botão de exclusão para um vermelho escuro ao passar o mouse sobre ele */
 }
 
-/* Estilos para o estado vazio */
+/* Estilos para o estado vazio, quando não há dados a serem exibidos */
 .empty-state img {
-    width: 150px;
-    margin: 20px 0;
+    width: 150px; /* Define a largura da imagem como 150 pixels */
+    margin: 20px 0; /* Adiciona uma margem vertical de 20 pixels acima e abaixo da imagem */
 }
 
 .empty-state p {
-    color: #ccc;
-    font-size: 1.2em;
+    color: #ccc; /* Define a cor do texto como cinza claro */
+    font-size: 1.2em; /* Define o tamanho da fonte como 1.2 vezes o tamanho padrão */
 }
 
-/* Modal de busca avançada */
+/* Estilo para o modal de busca avançada */
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed; /* Define a posição do modal como fixa, para que fique sobreposto ao conteúdo */
+    top: 0; /* Alinha o modal ao topo da janela */
+    left: 0; /* Alinha o modal à esquerda da janela */
+    width: 100%; /* Define a largura do modal como 100% da largura da janela */
+    height: 100%; /* Define a altura do modal como 100% da altura da janela */
+    background-color: rgba(0, 0, 0, 0.8); /* Define a cor de fundo como preto com opacidade de 0.8 */
+    display: flex; /* Utiliza flexbox para organizar o conteúdo do modal */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do modal */
+    align-items: center; /* Centraliza o conteúdo verticalmente dentro do modal */
 }
 
+/* Estilo para o conteúdo do modal */
 .modal-content {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 5px;
-    width: 400px;
-    color: white;
+    background-color: #222; /* Define a cor de fundo do conteúdo do modal como um cinza escuro */
+    padding: 20px; /* Adiciona um preenchimento interno de 20 pixels ao conteúdo do modal */
+    border-radius: 5px; /* Arredonda os cantos do conteúdo do modal com um raio de 5 pixels */
+    width: 400px; /* Define a largura do conteúdo do modal como 400 pixels */
+    color: white; /* Define a cor do texto dentro do conteúdo do modal como branco */
 }
 
+/* Estilo para o título dentro do conteúdo do modal */
 .modal-content h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-top: 0; /* Remove a margem superior do título */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20 pixels ao título */
 }
 
+/* Estilo para o botão de fechar do modal */
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 1.5em;
+    position: absolute; /* Define a posição do botão de fechar como absoluta, para que possa ser posicionado em relação ao modal */
+    top: 10px; /* Alinha o botão de fechar a 10 pixels do topo do modal */
+    right: 20px; /* Alinha o botão de fechar a 20 pixels da direita do modal */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o botão */
+    font-size: 1.5em; /* Define o tamanho da fonte do botão de fechar como 1.5 vezes o tamanho padrão */
 }
 
-/* Responsividade */
+/* Estilos responsivos para telas menores que 768 pixels de largura */
 @media (max-width: 768px) {
     .timesheet-buttons {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: column; /* Altera a direção dos botões de timesheet para coluna em telas menores */
+        align-items: stretch; /* Estica os botões para preencher a largura do contêiner */
     }
 
     .timesheet-actions {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: column; /* Altera a direção das ações de timesheet para coluna em telas menores */
+        align-items: stretch; /* Estica as ações para preencher a largura do contêiner */
     }
 
     .search-bar input {
-        width: 100%;
+        width: 100%; /* Define a largura do campo de entrada da barra de pesquisa como 100% em telas menores */
     }
 }

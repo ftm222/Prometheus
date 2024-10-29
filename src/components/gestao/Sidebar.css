@@ -1,152 +1,152 @@
 /* Estilos básicos da sidebar */
-.sidebar {
-    background-color: #2c3e50;
-    padding: 20px;
-    width: 250px;
-    height: calc(100vh - 80px);
-    color: #ecf0f1;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    overflow-y: auto;
-    transition: transform 0.3s ease;
-    z-index: 1000;
+.sidebar { /* Seleciona o elemento com a classe 'sidebar' */
+    background-color: #2c3e50; /* Define a cor de fundo da sidebar */
+    padding: 20px; /* Adiciona um espaçamento interno de 20 pixels */
+    width: 250px; /* Define a largura da sidebar como 250 pixels */
+    height: calc(100vh - 80px); /* Define a altura da sidebar como a altura total da viewport menos 80 pixels */
+    color: #ecf0f1; /* Define a cor do texto na sidebar */
+    position: fixed; /* Define a posição da sidebar como fixa na tela */
+    top: 80px; /* Posiciona a sidebar 80 pixels do topo da viewport */
+    left: 0; /* Posiciona a sidebar à esquerda da viewport */
+    overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura */
+    transition: transform 0.3s ease; /* Define uma transição suave para transformações */
+    z-index: 1000; /* Define a ordem em relação a outros elementos, para que a sidebar fique acima deles */
 }
 
 /* Estilo para as seções da sidebar */
-.sidebar .section {
-    margin-bottom: 20px;
+.sidebar .section { /* Seleciona elementos com a classe 'section' dentro da 'sidebar' */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo de cada seção */
 }
 
 /* Títulos das seções */
-.sidebar h3 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    color: #f39c12;
-    text-transform: uppercase;
+.sidebar h3 { /* Seleciona elementos 'h3' dentro da 'sidebar' */
+    margin-bottom: 10px; /* Adiciona um espaço abaixo do título */
+    font-size: 1.2em; /* Define o tamanho da fonte do título */
+    color: #f39c12; /* Define a cor do texto do título */
+    text-transform: uppercase; /* Transforma o texto do título em letras maiúsculas */
 }
 
 /* Estilos para as listas da sidebar */
-.sidebar ul {
-    list-style-type: none;
-    padding-left: 10px;
+.sidebar ul { /* Seleciona elementos 'ul' dentro da 'sidebar' */
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding-left: 10px; /* Adiciona um espaçamento à esquerda */
 }
 
 /* Estilos para os itens da lista */
-.sidebar li {
-    margin: 8px 0;
-    font-size: 1em;
-    color: #bdc3c7;
-    cursor: pointer;
-    transition: color 0.3s ease;
+.sidebar li { /* Seleciona elementos 'li' dentro da 'sidebar' */
+    margin: 8px 0; /* Adiciona um espaço de 8 pixels acima e abaixo de cada item */
+    font-size: 1em; /* Define o tamanho da fonte dos itens da lista */
+    color: #bdc3c7; /* Define a cor do texto dos itens da lista */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: color 0.3s ease; /* Define uma transição suave para mudanças de cor */
 }
 
 /* Dropdown para o item Relatórios */
-.sidebar .dropdown {
-    position: relative;
-    display: inline-block;
+.sidebar .dropdown { /* Seleciona elementos com a classe 'dropdown' dentro da 'sidebar' */
+    position: relative; /* Define a posição relativa para posicionar o dropdown */
+    display: inline-block; /* Exibe o dropdown em linha com outros elementos */
 }
 
-.sidebar .dropdown-content {
-    display: none;
-    position: absolute;
+.sidebar .dropdown-content { /* Seleciona o conteúdo do dropdown */
+    display: none; /* Oculta o conteúdo do dropdown por padrão */
+    position: absolute; /* Define a posição absoluta para o dropdown */
     left: 100%; /* Faz o dropdown aparecer à direita do item pai */
-    top: 0;
-    background-color: #34495e;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    list-style: none;
-    padding: 0;
+    top: 0; /* Alinha o topo do dropdown com o topo do item pai */
+    background-color: #34495e; /* Define a cor de fundo do dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao dropdown */
+    z-index: 1; /* Define a ordem em relação a outros elementos, para que o dropdown fique acima deles */
+    list-style: none; /* Remove os marcadores da lista dentro do dropdown */
+    padding: 0; /* Remove o preenchimento do dropdown */
 }
 
-.sidebar .dropdown:hover .dropdown-content {
-    display: block;
+.sidebar .dropdown:hover .dropdown-content { /* Exibe o conteúdo do dropdown ao passar o mouse sobre o item pai */
+    display: block; /* Torna o conteúdo visível */
 }
 
 /* Estilo dos itens dentro do dropdown */
-.sidebar .dropdown-content li {
-    color: #bdc3c7;
-    padding: 8px 12px;
-    display: block;
-    transition: background-color 0.3s ease;
+.sidebar .dropdown-content li { /* Seleciona itens 'li' dentro do conteúdo do dropdown */
+    color: #bdc3c7; /* Define a cor do texto dos itens do dropdown */
+    padding: 8px 12px; /* Adiciona preenchimento aos itens do dropdown */
+    display: block; /* Faz com que os itens ocupem toda a largura disponível */
+    transition: background-color 0.3s ease; /* Define uma transição suave para mudanças de cor de fundo */
 }
 
 /* Efeito hover para itens dentro do dropdown */
-.sidebar .dropdown-content li:hover {
-    background-color: #2c3e50;
+.sidebar .dropdown-content li:hover { /* Seleciona itens do dropdown ao passar o mouse */
+    background-color: #2c3e50; /* Altera a cor de fundo ao passar o mouse */
 }
 
 /* Efeito hover sobre os itens da lista */
-.sidebar li:hover {
-    color: #f39c12;
-    text-decoration: underline;
+.sidebar li:hover { /* Seleciona itens da lista ao passar o mouse */
+    color: #f39c12; /* Altera a cor do texto ao passar o mouse */
+    text-decoration: underline; /* Adiciona um sublinhado ao texto ao passar o mouse */
 }
 
 /* Scrollbar personalizada */
-.sidebar::-webkit-scrollbar {
-    width: 8px;
+.sidebar::-webkit-scrollbar { /* Seleciona a scrollbar da sidebar */
+    width: 8px; /* Define a largura da scrollbar */
 }
 
-.sidebar::-webkit-scrollbar-thumb {
-    background-color: #7f8c8d;
-    border-radius: 10px;
+.sidebar::-webkit-scrollbar-thumb { /* Seleciona o "polegar" da scrollbar */
+    background-color: #7f8c8d; /* Define a cor do polegar da scrollbar */
+    border-radius: 10px; /* Arredonda as bordas do polegar */
 }
 
-.sidebar::-webkit-scrollbar-track {
-    background-color: #2c3e50;
+.sidebar::-webkit-scrollbar-track { /* Seleciona a pista da scrollbar */
+    background-color: #2c3e50; /* Define a cor da pista da scrollbar */
 }
 
 /* --------- Media Queries para Responsividade --------- */
 
 /* Sidebar responsiva para telas menores que 768px */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 200px;
-        transform: translateX(-100%); /* Inicialmente oculta a sidebar */
+@media (max-width: 768px) { /* Define estilos para telas com largura máxima de 768 pixels */
+    .sidebar { /* Seleciona a sidebar */
+        width: 200px; /* Define a largura da sidebar como 200 pixels */
+        transform: translateX(-100%); /* Inicialmente oculta a sidebar fora da tela */
     }
 
-    .sidebar-toggle {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        background-color: #f39c12;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-        font-size: 18px;
-        z-index: 1001;
+    .sidebar-toggle { /* Seleciona o botão de alternância da sidebar */
+        position: absolute; /* Define a posição como absoluta */
+        top: 20px; /* Posiciona o botão 20 pixels do topo */
+        left: 20px; /* Posiciona o botão 20 pixels da esquerda */
+        background-color: #f39c12; /* Define a cor de fundo do botão */
+        color: white; /* Define a cor do texto do botão como branca */
+        border: none; /* Remove a borda do botão */
+        padding: 10px 15px; /* Adiciona preenchimento ao botão */
+        cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        font-size: 18px; /* Define o tamanho da fonte do botão */
+        z-index: 1001; /* Define a ordem em relação a outros elementos, para que o botão fique acima deles */
     }
 
-    .sidebar.open {
-        transform: translateX(0); /* Mostra a sidebar quando 'open' */
+    .sidebar.open { /* Seleciona a sidebar quando a classe 'open' está presente */
+        transform: translateX(0); /* Mostra a sidebar ao definir a transformação para 0 */
     }
 }
 
 /* Sidebar para telas menores que 480px */
-@media (max-width: 480px) {
-    .sidebar {
-        width: 180px;
-        padding: 15px;
+@media (max-width: 480px) { /* Define estilos para telas com largura máxima de 480 pixels */
+    .sidebar { /* Seleciona a sidebar */
+        width: 180px; /* Define a largura da sidebar como 180 pixels */
+        padding: 15px; /* Adiciona preenchimento de 15 pixels */
     }
 
-    .sidebar h3 {
-        font-size: 1.1em;
+    .sidebar h3 { /* Seleciona títulos 'h3' dentro da sidebar */
+        font-size: 1.1em; /* Define o tamanho da fonte dos títulos como 1.1em */
     }
 
-    .sidebar li {
-        font-size: 0.9em;
-        margin: 5px 0;
+    .sidebar li { /* Seleciona itens 'li' dentro da sidebar */
+        font-size: 0.9em; /* Define o tamanho da fonte dos itens como 0.9em */
+        margin: 5px 0; /* Adiciona um espaço de 5 pixels acima e abaixo de cada item */
     }
 }
 
 /* Ocultar o botão de menu hamburger em telas maiores que 768px */
-@media (min-width: 769px) {
-    .sidebar-toggle {
-        display: none;
+@media (min-width: 769px) { /* Define estilos para telas com largura mínima de 769 pixels */
+    .sidebar-toggle { /* Seleciona o botão de alternância da sidebar */
+        display: none; /* Oculta o botão em telas maiores */
     }
 
-    .sidebar {
-        transform: none; /* Reseta a transformação */
+    .sidebar { /* Seleciona a sidebar */
+        transform: none; /* Reseta a transformação, garantindo que a sidebar esteja visível */
     }
 }

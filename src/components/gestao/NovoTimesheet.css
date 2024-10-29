@@ -1,36 +1,36 @@
-.new-timesheet {
-    padding: 20px;
+.new-timesheet { /* Define estilos para o contêiner com a classe 'new-timesheet'. */
+    padding: 20px; /* Adiciona 20 pixels de preenchimento interno ao contêiner. */
 }
 
-.new-timesheet h1 {
-    margin-bottom: 20px;
+.new-timesheet h1 { /* Define estilos para o elemento <h1> dentro do contêiner 'new-timesheet'. */
+    margin-bottom: 20px; /* Adiciona 20 pixels de margem na parte inferior do título. */
 }
 
-.new-timesheet form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.new-timesheet form { /* Define estilos para o elemento <form> dentro do contêiner 'new-timesheet'. */
+    display: flex; /* Utiliza o layout flexível para organizar os elementos filhos. */
+    flex-direction: column; /* Organiza os elementos em uma coluna vertical. */
+    gap: 15px; /* Adiciona um espaço de 15 pixels entre os elementos filhos. */
 }
 
-.new-timesheet label {
-    font-weight: bold;
+.new-timesheet label { /* Define estilos para os rótulos <label> dentro do contêiner 'new-timesheet'. */
+    font-weight: bold; /* Define o peso da fonte como negrito. */
 }
 
-.new-timesheet input, .new-timesheet textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #333;
+.new-timesheet input, .new-timesheet textarea { /* Define estilos para elementos <input> e <textarea> dentro do contêiner 'new-timesheet'. */
+    padding: 10px; /* Adiciona 10 pixels de preenchimento interno aos campos de entrada e áreas de texto. */
+    border-radius: 5px; /* Adiciona bordas arredondadas com raio de 5 pixels. */
+    border: 1px solid #333; /* Define a borda como sólida, com 1 pixel de largura e cor #333 (um cinza escuro). */
 }
 
-.new-timesheet button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.new-timesheet button { /* Define estilos para os botões dentro do contêiner 'new-timesheet'. */
+    background-color: #007BFF; /* Define a cor de fundo do botão como azul (#007BFF). */
+    color: white; /* Define a cor do texto do botão como branca. */
+    padding: 10px 20px; /* Adiciona 10 pixels de preenchimento vertical e 20 pixels de preenchimento horizontal ao botão. */
+    border: none; /* Remove a borda padrão do botão. */
+    border-radius: 5px; /* Adiciona bordas arredondadas com raio de 5 pixels ao botão. */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável. */
 }
 
-.new-timesheet button:hover {
-    background-color: #0056b3;
+.new-timesheet button:hover { /* Define estilos quando o mouse passa sobre o botão dentro do contêiner 'new-timesheet'. */
+    background-color: #0056b3; /* Muda a cor de fundo do botão para um azul mais escuro ao passar o mouse. */
 }

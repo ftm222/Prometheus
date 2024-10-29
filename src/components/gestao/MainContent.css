@@ -1,6 +1,6 @@
 /* Estilos principais para a área de conteúdo */
 .main-container {
-  display: flex;
+  display: flex; /* Usa um layout flexível para a estrutura do contêiner */
   flex-direction: column; /* Layout em coluna para manter o cabeçalho no topo */
   height: 100vh; /* Ocupar a altura total da viewport */
   overflow-x: hidden; /* Evita a rolagem lateral */
@@ -9,41 +9,41 @@
 
 /* Ajusta o espaço quando a sidebar estiver aberta */
 .sidebar-open .main-content {
-  margin-left: 250px;
+  margin-left: 250px; /* Adiciona margem à esquerda para o conteúdo principal */
   width: calc(100vw - 250px); /* Certifica que o conteúdo considere a largura da sidebar */
 }
 
 .main-content {
-  background-color: #f9f9f9;
-  padding: 20px;
+  background-color: #f9f9f9; /* Define a cor de fundo do conteúdo principal */
+  padding: 20px; /* Adiciona espaçamento interno ao conteúdo principal */
   width: 100vw; /* Garante que o conteúdo principal ocupe 100% da largura quando a sidebar está fechada */
   height: 100%; /* Certifica-se de que o conteúdo principal ocupe 100% da altura restante */
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Usa um layout flexível para o conteúdo principal */
+  flex-direction: column; /* Alinha os filhos em uma coluna */
   justify-content: flex-start; /* Alinha o conteúdo no topo */
-  box-sizing: border-box;
+  box-sizing: border-box; /* Inclui padding e borda na largura e altura total do elemento */
   overflow-y: auto; /* Permite rolagem vertical caso o conteúdo seja maior que a altura */
 }
 
 /* Estilos para o cabeçalho */
 .header {
-  display: flex;
-  align-items: center;
+  display: flex; /* Usa um layout flexível para o cabeçalho */
+  align-items: center; /* Alinha verticalmente os itens no cabeçalho */
   justify-content: space-between; /* Distribui o espaço entre os itens */
-  padding: 10px;
+  padding: 10px; /* Adiciona espaçamento interno ao cabeçalho */
   background-color: white; /* Fundo branco para destacar */
-  border-bottom: 1px solid #ccc; /* Linha divisória */
+  border-bottom: 1px solid #ccc; /* Linha divisória inferior */
   position: sticky; /* Adiciona fixação ao rolar a página */
   top: 0; /* Fixa o cabeçalho no topo */
   z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
-  width: 100%; /* Ocupa toda a largura */
+  width: 100%; /* Ocupa toda a largura da tela */
 }
 
 /* Estilos para a distribuição de itens no cabeçalho */
 .header-left, .header-center, .header-right {
-  flex: 1; /* Cada seção ocupa o mesmo espaço */
-  display: flex;
-  align-items: center; /* Alinha verticalmente os itens */
+  flex: 1; /* Cada seção ocupa o mesmo espaço dentro do cabeçalho */
+  display: flex; /* Usa um layout flexível para as seções do cabeçalho */
+  align-items: center; /* Alinha verticalmente os itens em cada seção */
 }
 
 /* Estilo para o conteúdo à esquerda (botão "Menu") */
@@ -63,153 +63,153 @@
 
 /* Estilos para o título "Relatórios" */
 .header h2 {
-  margin: 0;
-  font-size: 24px;
+  margin: 0; /* Remove a margem do título */
+  font-size: 24px; /* Define o tamanho da fonte do título */
 }
 
 /* Estilos do botão "Menu" */
 .menu-button {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
+  background: none; /* Remove o fundo do botão */
+  border: none; /* Remove a borda do botão */
+  font-size: 24px; /* Define o tamanho da fonte do botão */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
   margin-right: 10px; /* Adiciona espaço à direita do botão "Menu" */
 }
 
 /* Estilos do botão "Perfil" */
 .profile-button {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
+  background: none; /* Remove o fundo do botão */
+  border: none; /* Remove a borda do botão */
+  font-size: 24px; /* Define o tamanho da fonte do botão */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
   margin-left: 10px; /* Adiciona espaço à esquerda do botão "Perfil" */
 }
 
 /* Sidebar-title agora no topo da página como cabeçalho */
 .sidebar-title {
-  display: flex;
+  display: flex; /* Usa um layout flexível para o título da sidebar */
   justify-content: flex-start; /* Alinha o conteúdo à esquerda */
-  align-items: center;
-  padding: 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  z-index: 1000;
-  border-bottom: 1px solid #ccc;
+  align-items: center; /* Alinha verticalmente os itens */
+  padding: 10px; /* Adiciona espaçamento interno ao título da sidebar */
+  position: fixed; /* Fixa a posição do título na tela */
+  top: 0; /* Alinha ao topo da página */
+  left: 0; /* Alinha à esquerda da página */
+  width: 100%; /* Ocupa toda a largura da tela */
+  background-color: white; /* Define a cor de fundo como branca */
+  z-index: 1000; /* Garante que o título da sidebar fique sobre outros elementos */
+  border-bottom: 1px solid #ccc; /* Linha divisória inferior */
 }
 
 /* Estilos do dropdown */
 .dropdown {
-  position: relative;
-  display: inline-block;
+  position: relative; /* Permite que o dropdown seja posicionado de forma relativa ao seu contêiner pai */
+  display: inline-block; /* Exibe o dropdown em linha */
 }
 
 .dropdown-button {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
+  background: none; /* Remove o fundo do botão do dropdown */
+  border: none; /* Remove a borda do botão do dropdown */
+  font-size: 24px; /* Define o tamanho da fonte do botão do dropdown */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  border-radius: 5px;
+  display: none; /* Inicialmente oculta o conteúdo do dropdown */
+  position: absolute; /* Permite que o conteúdo do dropdown seja posicionado em relação ao botão */
+  right: 0; /* Alinha o conteúdo do dropdown à direita */
+  background-color: #f9f9f9; /* Define a cor de fundo do conteúdo do dropdown */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao conteúdo do dropdown */
+  z-index: 1; /* Garante que o conteúdo do dropdown fique sobre outros elementos */
+  border-radius: 5px; /* Adiciona bordas arredondadas ao conteúdo do dropdown */
 }
 
 .dropdown-content ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style: none; /* Remove as marcas de lista do conteúdo do dropdown */
+  margin: 0; /* Remove a margem da lista */
+  padding: 0; /* Remove o padding da lista */
 }
 
 .dropdown-content li {
-  padding: 10px 20px;
-  cursor: pointer;
-  color: #555;
+  padding: 10px 20px; /* Adiciona espaçamento interno aos itens da lista */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  color: #555; /* Define a cor do texto dos itens da lista */
 }
 
 .dropdown-content li:hover {
-  background-color: #eee;
+  background-color: #eee; /* Altera a cor de fundo ao passar o mouse sobre o item */
 }
 
 .dropdown-button:hover + .dropdown-content,
 .dropdown-content:hover {
-  display: block;
+  display: block; /* Exibe o conteúdo do dropdown ao passar o mouse sobre o botão ou o conteúdo */
 }
 
 /* Estilos de conteúdo principal */
 .report-content {
   flex-grow: 1; /* Permite que o conteúdo cresça e ocupe o espaço disponível */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  overflow: hidden;
+  display: flex; /* Usa um layout flexível para o conteúdo dos relatórios */
+  flex-direction: column; /* Alinha os filhos em uma coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  max-width: 100%; /* Limita a largura máxima do conteúdo */
+  overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites do contêiner */
 }
 
 .clipboard {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-  max-width: 100%;
-  flex-wrap: wrap;
+  display: flex; /* Usa um layout flexível para os itens da clipboard */
+  justify-content: space-around; /* Distribui os itens uniformemente ao redor */
+  margin-bottom: 20px; /* Adiciona espaço abaixo da clipboard */
+  max-width: 100%; /* Limita a largura máxima da clipboard */
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha se necessário */
 }
 
 .clipboard img {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
+  width: 100px; /* Define a largura das imagens da clipboard */
+  height: 100px; /* Define a altura das imagens da clipboard */
+  margin: 10px; /* Adiciona espaço ao redor das imagens */
 }
 
 .report-content p {
-  font-size: 18px;
-  color: #777;
-  text-align: center;
-  max-width: 100%;
-  word-wrap: break-word;
-  margin: 0 20px;
+  font-size: 18px; /* Define o tamanho da fonte do parágrafo */
+  color: #777; /* Define a cor do texto do parágrafo */
+  text-align: center; /* Centraliza o texto do parágrafo */
+  max-width: 100%; /* Limita a largura máxima do parágrafo */
+  word-wrap: break-word; /* Permite que as palavras sejam quebradas caso sejam muito longas */
+  margin: 0 20px; /* Adiciona espaçamento horizontal ao parágrafo */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   .hamburger-menu {
-      font-size: 25px;
+      font-size: 25px; /* Ajusta o tamanho da fonte do botão "Menu" em telas menores */
   }
 
   .main-content h2 {
-      font-size: 20px;
+      font-size: 20px; /* Reduz o tamanho da fonte do título em telas menores */
   }
 
   .clipboard img {
-      width: 80px;
-      height: 80px;
+      width: 80px; /* Reduz a largura das imagens da clipboard em telas menores */
+      height: 80px; /* Reduz a altura das imagens da clipboard em telas menores */
   }
 }
 
 @media (max-width: 480px) {
   .hamburger-menu {
-      font-size: 20px;
+      font-size: 20px; /* Ajusta o tamanho da fonte do botão "Menu" em telas muito pequenas */
   }
 
   .main-content h2 {
-      font-size: 18px;
+      font-size: 18px; /* Reduz ainda mais o tamanho da fonte do título em telas muito pequenas */
   }
 
   .clipboard img {
-      width: 60px;
-      height: 60px;
+      width: 60px; /* Reduz a largura das imagens da clipboard em telas muito pequenas */
+      height: 60px; /* Reduz a altura das imagens da clipboard em telas muito pequenas */
   }
 
   .report-content p {
-      font-size: 16px;
-      margin: 0 10px;
+      font-size: 16px; /* Ajusta o tamanho da fonte do parágrafo em telas muito pequenas */
+      margin: 0 10px; /* Adiciona espaço ao redor do parágrafo em telas muito pequenas */
   }
 }

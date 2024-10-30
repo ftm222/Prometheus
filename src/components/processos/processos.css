@@ -1,0 +1,76 @@
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .new-process-btn, .search-btn, .advanced-search-btn, .filter-btn, .status-filter {
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .search-bar {
+    padding: 8px;
+    flex-grow: 1;
+  }
+  
+  .sort-and-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .sort-dropdown {
+    padding: 8px;
+  }
+  
+  .batch-actions-btn {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .process-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .process-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .process-details p {
+    margin: 2px 0;
+  }
+  
+  .process-status .status-tag {
+    font-size: 0.9em;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  
+  .status-tag.incomplete {
+    background-color: orange;
+    color: #fff;
+  }
+  
+  .status-tag.moved {
+    background-color: green;
+    color: #fff;
+  }
+  
+  .tag {
+    font-size: 0.9em;
+    background-color: #ccc;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  

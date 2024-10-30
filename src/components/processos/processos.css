@@ -1,76 +1,88 @@
+/* Estiliza a barra superior com um layout flexível */
 .top-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
+    display: flex; /* Define o layout como flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    gap: 10px; /* Define um espaçamento de 10px entre os itens */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+}
   
-  .new-process-btn, .search-btn, .advanced-search-btn, .filter-btn, .status-filter {
-    padding: 8px 12px;
-    margin-right: 5px;
-    cursor: pointer;
-  }
+/* Estiliza os botões principais da barra superior */
+.new-process-btn, .search-btn, .advanced-search-btn, .filter-btn, .status-filter {
+    padding: 8px 12px; /* Define o espaçamento interno dos botões */
+    margin-right: 5px; /* Adiciona uma margem direita de 5px */
+    cursor: pointer; /* Altera o cursor para indicar que o elemento é clicável */
+}
   
-  .search-bar {
-    padding: 8px;
-    flex-grow: 1;
-  }
+/* Estiliza o campo de busca */
+.search-bar {
+    padding: 8px; /* Define o espaçamento interno do campo de busca */
+    flex-grow: 1; /* Permite que o campo de busca ocupe o espaço restante disponível */
+}
   
-  .sort-and-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
+/* Estiliza a área de ordenação e ações em lote */
+.sort-and-actions {
+    display: flex; /* Define o layout como flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    gap: 10px; /* Define um espaçamento de 10px entre os itens */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+}
   
-  .sort-dropdown {
-    padding: 8px;
-  }
+/* Estiliza o menu dropdown de ordenação */
+.sort-dropdown {
+    padding: 8px; /* Define o espaçamento interno do dropdown */
+}
   
-  .batch-actions-btn {
-    padding: 8px 12px;
-    cursor: pointer;
-  }
+/* Estiliza o botão de ações em lote */
+.batch-actions-btn {
+    padding: 8px 12px; /* Define o espaçamento interno do botão */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+}
   
-  .process-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+/* Estiliza a lista de processos */
+.process-list {
+    display: flex; /* Define o layout como flexbox */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    gap: 10px; /* Define um espaçamento de 10px entre os itens */
+}
   
-  .process-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
+/* Estiliza cada item da lista de processos */
+.process-item {
+    display: flex; /* Define o layout como flexbox */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    gap: 15px; /* Define um espaçamento de 15px entre os elementos */
+    padding: 10px; /* Define o espaçamento interno do item */
+    border: 1px solid #ddd; /* Define uma borda cinza clara ao redor do item */
+    border-radius: 5px; /* Arredonda os cantos do item */
+}
   
-  .process-details p {
-    margin: 2px 0;
-  }
+/* Estiliza os parágrafos dentro da seção de detalhes do processo */
+.process-details p {
+    margin: 2px 0; /* Define uma pequena margem vertical para os parágrafos */
+}
   
-  .process-status .status-tag {
-    font-size: 0.9em;
-    padding: 5px;
-    border-radius: 3px;
-  }
+/* Estiliza a tag de status do processo */
+.process-status .status-tag {
+    font-size: 0.9em; /* Define o tamanho da fonte um pouco menor */
+    padding: 5px; /* Define o espaçamento interno da tag */
+    border-radius: 3px; /* Arredonda os cantos da tag */
+}
   
-  .status-tag.incomplete {
-    background-color: orange;
-    color: #fff;
-  }
+/* Estiliza a tag de status para processos incompletos */
+.status-tag.incomplete {
+    background-color: orange; /* Define a cor de fundo como laranja */
+    color: #fff; /* Define a cor do texto como branco */
+}
   
-  .status-tag.moved {
-    background-color: green;
-    color: #fff;
-  }
+/* Estiliza a tag de status para processos movimentados */
+.status-tag.moved {
+    background-color: green; /* Define a cor de fundo como verde */
+    color: #fff; /* Define a cor do texto como branco */
+}
   
-  .tag {
-    font-size: 0.9em;
-    background-color: #ccc;
-    padding: 5px;
-    border-radius: 3px;
-  }
-  
+/* Estiliza a tag geral de classificação do processo */
+.tag {
+    font-size: 0.9em; /* Define o tamanho da fonte um pouco menor */
+    background-color: #ccc; /* Define a cor de fundo como cinza claro */
+    padding: 5px; /* Define o espaçamento interno da tag */
+    border-radius: 3px; /* Arredonda os cantos da tag */
+}

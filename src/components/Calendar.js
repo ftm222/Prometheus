@@ -1,11 +1,14 @@
 // src/components/Calendar.js
 import React, { useState } from 'react'; // Importa React e a função useState para gerenciar estado
+import { useNavigate } from "react-router-dom";
 import FullCalendar from '@fullcalendar/react'; // Importa o componente FullCalendar da biblioteca FullCalendar
 import dayGridPlugin from '@fullcalendar/daygrid'; // Importa o plugin de visualização em grade de dias
 import interactionPlugin from '@fullcalendar/interaction'; // Importa o plugin que permite interações, como clicar em datas
 import './Calendar.css' // Importa o arquivo de estilos CSS para o componente Calendar
 
 const Calendar = () => { // Define o componente funcional Calendar
+  let navigate = useNavigate();
+
   const [events, setEvents] = useState([ // Inicializa o estado "events" com um array de eventos
     { title: 'Evento 1', start: '2024-10-01' }, // Primeiro evento com título e data de início
     { title: 'Evento 2', start: '2024-10-02' }  // Segundo evento com título e data de início
@@ -15,6 +18,7 @@ const Calendar = () => { // Define o componente funcional Calendar
   const handleDateClick = (arg) => { // Define a função que lida com o clique em uma data
     const newEvent = { title: 'Novo Evento', start: arg.dateStr }; // Cria um novo evento com título e data selecionada
     setEvents([...events, newEvent]); // Atualiza o estado "events" adicionando o novo evento
+    navigate.push('./atividades/kanban_tarefas.js')
   };
 
   return ( // Início do retorno do JSX // Cria um div que envolve o calendário com uma classe CSS

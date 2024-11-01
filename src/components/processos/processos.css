@@ -12,7 +12,71 @@
     margin-right: 5px; /* Adiciona uma margem direita de 5px */
     cursor: pointer; /* Altera o cursor para indicar que o elemento é clicável */
 }
-  
+
+/* Estilos para o formulário de "Busca avançada" */
+.advanced-search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.advanced-search-form label {
+    font-weight: bold;
+}
+
+.advanced-search-form input,
+.advanced-search-form select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.advanced-search-form button {
+    align-self: flex-start;
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+}
+
+/* Passo 1: Adicione os estilos CSS para o pop-up */
+.advanced-search-popup {
+    position: fixed; /* Posiciona o pop-up fixamente na tela */
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Garante que o pop-up esteja acima de outros elementos */
+}
+
+.advanced-search-content {
+    background-color: white; /* Fundo branco para o conteúdo do pop-up */
+    padding: 20px;
+    border-radius: 8px; /* Arredonda os cantos */
+    width: 80%; /* Largura de 80% da tela */
+    max-width: 500px; /* Largura máxima de 500px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+}
+
+.advanced-search-content h2 {
+    margin-top: 0; /* Remove a margem superior do título */
+}
+
 /* Estiliza o campo de busca */
 .search-bar {
     padding: 8px; /* Define o espaçamento interno do campo de busca */

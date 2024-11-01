@@ -1,13 +1,14 @@
-import React, { useState } from 'react'; // Importa a biblioteca React e useState
-import { useNavigate } from 'react-router-dom'; // Importa o hook useNavigate do React Router
-import './processos.css'; // Importa o arquivo de estilos CSS para aplicar ao componente
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './processos.css';
 
-// Define o componente funcional ProcessosPage
 function ProcessosPage() {
-  const navigate = useNavigate(); // Inicializa o hook useNavigate
-  const [processos] = useState([ // Define o estado para armazenar os processos
+  const navigate = useNavigate();
+  const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
+
+  const [processos] = useState([
     {
-      id: 1, // Adiciona um ID único para cada processo
+      id: 1,
       cliente: "SDREDES SEGURANCA DE REDES LTDA - ME",
       envolvido: "Reclamado",
       processo: "PRO.0001015 - 0000916-54.2024.5.10.0013 (CNJ)",
@@ -41,78 +42,105 @@ function ProcessosPage() {
     },
   ]);
 
-  // Função chamada ao clicar no botão "Novo processo"
   const handleNewProcess = () => {
-    console.log("Abrindo formulário para novo processo..."); // Exemplo de ação
-    navigate('/processos/novo-processo'); // Redireciona para a página de novo processo
+    console.log("Abrindo formulário para novo processo...");
+    navigate('/processos/novo-processo');
   };
-  
-  // Função para formatar o status e a tag do processo
+
   const formatProcessData = (item) => {
     const formattedItem = {
       ...item,
-      status: item.status || 'Sem Status', // Define um valor padrão para status se não existir
-      statusClass: item.status ? item.statusClass : 'sem-status', // Corrigido para usar a classe padrão se status não existir
-      tag: item.tag || 'Sem Tag', // Define um valor padrão para a tag se não existir
+      status: item.status || 'Sem Status',
+      statusClass: item.status ? item.statusClass : 'sem-status',
+      tag: item.tag || 'Sem Tag',
     };
     return formattedItem;
   };
 
+  const toggleAdvancedSearch = () => {
+    setShowAdvancedSearch(!showAdvancedSearch);
+  };
+
   return (
-    <main> {/* Início da estrutura principal da página */}
-      <h1>Processos</h1> {/* Título da página */}
+    <main>
+      <h1>Processos</h1>
 
-      {/* Top Buttons and Search */}
-      <div className="top-bar"> {/* Container para a barra superior com botões e barra de pesquisa */}
-        <button className="new-process-btn" onClick={handleNewProcess}>Novo processo</button> {/* Botão para criar um novo processo */}
+      <div className="top-bar">
+        <button className="new-process-btn" onClick={handleNewProcess}>Novo processo</button>
         <input
-          type="text" // Tipo do input é texto
-          className="search-bar" // Classe para aplicar estilos à barra de pesquisa
-          placeholder="Pesquise por pasta, nº processo, marcador, assunto ou envolvidos" // Texto que aparece quando a barra está vazia
+          type="text"
+          className="search-bar"
+          placeholder="Pesquise por pasta, nº processo, marcador, assunto ou envolvidos"
         />
-        <button className="search-btn">🔍</button> {/* Botão de pesquisa */}
-        <button className="advanced-search-btn">Busca avançada</button> {/* Botão para busca avançada */}
-        <button className="filter-btn">📁</button> {/* Botão de filtro */}
-        <button className="status-filter all">Todos (0)</button> {/* Botão para mostrar todos os processos */}
-        <button className="status-filter incomplete">Incompletos (0)</button> {/* Botão para mostrar processos incompletos */}
-        <button className="status-filter moved">Movimentados (0)</button> {/* Botão para mostrar processos movimentados */}
-        <button className="status-filter stopped">Parados (0)</button> {/* Botão para mostrar processos parados */}
+        <button className="search-btn">🔍</button>
+        <button className="advanced-search-btn" onClick={toggleAdvancedSearch}>Busca avançada</button>
+        <button className="filter-btn">📁</button>
+        <button className="status-filter all">Todos (0)</button>
+        <button className="status-filter incomplete">Incompletos (0)</button>
+        <button className="status-filter moved">Movimentados (0)</button>
+        <button className="status-filter stopped">Parados (0)</button>
       </div>
 
-      {/* Sort and Batch Actions */}
-      <div className="sort-and-actions"> {/* Container para opções de ordenação e ações em lote */}
-        <select className="sort-dropdown"> {/* Menu suspenso para selecionar o tipo de ordenação */}
-          <option value="recent">Últimos cadastrados</option> {/* Opção para ordenar pelos últimos cadastrados */}
+      <div className="sort-and-actions">
+        <select className="sort-dropdown">
+          <option value="recent">Últimos cadastrados</option>
         </select>
-        <button className="batch-actions-btn">Ações em lote</button> {/* Botão para realizar ações em lote */}
+        <button className="batch-actions-btn">Ações em lote</button>
       </div>
 
-      {/* Process List */}
-      <div className="process-list"> {/* Container para a lista de processos */}
-        {processos.map((item) => { // Mapeia cada item do array de processos para criar elementos JSX
-          const formattedItem = formatProcessData(item); // Formata os dados do processo
+      <div className="process-list">
+        {processos.map((item) => {
+          const formattedItem = formatProcessData(item);
           return (
-            <div key={formattedItem.id} className="process-item"> {/* Container para cada item de processo */}
-              <input type="checkbox" /> {/* Checkbox para seleção do processo */}
-              <div className="process-details"> {/* Container para os detalhes do processo */}
-                <p><strong>Cliente:</strong> {formattedItem.cliente}</p> {/* Exibe o nome do cliente */}
-                <p><strong>Envolvido:</strong> {formattedItem.envolvido}</p> {/* Exibe o tipo de envolvido */}
-                <p><strong>Número do processo:</strong> {formattedItem.processo}</p> {/* Exibe o número do processo */}
-                <p><strong>Assunto:</strong> {formattedItem.assunto}</p> {/* Exibe o assunto do processo */}
-                <p><strong>Órgão:</strong> {formattedItem.orgao}</p> {/* Exibe o órgão responsável */}
+            <div key={formattedItem.id} className="process-item">
+              <input type="checkbox" />
+              <div className="process-details">
+                <p><strong>Cliente:</strong> {formattedItem.cliente}</p>
+                <p><strong>Envolvido:</strong> {formattedItem.envolvido}</p>
+                <p><strong>Número do processo:</strong> {formattedItem.processo}</p>
+                <p><strong>Assunto:</strong> {formattedItem.assunto}</p>
+                <p><strong>Órgão:</strong> {formattedItem.orgao}</p>
               </div>
-              <div className="process-status"> {/* Container para o status do processo */}
-                <span className={`status-tag ${formattedItem.statusClass}`}> {/* Exibe o status com a classe apropriada */}
+              <div className="process-status">
+                <span className={`status-tag ${formattedItem.statusClass}`}>
                   {formattedItem.status}
                 </span>
-                <span className="tag">{formattedItem.tag}</span> {/* Exibe a tag se estiver presente */}
+                <span className="tag">{formattedItem.tag}</span>
               </div>
             </div>
           );
-        })} {/* Fim do mapeamento */}
+        })}
       </div>
+
+      {showAdvancedSearch && (
+        <div className="advanced-search-popup">
+          <div className="advanced-search-content">
+            <h2>Busca Avançada</h2>
+            <form>
+              <label>
+                Cliente:
+                <input type="text" name="cliente" />
+              </label>
+              <label>
+                Envolvido:
+                <input type="text" name="envolvido" />
+              </label>
+              <label>
+                Assunto:
+                <input type="text" name="assunto" />
+              </label>
+              <label>
+                Órgão:
+                <input type="text" name="orgao" />
+              </label>
+              <button type="submit">Buscar</button>
+              <button type="button" onClick={toggleAdvancedSearch}>Fechar</button>
+            </form>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
 
-export default ProcessosPage; // Exporta o componente para ser utilizado em outras partes da aplicação
+export default ProcessosPage;

@@ -1,115 +1,192 @@
 /* styles.css */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Container for the main form */
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da tela */
+  overflow-y: auto; /* Permite rolagem vertical quando necessário */
+}
+
+/* Container for the main form */
+.novo-processo-container {
+  max-width: 500px;
+  width: 90%;
+  margin: 50px auto; /* Centraliza horizontalmente e adiciona espaço superior */
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Title style */
+.novo-processo-container h2 {
+  text-align: center;
+  color: #00bfa6;
+  font-size: 1.8rem;
+}
+
+/* Tab buttons */
+.tab-buttons {
+  display: flex;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  color: #fff;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: border-bottom 0.3s ease;
+  font-size: 1rem;
+}
+
+.tab-button.active {
+  color: #00bfa6;
+  border-bottom: 2px solid #00bfa6;
+}
+
+/* Form field styles */
+.form-field {
+  margin-top: 10px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #333;
+  color: #aaa;
+  font-size: 1rem;
+}
+
+/* Checkbox styles */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  margin-right: 5px;
+}
+
+/* Button styles */
+.button {
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #00bfa6;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #008f8f;
+}
+
+/* Bottom options */
+.bottom-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.cancel-button {
+  color: #00bfa6;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.add-button {
+  color: #00bfa6;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styles for the pop-up */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+.popup-content h3 {
+  color: #00bfa6;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.popup-content button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .novo-processo-container {
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
-    background-color: #1e1e1e;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Title style */
-  .novo-processo-container h2 {
-    text-align: center;
-    color: #00bfa6;
-  }
-  
-  /* Tab buttons */
-  .tab-buttons {
-    display: flex;
-    margin-bottom: 10px;
-  }
-  
-  .tab-button {
-    flex: 1;
-    padding: 10px;
-    color: #fff;
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    cursor: pointer;
-    transition: border-bottom 0.3s ease;
-  }
-  
-  .tab-button.active {
-    color: #00bfa6;
-    border-bottom: 2px solid #00bfa6;
-  }
-  
-  /* Form field styles */
-  .form-field {
-    margin-top: 10px;
-  }
-  
-  .form-field label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .form-field input,
-  .form-field select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #333;
-    border-radius: 4px;
-    background-color: #333;
-    color: #aaa;
+    padding: 15px;
   }
-  
-  /* Checkbox styles */
-  .checkbox-container {
-    display: flex;
-    align-items: center;
+
+  .tab-button {
+    padding: 8px;
+    font-size: 0.9rem;
   }
-  
-  .checkbox-container input {
-    margin-right: 5px;
+
+  .button,
+  .cancel-button,
+  .popup-content button {
+    font-size: 1rem;
+    padding: 8px 12px;
   }
-  
-  /* Button styles */
-  .button {
-    padding: 10px 15px;
-    color: #fff;
-    background-color: #00bfa6;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #008f8f;
-  }
-  
-  /* Bottom options */
+
   .bottom-options {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cancel-button {
+    text-align: center;
     margin-top: 10px;
   }
-  
-  .cancel-button {
-    color: #00bfa6;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Additional styles for the + button */
-  .add-button {
-    color: #00bfa6;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
+}

@@ -1,0 +1,114 @@
+/* intimacoes.css */
+
+.intimacoes {
+    padding: 20px;
+    background-color: #121212;
+    color: #FFFFFF;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+  
+  .tabs button {
+    background: #1A1A1A;
+    color: #FFFFFF;
+    padding: 10px;
+    border: none;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .tabs button:hover {
+    background: #333;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 10px;
+    background: #333;
+    color: #FFF;
+    border: none;
+    margin-right: 10px;
+  }
+  
+  .search-btn {
+    background: #1A73E8;
+    color: #FFF;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .filter-buttons .filter-btn {
+    background: #444;
+    color: #FFF;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .filter-buttons .filter-btn:hover {
+    background: #555;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .sort-btn, .batch-actions-btn {
+    background: #1A73E8;
+    color: #FFF;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .intimacoes-list {
+    margin-top: 20px;
+  }
+  
+  .intimacao-item {
+    display: flex;
+    align-items: center;
+    background: #222;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .intimacao-item input[type="checkbox"] {
+    margin-right: 15px;
+  }
+  
+  .intimacao-details,
+  .process-details {
+    flex: 1;
+    color: #FFF;
+  }
+  
+  .status .status-badge {
+    background: #FF9800;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .tags .tag {
+    background: #666;
+    color: #FFF;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 3px;
+  }
+  

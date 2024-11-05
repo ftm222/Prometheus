@@ -81,7 +81,7 @@ const App = () => {
         <Route path="/processos/central-captura" element={<CentralCaptura />} />
         <Route path="/processos/andamentos" element={<AndamentosProcessuais />} />
         <Route path="/processos/relatorios" element={<RelatoriosProcessos />} />
-        <Route path="/processos/novo-processo" element={<NovoProcesso />} /> {/* Verifique se o componente está exportado corretamente */}
+        <Route path="/processos/novo-processo" element={<NovoProcesso />} />
 
         {/* Rotas da seção Financeiro */}
         <Route path="/financeiro" element={<ReceitasDespesas />} />

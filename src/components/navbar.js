@@ -73,7 +73,7 @@ const Navbar = () => {
             {activeDropdown === 'processos' && ( // Verifica se o dropdown de Processos está ativo
               <ul className="dropdown-menu"> {/* Exibe os links do dropdown se ativo */}
                 <li><Link to="/processos" onClick={handleLinkClick}>Processos</Link></li>
-                <li><Link to="/intimacoes" onClick={handleLinkClick}>Intimações</Link></li>
+                <li><Link to="/processos/intimacoes" onClick={handleLinkClick}>Intimações</Link></li> {/* Correção aqui */}
                 <li><Link to="/central" onClick={handleLinkClick}>Central de Captura</Link></li>
                 <li><Link to="/andamentos" onClick={handleLinkClick}>Andamentos Processuais</Link></li>
                 <li><Link to="/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>

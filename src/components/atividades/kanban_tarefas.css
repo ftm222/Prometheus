@@ -1,0 +1,150 @@
+/* Estilo geral para o contêiner principal do Kanban */
+.kanban-container {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo para o cabeçalho */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .new-board-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .new-board-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilo para a barra de ferramentas */
+  .toolbar {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .new-task-btn,
+  .search-btn,
+  .filters button,
+  .date-picker-btn,
+  .add-column-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .new-task-btn:hover,
+  .search-btn:hover,
+  .filters button:hover,
+  .date-picker-btn:hover,
+  .add-column-btn:hover {
+    background-color: #444;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #fff;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .settings-btn {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .settings-btn:hover {
+    color: #aaa;
+  }
+  
+  /* Estilo para filtros de ordenação e data */
+  .sort-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Estilo para as colunas do Kanban */
+  .kanban-columns {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .kanban-column {
+    flex: 1;
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .kanban-column h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .add-column-btn {
+    align-self: flex-start;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+  }
+  
+  .add-column-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilo para tornar responsivo */
+  @media (max-width: 768px) {
+    .kanban-columns {
+      flex-direction: column;
+    }
+  }
+  

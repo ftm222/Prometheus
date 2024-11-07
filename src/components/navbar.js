@@ -61,8 +61,8 @@ const Navbar = () => {
               <ul className="dropdown-menu"> {/* Exibe os links do dropdown se ativo */}
                 <li><Link to="/atividades" onClick={handleLinkClick}>Lista de Atividades</Link></li>
                 <li><Link to="/atividades/painel" onClick={handleLinkClick}>Painel de Tarefas</Link></li>
-                <li><Link to="/kanban" onClick={handleLinkClick}>Kanban de Tarefas</Link></li>
-                <li><Link to="/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
+                <li><Link to="/atividades/kanban" onClick={handleLinkClick}>Kanban de Tarefas</Link></li>
+                <li><Link to="/atividades/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
               </ul>
             )}
           </li>

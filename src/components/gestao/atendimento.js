@@ -3,6 +3,9 @@
 // Importa o React e o hook useState para gerenciar o estado do componente
 import React, { useState } from 'react';
 
+// Importa useNavigate
+import { useNavigate } from 'react-router-dom'; 
+
 // Importa o arquivo de estilos CSS para o componente
 import './atendimento.css';
 
@@ -17,6 +20,15 @@ const Atendimentos = () => {
     setShowAdvancedSearch(prevState => !prevState);
   };
 
+  // Define navigate com useNavigate
+  const navigate = useNavigate(); 
+
+  // Define o caminho da página inserir atendimento no botão Novo Atendimento
+  const handleNewService = () => {
+    console.log("Abrindo formulário para novo processo...");
+    navigate('/gestao/atendimento/inserir-atendimento');
+  };
+
   // Retorna o JSX que representa o componente
   return (
     <div>
@@ -27,7 +39,7 @@ const Atendimentos = () => {
           </div>
           <div className="right">
             {/* Botões de ação na barra superior */}
-            <button id="new">Novo</button>
+            <button className="new-process-btn" onClick={handleNewService}>Novo Atendiemnto</button>
             <button id="help">Ajuda</button>
             <button id="video">Vídeo</button>
             <button id="support">Suporte</button>

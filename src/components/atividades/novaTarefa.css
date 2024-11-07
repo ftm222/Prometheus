@@ -1,0 +1,134 @@
+/* Estilos gerais para o container do formulário */
+.nova-tarefa-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.nova-tarefa-container h2 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilos para os rótulos e campos */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    font-weight: bold;
+}
+
+label .required {
+    color: red;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+/* Estilos para botões */
+button[type="submit"],
+.mostrar-mais-info-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover,
+.mostrar-mais-info-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Botão "Mais informações" */
+.mostrar-mais-info-btn {
+    background-color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.mostrar-mais-info-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Seção de "Mais informações" */
+.mais-informacoes {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    margin-top: 15px;
+}
+
+.mais-informacoes label {
+    font-weight: normal;
+}
+
+/* Estilos para os checkboxes dentro de "Mais informações" */
+fieldset {
+    margin-top: 10px;
+    border: none;
+}
+
+fieldset legend {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+label input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Ajuste de layout para campos específicos */
+select[name="coluna"],
+select[name="quadro"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Caixa de seleção "Exibir tarefa no kanban" */
+label[for="exibirKanban"] {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+label[for="exibirKanban"] input {
+    margin-right: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .nova-tarefa-container {
+        padding: 15px;
+    }
+
+    button[type="submit"],
+    .mostrar-mais-info-btn {
+        font-size: 14px;
+    }
+}

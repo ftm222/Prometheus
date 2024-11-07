@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaSearch, FaPlus, FaCalendarAlt, FaCog } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 
 function KanbanPage() {
   const [searchText, setSearchText] = useState('');
@@ -11,6 +12,13 @@ function KanbanPage() {
     Concluidas: [],
   });
 
+  const navigate = useNavigate(); // Define navigate com useNavigate
+
+  const handleNewTask = () => {
+    console.log("Abrindo formulário para nova tarefa...");
+    navigate('/atividades/nova-tarefa'); // Usa navigate para redirecionar
+  };
+
   return (
     <div className="kanban-container" style={{ backgroundColor: '#1c1c1c', color: '#fff', padding: '20px' }}>
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -19,7 +27,7 @@ function KanbanPage() {
       </header>
 
       <div className="toolbar" style={{ margin: '20px 0', display: 'flex', alignItems: 'center' }}>
-        <button className="new-task-btn"><FaPlus /> Nova Tarefa</button>
+        <button className="new-process-btn" onClick={handleNewTask}>Nova Tarefa</button>
         <input
           type="text"
           placeholder="Pesquise por responsável, situação, descrição ou marcador"

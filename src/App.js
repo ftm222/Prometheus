@@ -19,6 +19,7 @@ import MainContent from './components/gestao/MainContent';
 import ListaAtividades from './components/atividades/lista_atividades';
 import PainelTarefas from './components/atividades/painel_tarefas';
 import KanbanTarefas from './components/atividades/kanban_tarefas';
+import NovaTarefa from './components/atividades/novaTarefa';
 import RelatoriosAtividades from './components/atividades/relatorios';
 
 // Importação dos componentes da página de Processos
@@ -73,6 +74,7 @@ const App = () => {
         <Route path="/atividades" element={<ListaAtividades />} />
         <Route path="/atividades/painel" element={<PainelTarefas />} />
         <Route path="/atividades/kanban" element={<KanbanTarefas />} />
+        <Route path="/atividades/nova-tarefa" element={<NovaTarefa />} />
         <Route path="/atividades/relatorios" element={<RelatoriosAtividades />} />
 
         {/* Rotas da seção Processos */}

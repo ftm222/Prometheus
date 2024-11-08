@@ -29,6 +29,7 @@ import CentralCaptura from './components/processos/central_captura_processos';
 import AndamentosProcessuais from './components/processos/andamentos_processuais';
 import RelatoriosProcessos from './components/processos/relatórios'; // Verifique se este caminho está correto
 import NovoProcesso from './components/processos/novoProcesso';
+import NovoAndamento from './components/processos/novoAndamento'
 
 // Importação dos componentes da página Financeiro
 import ReceitasDespesas from './components/financeiro/receitas_despesas';
@@ -71,7 +72,7 @@ const App = () => {
         <Route path="/gestao/relatorios" element={<MainContent />} />
 
         {/* Rotas da seção Atividades */}
-        <Route path="/atividades" element={<ListaAtividades />} />
+        <Route path="/atividades/lista-atividades" element={<ListaAtividades />} />
         <Route path="/atividades/painel" element={<PainelTarefas />} />
         <Route path="/atividades/kanban" element={<KanbanTarefas />} />
         <Route path="/atividades/nova-tarefa" element={<NovaTarefa />} />
@@ -84,9 +85,10 @@ const App = () => {
         <Route path="/processos/andamentos" element={<AndamentosProcessuais />} />
         <Route path="/processos/relatorios" element={<RelatoriosProcessos />} />
         <Route path="/processos/novo-processo" element={<NovoProcesso />} />
+        <Route path="/processos/andamentos/novo-andamento" element={<NovoAndamento />} />
 
         {/* Rotas da seção Financeiro */}
-        <Route path="/financeiro" element={<ReceitasDespesas />} />
+        <Route path="/financeiro/receitas-despesas" element={<ReceitasDespesas />} />
         <Route path="/financeiro/extrato" element={<ExtratoConta />} />
         <Route path="/financeiro/solicitacoes" element={<Solicitacoes />} />
         <Route path="/financeiro/integracao-receitas" element={<IntegracaoReceitas />} />
@@ -95,7 +97,7 @@ const App = () => {
 
         {/* Rotas da seção Documentos */}
         <Route path="/documentos" element={<Documentos />} />
-        <Route path="/documentos/modelos" element={<ModelosDocumentos />} />
+        <Route path="/documentos/modelos-documentos" element={<ModelosDocumentos />} />
 
         {/* Rotas da seção Extensões */}
         <Route path="/extensoes" element={<Conexoes />} />

@@ -10,10 +10,13 @@ import './timesheet.css'; // Certifique-se de que o nome do arquivo CSS esteja c
 const Timesheet = () => {
     // Inicializa o hook useNavigate, permitindo redirecionamento de páginas
     const navigate = useNavigate(); // Inicializa o hook useNavigate
+    
     // Define o estado currentPage, com valor inicial 'timesheets'
     const [currentPage, setCurrentPage] = useState('timesheets'); // Estado para controlar a página atual
+    
     // Define o estado timesheets como um array vazio para armazenar os timesheets
     const [timesheets] = useState([]); // Estado para armazenar os timesheets
+    
     // Define o estado showAdvancedSearch como false para controlar a exibição do modal de busca avançada
     const [showAdvancedSearch, setShowAdvancedSearch] = useState(false); // Estado para controlar o modal de busca avançada
 

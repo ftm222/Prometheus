@@ -59,7 +59,7 @@ const Navbar = () => {
             <Link to="#">Atividades</Link> {/* Link fictício para abrir o menu de Atividades */}
             {activeDropdown === 'atividades' && ( // Verifica se o dropdown de Atividades está ativo
               <ul className="dropdown-menu"> {/* Exibe os links do dropdown se ativo */}
-                <li><Link to="/atividades" onClick={handleLinkClick}>Lista de Atividades</Link></li>
+                <li><Link to="/atividades/lista-atividades" onClick={handleLinkClick}>Lista de Atividades</Link></li>
                 <li><Link to="/atividades/painel" onClick={handleLinkClick}>Painel de Tarefas</Link></li>
                 <li><Link to="/atividades/kanban" onClick={handleLinkClick}>Kanban de Tarefas</Link></li>
                 <li><Link to="/atividades/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
@@ -74,9 +74,9 @@ const Navbar = () => {
               <ul className="dropdown-menu"> {/* Exibe os links do dropdown se ativo */}
                 <li><Link to="/processos" onClick={handleLinkClick}>Processos</Link></li>
                 <li><Link to="/processos/intimacoes" onClick={handleLinkClick}>Intimações</Link></li> {/* Correção aqui */}
-                <li><Link to="/central" onClick={handleLinkClick}>Central de Captura</Link></li>
-                <li><Link to="/andamentos" onClick={handleLinkClick}>Andamentos Processuais</Link></li>
-                <li><Link to="/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
+                <li><Link to="/processos/central-captura" onClick={handleLinkClick}>Central de Captura</Link></li>
+                <li><Link to="/processos/andamentos" onClick={handleLinkClick}>Andamentos Processuais</Link></li>
+                <li><Link to="/processos/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
               </ul>
             )}
           </li>
@@ -86,11 +86,12 @@ const Navbar = () => {
             <Link to="#">Financeiro</Link> {/* Link fictício para abrir o menu de Financeiro */}
             {activeDropdown === 'financeiro' && ( // Verifica se o dropdown de Financeiro está ativo
               <ul className="dropdown-menu"> {/* Exibe os links do dropdown se ativo */}
-                <li><Link to="/receitas" onClick={handleLinkClick}>Receitas e Despesas</Link></li>
-                <li><Link to="/extrato" onClick={handleLinkClick}>Extrato de Conta</Link></li>
-                <li><Link to="/solicitacoes" onClick={handleLinkClick}>Solicitações</Link></li>
-                <li><Link to="/integracao" onClick={handleLinkClick}>Integração de Receitas</Link></li>
-                <li><Link to="/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
+                <li><Link to="/financeiro/receitas-despesas" onClick={handleLinkClick}>Receitas e Despesas</Link></li>
+                <li><Link to="/financeiro/extrato" onClick={handleLinkClick}>Extrato de Conta</Link></li>
+                <li><Link to="/financeiro/solicitacoes" onClick={handleLinkClick}>Solicitações</Link></li>
+                <li><Link to="/financeiro/integracao-receitas" onClick={handleLinkClick}>Integração de Receitas</Link></li>
+                <li><Link to="/financeiro/integracao-despesas" onClick={handleLinkClick}>Integração de Despesas</Link></li>
+                <li><Link to="/financeiro/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
               </ul>
             )}
           </li>
@@ -101,7 +102,7 @@ const Navbar = () => {
             {activeDropdown === 'documentos' && ( // Verifica se o dropdown de Documentos está ativo
               <ul className="dropdown-menu"> {/* Exibe os links do dropdown se ativo */}
                 <li><Link to="/documentos" onClick={handleLinkClick}>Documentos</Link></li>
-                <li><Link to="/modelos" onClick={handleLinkClick}>Modelos de Documentos</Link></li>
+                <li><Link to="/documentos/modelos-documentos" onClick={handleLinkClick}>Modelos de Documentos</Link></li>
               </ul>
             )}
           </li>
@@ -112,7 +113,7 @@ const Navbar = () => {
             {activeDropdown === 'extensoes' && ( // Verifica se o dropdown de Extensões está ativo
               <ul className="dropdown-menu"> {/* Exibe os links do dropdown se ativo */}
                 <li><Link to="/conexoes" onClick={handleLinkClick}>Conexões</Link></li>
-                <li><Link to="/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
+                <li><Link to="/extensoes/relatorios" onClick={handleLinkClick}>Relatórios</Link></li>
               </ul>
             )}
           </li>

@@ -1,9 +1,10 @@
 // Intimacoes.js
-
 import React, { useState } from 'react';
 import './intimacoes.css';
 
+// Componente principal Intimacoes
 function Intimacoes() {
+  // Define o estado das intimações com uma lista de objetos de exemplo
   const [intimacoes, setIntimacoes] = useState([
     {
       id: 1,
@@ -25,13 +26,25 @@ function Intimacoes() {
       status: 'Pendente',
       tags: ['GC', 'ND', 'BC']
     },
-    // Adicione os outros itens conforme a imagem
   ]);
 
-  // Função para filtrar apenas intimações pendentes
+  // Função para filtrar apenas intimações com status "Pendente"
   const filtrarPendentes = () => {
     const intimacoesPendentes = intimacoes.filter(item => item.status === 'Pendente');
     setIntimacoes(intimacoesPendentes);
+  };
+
+  // Define o estado para controlar a exibição do modal de busca avançada
+  const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
+
+  // Função para abrir o modal de busca avançada
+  const handleAdvancedSearchClick = () => {
+    setShowAdvancedSearch(true); // Atualiza o estado para exibir o modal
+  };
+
+  // Função para fechar o modal de busca avançada
+  const closeAdvancedSearch = () => {
+    setShowAdvancedSearch(false);
   };
 
   return (
@@ -47,7 +60,9 @@ function Intimacoes() {
 
       <div className="search-bar">
         <input type="text" placeholder="Pesquise pela descrição da intimação..." />
-        <button className="search-btn">Busca avançada</button>
+        <button className="btn-advanced-search" onClick={handleAdvancedSearchClick}>
+          Busca avançada
+        </button>
         <div className="filter-buttons">
           <button className="filter-btn" onClick={() => setIntimacoes(intimacoes)}>Todas</button>
           <button className="filter-btn" onClick={filtrarPendentes}>Pendentes</button>
@@ -66,10 +81,114 @@ function Intimacoes() {
           <IntimacaoItem key={item.id} item={item} />
         ))}
       </div>
+
+      {/* Modal de Busca Avançada */}
+      {showAdvancedSearch && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close-btn" onClick={closeAdvancedSearch}>
+              &times;
+            </span>
+            <AdvancedSearch closeModal={closeAdvancedSearch} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
+// Componente AdvancedSearch para a busca avançada
+function AdvancedSearch({ closeModal }) {
+  const [formData, setFormData] = useState({
+    tipoDiario: false,
+    tipoEletronica: false,
+    justica: "",
+    estado: "",
+    filtroData: "Data da Publicação",
+    periodoInicio: "",
+    periodoFim: "",
+    responsavelProcesso: "",
+    grupoTrabalho: "",
+    exibirExcluidos: "Não exibir excluídos",
+    filtros: "",
+    responsavelIntimacao: "",
+    advogadoTermoPesquisa: ""
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value
+    });
+  };
+
+  const handleClear = () => {
+    setFormData({
+      tipoDiario: false,
+      tipoEletronica: false,
+      justica: "",
+      estado: "",
+      filtroData: "Data da Publicação",
+      periodoInicio: "",
+      periodoFim: "",
+      responsavelProcesso: "",
+      grupoTrabalho: "",
+      exibirExcluidos: "Não exibir excluídos",
+      filtros: "",
+      responsavelIntimacao: "",
+      advogadoTermoPesquisa: ""
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Searching with:", formData);
+    closeModal();
+  };
+
+  return (
+    <form className="advanced-search" onSubmit={handleSubmit}>
+      <h2>Busca avançada</h2>
+
+      <div className="form-group">
+        <label>
+          <input
+            type="checkbox"
+            name="tipoDiario"
+            checked={formData.tipoDiario}
+            onChange={handleChange}
+          />
+          Diário
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="tipoEletronica"
+            checked={formData.tipoEletronica}
+            onChange={handleChange}
+          />
+          Eletrônica
+        </label>
+      </div>
+
+      <div className="form-group">
+        <label>Justiça</label>
+        <select name="justica" value={formData.justica} onChange={handleChange}>
+          <option value="">Pesquise</option>
+          {/* Adicionar opções dinamicamente aqui */}
+        </select>
+      </div>
+
+      <div className="form-group-buttons">
+        <button type="button" onClick={handleClear}>Limpar</button>
+        <button type="submit">Aplicar Filtros</button>
+      </div>
+    </form>
+  );
+}
+
+// Componente que renderiza cada item de intimação individualmente
 function IntimacaoItem({ item }) {
   return (
     <div className="intimacao-item">

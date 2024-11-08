@@ -1,0 +1,186 @@
+/* Estilos Gerais */
+body { /* Define o estilo do corpo da página */
+    font-family: Arial, sans-serif; /* Define a fonte principal da página como Arial ou sans-serif como fallback */
+    background-color: #f8f9fb; /* Define a cor de fundo da página */
+    color: #333; /* Define a cor do texto */
+    margin: 0; /* Remove a margem padrão do corpo */
+    padding: 0; /* Remove o preenchimento padrão do corpo */
+}
+
+.process-list-page { /* Define o estilo para a página de lista de processos */
+    max-width: 1200px; /* Limita a largura máxima da página a 1200px */
+    margin: auto; /* Centraliza a página horizontalmente */
+    padding: 20px; /* Aplica um espaçamento interno de 20px */
+}
+
+/* Header */
+header h1 { /* Define o estilo do título no cabeçalho */
+    font-size: 24px; /* Define o tamanho da fonte do título */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    margin-bottom: 20px; /* Aplica uma margem inferior de 20px para separar do conteúdo seguinte */
+}
+
+/* Barra de Ações */
+.actions { /* Define o estilo para o contêiner de ações (botões e filtros) */
+    display: flex; /* Aplica um layout flexível para os itens dentro do contêiner */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    gap: 10px; /* Adiciona um espaço de 10px entre os itens */
+    margin-bottom: 20px; /* Aplica uma margem inferior de 20px */
+}
+
+.btn-novo-andamento { /* Define o estilo do botão "Novo Andamento" */
+    background-color: #4CAF50; /* Define a cor de fundo como verde */
+    color: white; /* Define a cor do texto como branco */
+    padding: 10px 15px; /* Aplica um espaçamento interno de 10px vertical e 15px horizontal */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    font-size: 14px; /* Define o tamanho da fonte */
+    display: flex; /* Aplica um layout flexível para o ícone e texto dentro do botão */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+.btn-novo-andamento svg { /* Define o estilo do ícone dentro do botão "Novo Andamento" */
+    margin-right: 5px; /* Aplica uma margem à direita do ícone */
+}
+
+input[type="text"] { /* Define o estilo para campos de texto de busca */
+    flex: 1; /* Faz o campo de texto ocupar o máximo de espaço disponível */
+    padding: 8px 12px; /* Aplica um espaçamento interno de 8px vertical e 12px horizontal */
+    font-size: 14px; /* Define o tamanho da fonte */
+    border: 1px solid #ddd; /* Aplica uma borda de 1px de cor cinza claro */
+    border-radius: 4px; /* Arredonda os cantos da borda */
+}
+
+.btn-busca-avancada { /* Define o estilo do botão de busca avançada */
+    background-color: #4CAF50; /* Define a cor de fundo como verde */
+    color: white; /* Define a cor do texto como branco */
+    padding: 8px 12px; /* Aplica um espaçamento interno de 8px vertical e 12px horizontal */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    font-size: 14px; /* Define o tamanho da fonte */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+.filter-buttons { /* Define o estilo para o contêiner de botões de filtro */
+    display: flex; /* Aplica um layout flexível para os itens dentro do contêiner */
+    gap: 10px; /* Adiciona um espaço de 10px entre os itens */
+}
+
+.filter { /* Define o estilo de cada botão de filtro */
+    background-color: #ddd; /* Define a cor de fundo como cinza claro */
+    color: #333; /* Define a cor do texto */
+    padding: 8px 12px; /* Aplica um espaçamento interno de 8px vertical e 12px horizontal */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    font-size: 14px; /* Define o tamanho da fonte */
+    border: none; /* Remove a borda do botão */
+}
+
+.filter.active { /* Define o estilo para o botão de filtro ativo */
+    background-color: #4CAF50; /* Altera a cor de fundo para verde quando ativo */
+    color: white; /* Altera a cor do texto para branco quando ativo */
+}
+
+.sort-dropdown select { /* Define o estilo do seletor de ordenação */
+    padding: 8px 12px; /* Aplica um espaçamento interno de 8px vertical e 12px horizontal */
+    font-size: 14px; /* Define o tamanho da fonte */
+    border: 1px solid #ddd; /* Aplica uma borda de 1px de cor cinza claro */
+    border-radius: 5px; /* Arredonda os cantos da borda */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+/* Tabela de Processos */
+.process-table { /* Define o estilo para a tabela de processos */
+    width: 100%; /* Define a largura da tabela para 100% do contêiner */
+    border-collapse: collapse; /* Remove o espaçamento entre as células da tabela */
+    background-color: white; /* Define a cor de fundo da tabela como branco */
+    border: 1px solid #ddd; /* Aplica uma borda de 1px de cor cinza claro */
+    border-radius: 5px; /* Arredonda os cantos da tabela */
+    overflow: hidden; /* Impede o conteúdo de exceder os limites da tabela */
+}
+
+.process-table th, /* Define o estilo para as células de cabeçalho */
+.process-table td { /* Define o estilo para as células da tabela */
+    padding: 10px; /* Aplica um espaçamento interno de 10px nas células */
+    text-align: left; /* Alinha o texto à esquerda nas células */
+    font-size: 14px; /* Define o tamanho da fonte */
+}
+
+.process-table th { /* Define o estilo para as células de cabeçalho */
+    background-color: #f4f4f4; /* Define a cor de fundo das células de cabeçalho como cinza claro */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    color: #333; /* Define a cor do texto das células de cabeçalho */
+}
+
+.process-table tr:nth-child(even) { /* Altera o fundo das linhas pares da tabela */
+    background-color: #fafafa; /* Define a cor de fundo como cinza muito claro para linhas pares */
+}
+
+.process-table td:first-child { /* Define o estilo da primeira célula em cada linha */
+    width: 40px; /* Define a largura da primeira célula */
+}
+
+.process-table input[type="checkbox"] { /* Estilo para a caixa de seleção dentro da tabela */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+.process-table td:last-child { /* Define o estilo da última célula em cada linha */
+    width: 50px; /* Define a largura da última célula */
+    text-align: center; /* Alinha o conteúdo da última célula ao centro */
+}
+
+.btn-visualizar { /* Define o estilo do botão de visualizar */
+    background-color: #ffb74d; /* Define a cor de fundo do botão como laranja */
+    border: none; /* Remove a borda do botão */
+    color: white; /* Define a cor do texto como branco */
+    padding: 6px; /* Aplica um espaçamento interno de 6px */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+.btn-visualizar svg { /* Define o estilo do ícone dentro do botão de visualizar */
+    font-size: 16px; /* Define o tamanho do ícone */
+}
+
+/* Ícones de notificação e envelope */
+.btn-visualizar { /* Ajusta o estilo do botão para exibir o ícone e o texto de forma centralizada */
+    display: flex; /* Aplica um layout flexível para o conteúdo dentro do botão */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+}
+
+/* Suporte Novidades */
+.support { /* Define o estilo do botão de suporte */
+    position: fixed; /* Define a posição fixa para o botão */
+    bottom: 20px; /* Define a distância de 20px da parte inferior da tela */
+    right: 20px; /* Define a distância de 20px da parte direita da tela */
+}
+
+.support button { /* Define o estilo do botão de suporte */
+    background-color: #4CAF50; /* Define a cor de fundo como verde */
+    color: white; /* Define a cor do texto como branco */
+    padding: 10px 15px; /* Aplica um espaçamento interno de 10px vertical e 15px horizontal */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    font-size: 14px; /* Define o tamanho da fonte */
+}
+
+/* Responsividade */
+@media (max-width: 768px) { /* Define as regras para telas menores que 768px */
+    .actions { /* Ajusta o layout para a barra de ações em telas pequenas */
+        flex-direction: column; /* Alinha os itens em uma coluna */
+        gap: 10px; /* Adiciona um espaço de 10px entre os itens */
+    }
+
+    .process-table th, .process-table td { /* Ajusta o tamanho da fonte e o preenchimento das células na tabela */
+        font-size: 12px; /* Reduz o tamanho da fonte */
+        padding: 8px; /* Diminui o espaçamento interno */
+    }
+
+    .btn-novo-andamento, .btn-busca-avancada, .filter, .sort-dropdown select { /* Ajusta o tamanho da fonte e o preenchimento dos botões em telas pequenas */
+        font-size: 12px; /* Reduz o tamanho da fonte */
+        padding: 8px; /* Diminui o espaçamento interno */
+    }
+}

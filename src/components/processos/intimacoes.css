@@ -1,114 +1,243 @@
-/* intimacoes.css */
-
+/* Estilos principais */
 .intimacoes {
-    padding: 20px;
-    background-color: #121212;
-    color: #FFFFFF;
-  }
-  
-  h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #FFFFFF;
-  }
-  
-  .tabs button {
-    background: #1A1A1A;
-    color: #FFFFFF;
-    padding: 10px;
-    border: none;
-    margin-right: 5px;
-    cursor: pointer;
-  }
-  
-  .tabs button:hover {
-    background: #333;
-  }
-  
-  .search-bar {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .search-bar input {
-    flex: 1;
-    padding: 10px;
-    background: #333;
-    color: #FFF;
-    border: none;
-    margin-right: 10px;
-  }
-  
-  .search-btn {
-    background: #1A73E8;
-    color: #FFF;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .filter-buttons .filter-btn {
-    background: #444;
-    color: #FFF;
-    padding: 5px 10px;
-    margin-right: 5px;
-    cursor: pointer;
-  }
-  
-  .filter-buttons .filter-btn:hover {
-    background: #555;
-  }
-  
-  .actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-  
-  .sort-btn, .batch-actions-btn {
-    background: #1A73E8;
-    color: #FFF;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .intimacoes-list {
-    margin-top: 20px;
-  }
-  
-  .intimacao-item {
-    display: flex;
-    align-items: center;
-    background: #222;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .intimacao-item input[type="checkbox"] {
-    margin-right: 15px;
-  }
-  
-  .intimacao-details,
-  .process-details {
-    flex: 1;
-    color: #FFF;
-  }
-  
-  .status .status-badge {
-    background: #FF9800;
-    color: #FFF;
-    padding: 5px;
-    border-radius: 5px;
-  }
-  
-  .tags .tag {
-    background: #666;
-    color: #FFF;
-    padding: 5px;
-    margin-left: 5px;
-    border-radius: 3px;
-  }
-  
+  padding: 20px;
+  background-color: #121212;
+  color: #FFFFFF;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.tabs button {
+  background: #1A1A1A;
+  color: #FFFFFF;
+  padding: 10px;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.tabs button:hover {
+  background: #333;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  background: #333;
+  color: #FFF;
+  border: none;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.btn-advanced-search {
+  background: #1A73E8;
+  color: #FFF;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn-advanced-search:hover {
+  background: #1558b0;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.filter-buttons .filter-btn {
+  background: #444;
+  color: #FFF;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.filter-buttons .filter-btn:hover {
+  background: #555;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.sort-btn, .batch-actions-btn {
+  background: #1A73E8;
+  color: #FFF;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.sort-btn:hover, .batch-actions-btn:hover {
+  background: #1558b0;
+}
+
+.intimacoes-list {
+  margin-top: 20px;
+}
+
+.intimacao-item {
+  display: flex;
+  align-items: center;
+  background: #222;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.intimacao-item input[type="checkbox"] {
+  margin-right: 15px;
+}
+
+.intimacao-details,
+.process-details {
+  flex: 1;
+  color: #FFF;
+}
+
+.status .status-badge {
+  background: #FF9800;
+  color: #FFF;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.tags {
+  display: flex;
+  gap: 5px;
+}
+
+.tags .tag {
+  background: #666;
+  color: #FFF;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* Estilos para o Modal de Busca Avançada */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #1A1A1A;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  color: #FFF;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #FFF;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #FF9800;
+}
+
+h2 {
+  margin-top: 0;
+  color: #FFFFFF;
+}
+
+.advanced-search {
+  display: flex;
+  flex-direction: column;
+}
+
+.advanced-search .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.advanced-search label {
+  margin-bottom: 5px;
+  color: #CCC;
+}
+
+.advanced-search input[type="text"],
+.advanced-search input[type="date"],
+.advanced-search select {
+  padding: 8px;
+  background: #333;
+  color: #FFF;
+  border: none;
+  border-radius: 4px;
+}
+
+.advanced-search input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.form-group-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.form-group-buttons button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.form-group-buttons button[type="button"] {
+  background-color: #555;
+  color: #FFF;
+}
+
+.form-group-buttons button[type="button"]:hover {
+  background-color: #666;
+}
+
+.form-group-buttons button[type="submit"] {
+  background-color: #1A73E8;
+  color: #FFF;
+}
+
+.form-group-buttons button[type="submit"]:hover {
+  background-color: #1558b0;
+}

@@ -1,0 +1,179 @@
+/* Estilo para o container principal */
+.novo-lancamento {
+    background-color: #1a1a1a; /* Fundo escuro */
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do cabeçalho e botão "Cadastro Avançado" */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.cadastro-avancado {
+    background: none;
+    color: #00b37e;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilo das abas */
+.abas {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.abas button {
+    background: none;
+    color: #888;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.abas .ativa {
+    color: #fff;
+    background-color: #333;
+}
+
+/* Estilo geral dos campos do formulário */
+.formulario .campo {
+    margin-bottom: 15px;
+}
+
+.formulario label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.formulario input[type="text"],
+.formulario input[type="date"],
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Estilo específico para textarea */
+.formulario textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* Estilo para campos com layout de duas colunas */
+.campo.duplo {
+    display: flex;
+    gap: 20px;
+}
+
+.campo.duplo div {
+    flex: 1;
+}
+
+/* Checkbox de recorrência */
+.campo.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.campo.checkbox label {
+    font-weight: normal;
+}
+
+/* Botão para o campo "Favorecido" */
+.botao-favorecido {
+    background: #00b37e;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Estilo dos botões de ação (Cancelar e Salvar) */
+.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.botoes label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+}
+
+.botoes .cancelar {
+    background: none;
+    color: #888;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.botoes .salvar {
+    background-color: #00b37e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botoes .salvar:hover {
+    background-color: #009965;
+}
+
+/* Estilos para o campo de seleção Condição de pagamento */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ffffff" viewBox="0 0 16 16"><path d="M1.5 5.5l6 6 6-6"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    padding-right: 30px;
+}
+
+/* Estilos adicionais para acessibilidade e layout */
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: #00b37e;
+}

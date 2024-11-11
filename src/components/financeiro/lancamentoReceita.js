@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import './novoLancamento.css'
+import { useNavigate } from 'react-router-dom';
+import './lancamentoReceita.css'
 
 function NovoLancamento() {
   const [valorTotal, setValorTotal] = useState("");
@@ -30,13 +31,33 @@ function NovoLancamento() {
     console.log("Lançamento cancelado.");
   };
 
+  const navigate = useNavigate();
+
+  const handleNewExpenses = () => {
+    console.log("Abrindo formulário para novo processo...");
+    navigate('/financeiro/receitas-despesas/lancamento-despesas');
+};
+
+const handleNewRevenues = () => {
+    console.log("Abrindo formulário para novo processo...");
+    navigate('/financeiro/receitas-despesas/lancamento-receita');
+};
+
+const handleNewTransfer = () => {
+    console.log("Abrindo formulário para novo processo...");
+    navigate('/financeiro/receitas-despesas/lancamento-tranferencia');
+};
+
   return (
     <div className="novo-lancamento">
-      <h2>Novo Lançamento</h2>
+            <div className="header">
+                <h2>Novo Lançamento</h2>
+                <button className="cadastro-avancado">Cadastro Avançado</button>
+            </div>
       <div className="tabs">
-        <button className="tab active">Receita</button>
-        <button className="tab">Despesa</button>
-        <button className="tab">Transferência</button>
+        <button className="new-process-btn" onClick={handleNewRevenues}>Receitas</button>
+        <button className="new-process-btn" onClick={handleNewExpenses}>Despesas</button>
+        <button className="new-process-btn" onClick={handleNewTransfer}>Transferência</button>
       </div>
 
       <form>

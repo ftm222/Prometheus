@@ -1,27 +1,23 @@
 import React, { useState } from 'react';
 import { FaSearch, FaCog } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
-// Importa useNavigate para manipular navegação de páginas
-import { useNavigate } from 'react-router-dom';  // Importa o hook useNavigate da biblioteca react-router-dom para navegação entre páginas
-
-import './receitas_despesas.css'
+import './receitas_despesas.css';
 
 const Financeiro = () => {
   const [filtro, setFiltro] = useState('Todas');
-  
-  // Usa o hook useNavigate para navegar para outras páginas
-  const navigate = useNavigate();  // Cria uma instância de navegação
-  
-  // Função para manipular a navegação para uma nova página
+  const [aba, setAba] = useState('Receitas'); // Estado para controlar a aba ativa
+  const navigate = useNavigate();
+
   const handleNewLaunch = () => {
-    console.log("Abrindo formulário para novo processo...");  // Exibe mensagem no console
-    navigate('/financeiro/receitas-despesas/novo-lancamento');  // Navega para a página de criação de um novo andamento
+    console.log("Abrindo formulário para novo processo...");
+    navigate('/financeiro/receitas-despesas/lancamento-receita');
   };
 
   return (
     <div className="financeiro">
       <header className="header">
-        <h1>Receitas e despesas</h1>
+        <h1>Receitas e Despesas</h1>
       </header>
       
       <div className="content">
@@ -32,7 +28,7 @@ const Financeiro = () => {
             <p>R$ 0,00</p>
             <p className="receitas">R$ 0,00</p>
             <p className="despesas">R$ 0,00</p>
-            <p className="pendentes">R$ 4.000,00</p>
+            <p className="pendentes">R$ 0,00</p>
           </div>
         </div>
         
@@ -40,8 +36,18 @@ const Financeiro = () => {
         <div className="main-content">
           {/* Tabs */}
           <div className="tabs">
-            <button className="tab active">Receitas</button>
-            <button className="tab">Despesas</button>
+            <button 
+              className={`tab ${aba === 'Receitas' ? 'active' : ''}`} 
+              onClick={() => setAba('Receitas')}
+            >
+              Receitas
+            </button>
+            <button 
+              className={`tab ${aba === 'Despesas' ? 'active' : ''}`} 
+              onClick={() => setAba('Despesas')}
+            >
+              Despesas
+            </button>
           </div>
           
           {/* Novo Lançamento */}
@@ -73,16 +79,18 @@ const Financeiro = () => {
           
           {/* Lista de Lançamentos */}
           <div className="transaction-list">
+            <h2>{aba === 'Receitas' ? 'Lista de Receitas' : 'Lista de Despesas'}</h2>
             <div className="transaction-item">
               <input type="checkbox" />
               <span>Data de vencimento</span>
-              <span>19/11/2024</span>
-              <span className="valor">R$ 4.000,00</span>
-              <span>Plano de contas: Honorários contratuais</span>
-              <span>Cliente: MARCOS ANTÔNIO DA SILVA</span>
+              <span>20/12/2025</span>
+              <span className="valor">R$ 0,00</span>
+              <span>{aba === 'Receitas' ? 'Plano de contas: Honorários contratuais' : 'Plano de contas: Despesas operacionais'}</span>
+              <span>{aba === 'Receitas' ? 'Cliente: PEDRO DAS QUINTAS CORVOS' : 'Fornecedor: ABC Fornecedores Ltda'}</span>
               <span className="status-pendente">Pendente</span>
               <span className="action-btn"><FaCog /></span>
             </div>
+            {/* Outros itens de receitas ou despesas podem ser adicionados aqui */}
           </div>
         </div>
       </div>

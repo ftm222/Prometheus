@@ -29,7 +29,7 @@ import CentralCaptura from './components/processos/central_captura_processos';
 import AndamentosProcessuais from './components/processos/andamentos_processuais';
 import RelatoriosProcessos from './components/processos/relatórios'; // Verifique se este caminho está correto
 import NovoProcesso from './components/processos/novoProcesso';
-import NovoAndamento from './components/processos/novoAndamento'
+import NovoAndamento from './components/processos/novoAndamento';
 
 // Importação dos componentes da página Financeiro
 import ReceitasDespesas from './components/financeiro/receitas_despesas';
@@ -38,7 +38,9 @@ import Solicitacoes from './components/financeiro/solicitacoes';
 import IntegracaoReceitas from './components/financeiro/integracao_receitas';
 import IntegracaoDespesas from './components/financeiro/integracao_despesas';
 import RelatoriosFinanceiro from './components/financeiro/relatorios';
-import NovoLancamento from './components/financeiro/novoLancamento'
+import LancamentoReceita from './components/financeiro/lancamentoReceita';
+import LancamentoDespesas from './components/financeiro/lancamentoDespesas';
+import LancamentoTransferencia from './components/financeiro/lancamentoTransferencia';
 
 // Importação dos componentes da página Documentos
 import Documentos from './components/documentos/documentos';
@@ -95,7 +97,9 @@ const App = () => {
         <Route path="/financeiro/integracao-receitas" element={<IntegracaoReceitas />} />
         <Route path="/financeiro/integracao-despesas" element={<IntegracaoDespesas />} />
         <Route path="/financeiro/relatorios" element={<RelatoriosFinanceiro />} />
-        <Route path="/financeiro/receitas-despesas/novo-lancamento" element={<NovoLancamento />} />
+        <Route path="/financeiro/receitas-despesas/lancamento-receita" element={<LancamentoReceita />} />
+        <Route path="/financeiro/receitas-despesas/lancamento-despesas" element={<LancamentoDespesas />} />
+        <Route path="/financeiro/receitas-despesas/lancamento-tranferencia" element={<LancamentoTransferencia />} />
 
         {/* Rotas da seção Documentos */}
         <Route path="/documentos" element={<Documentos />} />

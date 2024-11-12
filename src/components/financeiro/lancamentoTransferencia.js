@@ -55,75 +55,77 @@ function NovoLancamento() {
     };
 
   return (
-    <div className="modal">
-      <h2>Novo lançamento</h2>
-      <div className="tabs">
-        <button className="new-process-btn" onClick={handleNewRevenues}>Receitas</button>
-        <button className="new-process-btn" onClick={handleNewExpenses}>Despesas</button>
-        <button className="new-process-btn" onClick={handleNewTransfer}>Transferência</button>
-      </div>
-      <form className="form">
-        <div className="form-group">
-          <label>Valor total <span className="required">*</span></label>
-          <input
-            type="text"
-            value={valorTotal}
-            onChange={(e) => setValorTotal(e.target.value)}
-            required
-          />
+    <div className="modal-container">
+        <div className="modal">
+          <h2>Novo lançamento</h2>
+          <div className="tabs">
+            <button className="new-process-btn" onClick={handleNewRevenues}>Receitas</button>
+            <button className="new-process-btn" onClick={handleNewExpenses}>Despesas</button>
+            <button className="new-process-btn" onClick={handleNewTransfer}>Transferência</button>
+          </div>
+          <form className="form">
+            <div className="form-group">
+              <label>Valor total <span className="required">*</span></label>
+              <input
+                type="text"
+                value={valorTotal}
+                onChange={(e) => setValorTotal(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Data da transferência <span className="required">*</span></label>
+              <input
+                type="text"
+                value={dataTransferencia}
+                onChange={(e) => setDataTransferencia(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Conta de origem <span className="required">*</span></label>
+              <select
+                value={contaOrigem}
+                onChange={(e) => setContaOrigem(e.target.value)}
+                required
+              >
+                <option value="">Pesquise</option>
+                {/* Adicionar opções reais aqui */}
+              </select>
+            </div>
+            <div className="form-group">
+              <label>Conta de destino <span className="required">*</span></label>
+              <select
+                value={contaDestino}
+                onChange={(e) => setContaDestino(e.target.value)}
+                required
+              >
+                <option value="">Pesquise</option>
+                {/* Adicionar opções reais aqui */}
+              </select>
+            </div>
+            <div className="form-group">
+              <label>Descrição</label>
+              <textarea
+                value={descricao}
+                onChange={(e) => setDescricao(e.target.value)}
+              />
+            </div>
+            <div className="form-footer">
+              <label>
+                <input
+                  type="checkbox"
+                  checked={criarOutro}
+                  onChange={(e) => setCriarOutro(e.target.checked)}
+                />
+                Criar outro
+              </label>
+              <button type="button" className="cancel" onClick={handleCancelar}>Cancelar</button>
+              <button type="button" className="save" onClick={handleSalvar}>Salvar</button>
+            </div>
+          </form>
         </div>
-        <div className="form-group">
-          <label>Data da transferência <span className="required">*</span></label>
-          <input
-            type="text"
-            value={dataTransferencia}
-            onChange={(e) => setDataTransferencia(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Conta de origem <span className="required">*</span></label>
-          <select
-            value={contaOrigem}
-            onChange={(e) => setContaOrigem(e.target.value)}
-            required
-          >
-            <option value="">Pesquise</option>
-            {/* Adicionar opções reais aqui */}
-          </select>
-        </div>
-        <div className="form-group">
-          <label>Conta de destino <span className="required">*</span></label>
-          <select
-            value={contaDestino}
-            onChange={(e) => setContaDestino(e.target.value)}
-            required
-          >
-            <option value="">Pesquise</option>
-            {/* Adicionar opções reais aqui */}
-          </select>
-        </div>
-        <div className="form-group">
-          <label>Descrição</label>
-          <textarea
-            value={descricao}
-            onChange={(e) => setDescricao(e.target.value)}
-          />
-        </div>
-        <div className="form-footer">
-          <label>
-            <input
-              type="checkbox"
-              checked={criarOutro}
-              onChange={(e) => setCriarOutro(e.target.checked)}
-            />
-            Criar outro
-          </label>
-          <button type="button" className="cancel" onClick={handleCancelar}>Cancelar</button>
-          <button type="button" className="save" onClick={handleSalvar}>Salvar</button>
-        </div>
-      </form>
-    </div>
+    </div>    
   );
 }
 

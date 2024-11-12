@@ -1,6 +1,16 @@
 import React from 'react'; // Importa a biblioteca React para usar componentes e funcionalidades do React.
+import { useNavigate } from 'react-router-dom';
 
 const NewTimesheet = () => { // Define um componente funcional chamado NewTimesheet.
+
+    const navigate = useNavigate();
+
+    const handleCancel = () => {
+        // Lógica para cancelar o lançamento
+        console.log("Lançamento cancelado.");
+        navigate('/gestao/timesheet');
+    };
+
     return ( // Retorna o JSX que será renderizado.
         <div className="new-timesheet"> {/* Contêiner principal do componente, com a classe 'new-timesheet'. */}
             <h1>Criar Novo Timesheet</h1> {/* Título do formulário, informando a ação a ser realizada. */}
@@ -26,6 +36,7 @@ const NewTimesheet = () => { // Define um componente funcional chamado NewTimesh
                     <textarea id="description" rows="4"></textarea> {/* Área de texto para inserir uma descrição, com 4 linhas visíveis. */}
                 </div>
                 <button type="submit">Salvar</button> {/* Botão para enviar o formulário e salvar os dados do timesheet. */}
+                <button type="button" onClick={handleCancel}>Cancelar</button>
             </form> {/* Fim do formulário. */}
         </div> // Fim do contêiner principal.
     );

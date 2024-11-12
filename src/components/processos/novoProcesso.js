@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './novoProcesso.css';
 
 // Componente principal
@@ -13,6 +14,14 @@ const App = () => {
   // Função para fechar o pop-up
   const closePopup = () => {
     setIsOpen(false);
+  };
+
+  const navigate = useNavigate();
+
+  const handleCancel = () => {
+      // Lógica para cancelar o lançamento
+      console.log("Lançamento cancelado.");
+      navigate('/processos');
   };
 
   // Componente do Novo Processo
@@ -174,6 +183,7 @@ const App = () => {
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
           <button onClick={handleSave}>Salvar</button>
           <button onClick={closePopup}>Fechar</button> {/* Botão para fechar o pop-up */}
+          <button type="button" onClick={handleCancel}>Cancelar</button>
         </div>
       </div>
     );

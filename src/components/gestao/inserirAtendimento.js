@@ -16,6 +16,11 @@ const InserirAtendimento = () => { // Define um componente funcional chamado Ins
     const [pessoa, setPessoa] = useState(''); // Estado para armazenar a pessoa relacionada ao atendimento, inicializado como uma string vazia.
     const [tipoEnvolvimento, setTipoEnvolvimento] = useState('Cliente'); // Estado para armazenar o tipo de envolvimento, inicializado como "Cliente".
     const navigate = useNavigate(); // Cria uma instância do hook de navegação para redirecionar o usuário.
+    const handleCancel = () => {
+        // Lógica para cancelar o lançamento
+        console.log("Atendimento cancelado.");
+        navigate('/gestao/atendimento');
+    };    
 
     // Função que será chamada ao enviar o formulário
     const handleSubmit = (event) => { // Define a função handleSubmit que é chamada ao enviar o formulário.
@@ -163,6 +168,7 @@ const InserirAtendimento = () => { // Define um componente funcional chamado Ins
                 </div>
 
                 <button type="submit" className="submit-button">Salvar Atendimento</button> {/* Botão para enviar o formulário. */}
+                <button type="button" onClick={handleCancel}>Cancelar</button>
             </form>
         </div>
     );

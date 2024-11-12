@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './novaTarefa.css'; // Arquivo de estilo CSS
 
 const NovaTarefa = () => {
+
+    const navigate = useNavigate();
+
     // Define o estado inicial do formulário com todos os campos
     const [formData, setFormData] = useState({
         tipoVinculo: '',
@@ -33,6 +37,12 @@ const NovaTarefa = () => {
         areaCliente: false,
         recorrencia: false
     });
+
+    const handleCancel = () => {
+        // Lógica para cancelar o lançamento
+        console.log("Atendimento cancelado.");
+        navigate('/atividades/kanban');
+    };    
 
     // Controla o estado para expandir ou recolher o campo "Mais informações"
     const [mostrarMaisInfo, setMostrarMaisInfo] = useState(false);
@@ -387,6 +397,7 @@ const NovaTarefa = () => {
 
                 {/* Botão para enviar o formulário */}
                 <button type="submit">Salvar</button>
+                <button type="button" onClick={handleCancel}>Cancelar</button>
             </form>
         </div>
     );

@@ -1,0 +1,152 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    overflow-x: hidden; /* Remove rolagem horizontal */
+}
+
+/* Container Principal */
+.container {
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Navegação */
+.nav {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha para evitar overflow */
+}
+
+/* Estilo para botões de navegação para que pareçam links */
+.nav-link {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 20px;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.nav-link:hover {
+    color: #ccc;
+}
+
+/* Ícones do cabeçalho */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+    width: 100%; /* Ocupa o espaço disponível */
+}
+
+/* Ícones no cabeçalho */
+.icon {
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.main-content h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Caixa de Pesquisa */
+.search-box {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.search-controls {
+    display: flex;
+    flex-wrap: wrap; /* Permite que elementos se ajustem à largura */
+    align-items: center;
+    gap: 10px;
+}
+
+.input-text {
+    flex: 1 1 70%; /* Flexível para ajustar-se ao espaço disponível */
+    min-width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #555;
+    border: 1px solid #666;
+    color: #fff;
+}
+
+.search-button, .advanced-search {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    min-width: 120px; /* Define um tamanho mínimo para botões */
+    max-width: 100%;
+}
+
+.search-button {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.advanced-search {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Filtros */
+.filters {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha para evitar overflow */
+    gap: 10px;
+}
+
+.filter-button {
+    background-color: #666;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+/* Botão de Suporte */
+.support-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

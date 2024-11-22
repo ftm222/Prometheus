@@ -1,151 +1,150 @@
 /* Estilos principais da página */
 .extrato-container {
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .extrato-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .novo-button {
-    background-color: #44c767;
-    color: #fff;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .extrato-content {
-    display: flex;
-    margin-top: 20px;
-  }
-  
-  .saldo-section {
-    width: 300px;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
-    margin-right: 20px;
-  }
-  
-  .saldo-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .saldo-negativo {
-    color: red;
-  }
-  
-  .saldo-positivo {
-    color: green;
-  }
-  
-  .entradas-saidas p {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .entradas-texto {
-    color: green;
-  }
-  
-  .saidas-texto {
-    color: red;
-  }
-  
-  /* Área de Pesquisa e Filtros */
-  .pesquisa-section {
-    flex: 1;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  .pesquisa-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .pesquisa-input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: none;
-    margin-right: 10px;
-  }
-  
-  .pesquisa-button {
-    background-color: #44c767;
-    color: #fff;
-    padding: 10px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .data-section {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  
-  .data-input {
-    padding: 10px;
-    border-radius: 4px;
-    width: 48%;
-    border: none;
-    background-color: #555;
-    color: #fff;
-  }
-  
-  .filtros-section {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .filtro-tab {
-    background-color: #444;
-    padding: 10px 15px;
-    border-radius: 4px;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .tab-count {
-    color: #999;
-  }
-  
-  .filtros-adicionais {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .contas-select, .ordenacao-select {
-    padding: 10px;
-    border-radius: 4px;
-    background-color: #444;
-    color: #fff;
-    border: none;
-  }
-  
-  .sem-movimentacao {
-    text-align: center;
-    margin-top: 50px;
-    color: #999;
-  }
-  
-  .icone-sem-movimentacao {
-    font-size: 50px;
-    margin-bottom: 10px;
-  }
-  
+  background-color: #222; /* Define o fundo da área principal da página como cinza escuro */
+  color: #fff; /* Define a cor do texto como branco */
+  padding: 20px; /* Adiciona espaçamento interno de 20px em todos os lados */
+}
+
+.extrato-header {
+  display: flex; /* Usa flexbox para organizar os elementos horizontalmente */
+  justify-content: space-between; /* Alinha os itens nos extremos do container */
+  align-items: center; /* Centraliza os itens verticalmente */
+}
+
+.novo-button {
+  background-color: #44c767; /* Cor de fundo verde do botão */
+  color: #fff; /* Define a cor do texto como branco */
+  padding: 8px 12px; /* Adiciona espaçamento interno de 8px em cima/baixo e 12px nas laterais */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 4px; /* Arredonda os cantos do botão */
+  cursor: pointer; /* Muda o cursor para uma mão, indicando que é clicável */
+}
+
+.extrato-content {
+  display: flex; /* Exibe os elementos em uma linha, devido ao uso de flexbox */
+  margin-top: 20px; /* Adiciona um espaçamento superior de 20px */
+}
+
+.saldo-section {
+  width: 300px; /* Define a largura da seção como 300px */
+  background-color: #333; /* Define um fundo cinza escuro */
+  padding: 20px; /* Adiciona espaçamento interno de 20px */
+  border-radius: 8px; /* Arredonda os cantos da seção */
+  margin-right: 20px; /* Adiciona uma margem à direita de 20px */
+}
+
+.saldo-header {
+  display: flex; /* Usa flexbox para organizar os elementos horizontalmente */
+  justify-content: space-between; /* Alinha os itens nos extremos do container */
+  align-items: center; /* Centraliza os itens verticalmente */
+}
+
+.saldo-negativo {
+  color: red; /* Define a cor de saldo negativo como vermelho */
+}
+
+.saldo-positivo {
+  color: green; /* Define a cor de saldo positivo como verde */
+}
+
+.entradas-saidas p {
+  display: flex; /* Usa flexbox para exibir o texto e o valor na mesma linha */
+  justify-content: space-between; /* Distribui o texto e o valor nos extremos */
+}
+
+.entradas-texto {
+  color: green; /* Define a cor das entradas como verde */
+}
+
+.saidas-texto {
+  color: red; /* Define a cor das saídas como vermelho */
+}
+
+/* Área de Pesquisa e Filtros */
+.pesquisa-section {
+  flex: 1; /* Permite que a seção ocupe o espaço restante disponível */
+  background-color: #333; /* Define um fundo cinza escuro */
+  padding: 20px; /* Adiciona espaçamento interno de 20px */
+  border-radius: 8px; /* Arredonda os cantos da seção */
+}
+
+.pesquisa-header {
+  display: flex; /* Usa flexbox para organizar os elementos horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+}
+
+.pesquisa-input {
+  width: 100%; /* Define a largura do input para ocupar todo o espaço disponível */
+  padding: 10px; /* Adiciona espaçamento interno de 10px */
+  border-radius: 4px; /* Arredonda os cantos do input */
+  border: none; /* Remove a borda padrão do input */
+  margin-right: 10px; /* Adiciona uma margem à direita de 10px */
+}
+
+.pesquisa-button {
+  background-color: #44c767; /* Cor de fundo verde do botão */
+  color: #fff; /* Define a cor do texto como branco */
+  padding: 10px 12px; /* Adiciona espaçamento interno de 10px em cima/baixo e 12px nas laterais */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 4px; /* Arredonda os cantos do botão */
+  cursor: pointer; /* Muda o cursor para uma mão, indicando que é clicável */
+}
+
+.data-section {
+  display: flex; /* Usa flexbox para exibir os inputs de data em linha */
+  justify-content: space-between; /* Espaça os inputs nos extremos */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+}
+
+.data-input {
+  padding: 10px; /* Adiciona espaçamento interno de 10px */
+  border-radius: 4px; /* Arredonda os cantos do input */
+  width: 48%; /* Define a largura do input para 48% */
+  border: none; /* Remove a borda padrão do input */
+  background-color: #555; /* Define um fundo cinza médio */
+  color: #fff; /* Define a cor do texto como branco */
+}
+
+.filtros-section {
+  display: flex; /* Usa flexbox para exibir os botões de filtro em linha */
+  gap: 10px; /* Adiciona um espaçamento de 10px entre os botões */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+}
+
+.filtro-tab {
+  background-color: #444; /* Define um fundo cinza escuro para os botões */
+  padding: 10px 15px; /* Adiciona espaçamento interno de 10px em cima/baixo e 15px nas laterais */
+  border-radius: 4px; /* Arredonda os cantos do botão */
+  color: #fff; /* Define a cor do texto como branco */
+  border: none; /* Remove a borda padrão do botão */
+  cursor: pointer; /* Muda o cursor para uma mão, indicando que é clicável */
+}
+
+.tab-count {
+  color: #999; /* Define a cor do contador dentro dos botões de filtro como cinza claro */
+}
+
+.filtros-adicionais {
+  display: flex; /* Usa flexbox para exibir os selects em linha */
+  justify-content: space-between; /* Espaça os selects nos extremos */
+}
+
+.contas-select, .ordenacao-select {
+  padding: 10px; /* Adiciona espaçamento interno de 10px */
+  border-radius: 4px; /* Arredonda os cantos do select */
+  background-color: #444; /* Define um fundo cinza escuro para os selects */
+  color: #fff; /* Define a cor do texto como branco */
+  border: none; /* Remove a borda padrão do select */
+}
+
+.sem-movimentacao {
+  text-align: center; /* Centraliza o texto */
+  margin-top: 50px; /* Adiciona um espaçamento superior de 50px */
+  color: #999; /* Define a cor do texto como cinza claro */
+}
+
+.icone-sem-movimentacao {
+  font-size: 50px; /* Define o tamanho da fonte do ícone para 50px */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+}

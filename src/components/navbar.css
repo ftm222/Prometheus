@@ -1,3 +1,10 @@
+/* Ajuste para evitar corte do dropdown */
+.navbar {
+  overflow: visible; /* Garante que os elementos internos não sejam cortados */
+  position: relative; /* Necessário para o posicionamento correto dos dropdowns */
+  z-index: 1500; /* Garante que a navbar fique acima de outros elementos */
+}
+
 /* Estilo da barra de navegação */
 .navbar {
   background-color: #101010; /* Define a cor de fundo da navbar como um tom escuro */
@@ -74,7 +81,10 @@
   padding: 0; /* Remove o preenchimento da lista */
   margin: 0; /* Remove as margens da lista */
   flex-direction: column; /* Organiza os itens do dropdown em coluna */
-  z-index: 1500; /* Define a camada de empilhamento para que o dropdown apareça acima de outros elementos */
+  z-index: 2000; /* Garante que o dropdown apareça acima de outros elementos */
+  white-space: nowrap; /* Impede quebras de texto dentro do menu */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra ao dropdown */
+  min-width: 150px; /* Define uma largura mínima para o dropdown */
 }
 
 /* Exibe o dropdown ao passar o mouse */
@@ -90,6 +100,11 @@
 
 .dropdown-menu li a {
   color: white; /* Define a cor do texto dos links no menu dropdown como branco */
+}
+
+.dropdown-menu li a:hover {
+  background-color: #444; /* Adiciona uma cor de fundo ao passar o mouse sobre os itens do menu dropdown */
+  color: #f0ad4e; /* Muda a cor do texto ao passar o mouse sobre os itens do menu dropdown */
 }
 
 /* Estilo da barra de pesquisa */
